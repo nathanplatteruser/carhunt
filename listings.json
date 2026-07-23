@@ -26,16 +26,21 @@
   "make": "Nissan",
   "model": "Armada",
   "trim": "Sl",
-  "mileage": null,
+  "mileage": 107953,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1320428870247481/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 25000,
+  "market_value": 22100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "clean title per listing; seller account joined Facebook 2025",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2021 Nissan Armada SL\n107,953 miles\n$23,330 + doc\nClean 2021 Nissan Armada SL available at Woodhouse Cadillac.\nTwo owners, no accidents, non smoker, clean title. Spacious SUV with plenty of room for the family.\nLocated at Woodhouse Cadillac.17335 Burt St.Omaha, NE 68118\nContact Jordan.\nSerious inquiries only.",
+  "title_status_desc": "clean"
  },
  {
   "id": "977378858637172",
@@ -44,18 +49,23 @@
   "year": 2018,
   "make": "Nissan",
   "model": "Armada",
-  "trim": null,
-  "mileage": null,
+  "trim": "Platinum",
+  "mileage": 94015,
   "category": "suv",
   "location": "Gretna, NE",
   "url": "https://www.facebook.com/marketplace/item/977378858637172/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 16000,
+  "market_value": 17300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "mileage not shown - check listing",
-  "title_status_desc": "clean"
+  "notes": "clean title per listing",
+  "title_status_desc": "clean",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "Used 2018 Nissan Armada Platinum for sale in Gretna, NE. With just over 94,000 miles, 5.6L V8, 4X4. Premium features: adaptive cruise control, blind spot monitor, collision warning, lane keep assist, rearview camera, heated seats, sunroof, navigation, premium audio, Bluetooth, push start. One owner, clean title."
  },
  {
   "id": "1319441433702656",
@@ -65,16 +75,21 @@
   "make": "Nissan",
   "model": "Armada",
   "trim": "Sl",
-  "mileage": null,
+  "mileage": 101372,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1319441433702656/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 20000,
+  "market_value": 19700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": "price drop from $17,500"
+  "notes": "price drop from $17,500; clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "PRICED TO SELL. 2019 Nissan Armada SL. Full-size 4WD SUV. Tires replaced last fall. No major issues, normal wear and tear with minor scratches. Clean leather interior with sunroof. Heated seats, remote start, power lift gate, power folding 3rd row seats. Clean title. Check engine light recently came on showing code P0456 (EVAP small leak, often gas cap; emissions only).",
+  "title_status_desc": "clean"
  },
  {
   "id": "704973585604483",
@@ -84,16 +99,21 @@
   "make": "Nissan",
   "model": "Armada",
   "trim": "Platinum",
-  "mileage": null,
+  "mileage": 87000,
   "category": "suv",
   "location": "Elkhorn, NE",
   "url": "https://www.facebook.com/marketplace/item/704973585604483/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 16500,
+  "market_value": 19400,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "price drop from $21,900; mileage not shown - check listing"
+  "notes": "REBUILT TITLE (stated in description); SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing); price drop from $21,900",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2017 Nissan Armada Platinum - Fully Loaded - Located in Elkhorn. 5.6L V8, Platinum trim. This Armada has a salvage title - it was rebuilt by a dealer before I bought it. Later, it was involved in a minor fender bender, and $13,000 in professional repairs were completed at Crash Champions in Elkhorn, including a new axle, side mirror, and more. In past winters, it had trouble getting up hills in the snow; rear-wheel drive without snow tires; seller has not driven much since the repairs.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "2481833195665287",
@@ -103,35 +123,21 @@
   "make": "Nissan",
   "model": "Armada",
   "trim": "Platinum",
-  "mileage": null,
+  "mileage": 97217,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/2481833195665287/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 24000,
+  "market_value": 23000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
- },
- {
-  "id": "947073668405214",
-  "title": "2017 Nissan armada Platinum Sport Utility 4D",
-  "price": 8008,
-  "year": 2017,
-  "make": "Nissan",
-  "model": "Armada",
-  "trim": "Platinum",
-  "mileage": null,
-  "category": "suv",
-  "location": "Humphrey, NE",
-  "url": "https://www.facebook.com/marketplace/item/947073668405214/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 16500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "low",
-  "notes": "LIKELY SCAM OR MAJOR DAMAGE: price is implausibly low (51% under book) with no mileage shown. Assume the worst until VIN and title check out; mileage not shown - check listing"
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2020 Nissan Armada Platinum SUV for sale at BMW of Lincoln. Clean title. No accidents or damage reported. Heated/ventilated seats, adaptive cruise, tow package, captain's chairs, rear entertainment, AWD, remote start, sunroof. Finance and shipping available. Client Advisor - Colin Ludvik",
+  "title_status_desc": "clean"
  },
  {
   "id": "1517467773408113",
@@ -150,7 +156,7 @@
   "market_value": 23000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "clean title per listing field; price drop from $26,000; mileage not shown - check listing",
+  "notes": "clean title per listing field; price drop from $26,000",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -163,16 +169,20 @@
   "make": "Nissan",
   "model": "Armada",
   "trim": "Sl",
-  "mileage": null,
+  "mileage": 102550,
   "category": "suv",
   "location": "Council Bluffs, IA",
   "url": "https://www.facebook.com/marketplace/item/1507406541011242/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 28000,
+  "market_value": 24500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "SUPER CLEAN! LOADED! 4X4! V8! FULLY INSPECTED, COMES WITH WARRANTY! FINANCING AVAILABLE! 3RD ROW, LEATHER, HEATED SEATS, REMOTE START, SUNROOF, AUTO LIFT GATE, NAVIGATION, MEMORY SEATS, APPLE CARPLAY"
  },
  {
   "id": "1052521387250068",
@@ -181,17 +191,23 @@
   "year": 2020,
   "make": "Nissan",
   "model": "Armada",
-  "trim": null,
-  "mileage": null,
+  "trim": "Platinum",
+  "mileage": 97217,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1052521387250068/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 21500,
+  "market_value": 20500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": ""
+  "notes": "clean title per listing; seller account joined Facebook 2025",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "Chris McKinney, BMW of Lincoln. Clean Title, free CARFAX offered. Gun Metallic exterior, Platinum trim. Leather Seats, Navigation, DVD, Sunroof, 4x4, Captains Chairs Package (7 passengers).",
+  "title_status_desc": "clean"
  },
  {
   "id": "1621722133291040",
@@ -201,16 +217,20 @@
   "make": "Nissan",
   "model": "Armada",
   "trim": null,
-  "mileage": null,
+  "mileage": 115883,
   "category": "suv",
   "location": "Nebraska City, NE",
   "url": "https://www.facebook.com/marketplace/item/1621722133291040/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 21500,
+  "market_value": 19000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": ""
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Dealer-style listing (Chaz Lewis): free Carfax, walk-around videos, financing, trades. Black 2020 Nissan Armada, V8."
  },
  {
   "id": "1523795791941534",
@@ -220,16 +240,21 @@
   "make": "Nissan",
   "model": "Armada",
   "trim": "Platinum",
-  "mileage": null,
+  "mileage": 95874,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1523795791941534/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 18500,
+  "market_value": 19700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "price drop from $19,950; mileage not shown - check listing"
+  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing); price drop from $19,950",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2018 NISSAN ARMADA Platinum 5.6L V8, automatic. 95xxx miles. Runs and drives good. Navigation, leather, heated/ventilated seats, 360 camera. This is a 2 owner Armada and holds a previously salvage title due to a side damage. Carfax report with service records available.",
+  "title_status_desc": "salvage"
  },
  {
   "id": "1973574076687381",
@@ -238,17 +263,22 @@
   "year": 2020,
   "make": "Nissan",
   "model": "Armada",
-  "trim": null,
-  "mileage": null,
+  "trim": "Platinum",
+  "mileage": 97217,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1973574076687381/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 21500,
+  "market_value": 20500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "price drop from $24,397"
+  "notes": "price drop from $24,397",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "Husker Auto Group Lincoln (Timothy Post). Platinum trim, Gun Metallic. Heated leather seats, DVD, sunroof, navigation, 3rd row, captains chairs package, 4x4, trailer hitch. VIN JN8AY2NE3L9780044 Stock H3154A."
  },
  {
   "id": "1538509334672779",
@@ -258,16 +288,20 @@
   "make": "Dodge",
   "model": "Durango",
   "trim": "R/T",
-  "mileage": null,
+  "mileage": 64542,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1538509334672779/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 17500,
+  "market_value": 21900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "seller account joined Facebook 2025",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Free 3 months 3000 miles warranty. Finance available. 2017 DODGE DURANGO RT fully loaded. Very low mileage only 64k miles. V8 5.7L Hemi, 8-speed auto, AWD 4x4. Luxury leather black interior with red RT logo. Sunroof, remote start, heated/vented seats, heated steering wheel. Sale by TOP AUTO SALE llc."
  },
  {
   "id": "2966584067019361",
@@ -286,7 +320,7 @@
   "market_value": 15300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing",
+  "notes": "",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -299,16 +333,21 @@
   "make": "Dodge",
   "model": "Durango",
   "trim": "Citadel",
-  "mileage": null,
+  "mileage": 115810,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/37532608716330220/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 18000,
+  "market_value": 17600,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2018 Dodge Durango Citadel. 3.6L V6 with 115,810 miles (may change slightly, still using it). Private seller upgrading. Excellent mechanical condition, everything works, small paint chips on hood. Heated/cooled front seats, heated rear. Rear captains seats. $17,000 OBO. Clear title in hand.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1346595076898553",
@@ -327,7 +366,7 @@
   "market_value": 19700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "seller account joined 2024 - verify carefully; mileage not shown - check listing",
+  "notes": "seller account joined 2024 - verify carefully",
   "recovered": [
    "trim",
    "mileage:fb-field"
@@ -341,7 +380,7 @@
   "make": "Dodge",
   "model": "Durango",
   "trim": "Gt",
-  "mileage": null,
+  "mileage": 125000,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1253703323398089/",
@@ -350,7 +389,11 @@
   "market_value": 16500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "",
+  "description": "2018 Dodge Durango AWD 125k miles. GT Sport Utility 4D, 3.6L V6 Pentastar. 7-passenger, 3 rows black leather/suede. Premium Sony touchscreen, wireless Apple CarPlay. Private-style listing, Lincoln.",
+  "recovered": [
+   "mileage"
+  ]
  },
  {
   "id": "764978693363818",
@@ -360,16 +403,20 @@
   "make": "Dodge",
   "model": "Durango",
   "trim": "Gt",
-  "mileage": null,
+  "mileage": 104850,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/764978693363818/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 16500,
+  "market_value": 17000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "AVA Auto Sales LLC. 2018 DODGE DURANGO GT AWD, cash price $15,400. Description claims 76,515 miles but FB field says Driven 104,850 miles - MILEAGE CONFLICT. 3.6L V6, 8-speed auto, remote start, Apple CarPlay."
  },
  {
   "id": "1657365248815085",
@@ -379,16 +426,20 @@
   "make": "Dodge",
   "model": "Durango",
   "trim": "R/T",
-  "mileage": null,
+  "mileage": 61000,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1657365248815085/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 19000,
+  "market_value": 23000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Selling my 2018 Dodge Durango RT. Purchased over a year ago from dealership. Only replaced the radiator fan (done at Dodge). Perfect condition, runs and drives great. Private seller, Omaha."
  },
  {
   "id": "971177972585757",
@@ -407,7 +458,7 @@
   "market_value": 16800,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "SALVAGE TITLE (FB listing field); seller account joined 2025 - verify carefully; mileage not shown - check listing",
+  "notes": "SALVAGE TITLE (FB listing field); seller account joined 2025 - verify carefully",
   "recovered": [
    "trim",
    "mileage:fb-field"
@@ -421,16 +472,21 @@
   "make": "Dodge",
   "model": "Durango",
   "trim": "Srt",
-  "mileage": null,
+  "mileage": 89864,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/2739891129715226/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 22000,
+  "market_value": 23700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "REBUILT/BRANDED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2018 Dodge Durango SRT AWD, 89K miles, 6.4L V8 475HP, 8-speed. Heated/cooled seats, navigation, blind spot. Please note that this Dodge Durango comes with a branded title! $28,950.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "1177479612117391",
@@ -449,7 +505,7 @@
   "market_value": 14700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing",
+  "notes": "",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -461,17 +517,23 @@
   "year": 2019,
   "make": "Dodge",
   "model": "Durango",
-  "trim": null,
-  "mileage": null,
+  "trim": "SXT",
+  "mileage": 106412,
   "category": "suv",
   "location": "Bellevue, NE",
   "url": "https://www.facebook.com/marketplace/item/1419069523421268/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 17000,
+  "market_value": 16300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "mileage not shown - check listing"
+  "notes": "REBUILT/BRANDED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "2019 Dodge Durango SXT Plus, $15,999, 106,412 miles, 3.6L V6, AWD, 7 seats. **NE BRANDED TITLE/REBUILT TITLE** **BRANDED TITLE DUE TO HAIL** Greenline Motors, Bellevue NE. Financing available.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "1537023724012302",
@@ -481,16 +543,21 @@
   "make": "Dodge",
   "model": "Durango",
   "trim": "R/T",
-  "mileage": null,
+  "mileage": 70881,
   "category": "suv",
   "location": "Elkhorn, NE",
   "url": "https://www.facebook.com/marketplace/item/1537023724012302/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 23000,
+  "market_value": 24100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2020 Dodge Durango R/T. Arizona vehicle - NO RUST, never endured Midwest winters. Only 2 owners, clean title, well maintained. HEMI V8, premium leather, heated & cooled front seats. Asking KBB value $25,000. Private seller, Elkhorn.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1032583199422161",
@@ -500,20 +567,22 @@
   "make": "Dodge",
   "model": "Durango",
   "trim": "SXT",
-  "mileage": null,
+  "mileage": 133000,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1032583199422161/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 11000,
+  "market_value": 12300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "",
+  "notes": "clean title per listing",
   "title_status_desc": "clean",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
+  ],
+  "description": "2015 Dodge Durango SXT. Free 3 months/3000 miles warranty. Title: CLEAN. 3.6L V6, 8-speed auto, AWD. Mileage: 133k. Third row seats. Asking $8,500. Denver Auto Sales, 4925 Cornhusker Hwy, Lincoln NE."
  },
  {
   "id": "2388635038284698",
@@ -522,36 +591,23 @@
   "year": 2017,
   "make": "Dodge",
   "model": "Durango",
-  "trim": null,
-  "mileage": null,
+  "trim": "Gt",
+  "mileage": 107272,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/2388635038284698/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 13500,
+  "market_value": 14800,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": ""
- },
- {
-  "id": "1665879801142328",
-  "title": "2018 Ford expedition Limited 40 sport",
-  "price": 10900,
-  "year": 2018,
-  "make": "Ford",
-  "model": "Expedition",
-  "trim": "Limited",
-  "mileage": null,
-  "category": "suv",
-  "location": "Grand Island, NE",
-  "url": "https://www.facebook.com/marketplace/item/1665879801142328/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 24000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": ""
+  "notes": "REBUILT/BRANDED TITLE (FB listing); ; seller account joined Facebook 2025",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "2017 Dodge Durango GT AWD $15,500. Miles: 107K. 3.6L 6-cyl, automatic. Title status: Rebuilt. Heated front and rear seats, sunroof, remote start. Freedom Motors, 122 S Antelope Valley Pkwy, Lincoln NE.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "1679252926449065",
@@ -570,7 +626,7 @@
   "market_value": 21500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "Listing hides mileage - price drop from $18,750 suggests motivated seller. First question: odometer reading; price drop from $18,750",
+  "notes": "First question: odometer reading; price drop from $18,750",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -592,7 +648,7 @@
   "market_value": 29900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "price drop from $29,495; mileage not shown - check listing",
+  "notes": "price drop from $29,495",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -614,7 +670,7 @@
   "market_value": 30000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing",
+  "notes": "",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -627,16 +683,20 @@
   "make": "Ford",
   "model": "Expedition",
   "trim": "Limited",
-  "mileage": null,
+  "mileage": 67753,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1484696256487625/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 26500,
+  "market_value": 28900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2019 Ford Expedition Limited, 3.5L EcoBoost twin-turbo V6 375hp, 10-speed auto. Three-row seating for 8, premium leather, heated and ventilated seats, navigation, Apple CarPlay."
  },
  {
   "id": "3764741090335084",
@@ -655,7 +715,7 @@
   "market_value": 32800,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "SALVAGE TITLE (FB listing field); mileage not shown - check listing",
+  "notes": "SALVAGE TITLE (FB listing field)",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -668,16 +728,21 @@
   "make": "Ford",
   "model": "Expedition",
   "trim": "Platinum",
-  "mileage": null,
+  "mileage": 139616,
   "category": "suv",
   "location": "Blair, NE",
   "url": "https://www.facebook.com/marketplace/item/1515462070355161/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 21000,
+  "market_value": 19700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "LIKELY SCAM OR MAJOR DAMAGE: price is implausibly low (44% under book) with no mileage shown. Assume the worst until VIN and title check out; mileage not shown - check listing"
+  "notes": "LIKELY SCAM OR MAJOR DAMAGE: price is implausibly low (44% under book) with no mileage shown. Assume the worst until VIN and title check out; clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "For sale by dealer - Ask for Ross. 2017 Ford Expedition Platinum 4x4, 3.5 V6, 139,616 miles. Runs and drives great. Clean title, no accidents, one owner, non smoker. Value lot: not inspected, sold as is. Blair, NE.",
+  "title_status_desc": "clean"
  },
  {
   "id": "2126427191552284",
@@ -706,16 +771,20 @@
   "make": "Ford",
   "model": "Expedition",
   "trim": "Limited",
-  "mileage": null,
+  "mileage": 138500,
   "category": "suv",
   "location": "Gretna, NE",
   "url": "https://www.facebook.com/marketplace/item/2884414488597715/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 19000,
+  "market_value": 17800,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Deal of the Day! 2017 Ford Expedition Limited 4x4, 3.5L V6 with 138k miles. Great condition, no accidents. Financing available. Ask for Tyler. Gretna, NE."
  },
  {
   "id": "4420689801552163",
@@ -725,7 +794,7 @@
   "make": "Ford",
   "model": "Expedition",
   "trim": "Xl",
-  "mileage": null,
+  "mileage": 132471,
   "category": "suv",
   "location": "Gretna, NE",
   "url": "https://www.facebook.com/marketplace/item/4420689801552163/",
@@ -734,7 +803,11 @@
   "market_value": 21500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "",
+  "description": "2019 Ford Expedition XLT, 132,471 miles. Strong turbo performance, 3rd row seating. Priced accordingly for the miles. Financing for all credit types. Gretna Auto Outlet, 12190 South 216 Plaza, Gretna NE. Ask for Jalen M.",
+  "recovered": [
+   "mileage"
+  ]
  },
  {
   "id": "825902037226115",
@@ -743,36 +816,23 @@
   "year": 2020,
   "make": "Ford",
   "model": "Expedition",
-  "trim": null,
-  "mileage": null,
+  "trim": "XLT",
+  "mileage": 79779,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/825902037226115/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 26000,
+  "market_value": 26400,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": ""
- },
- {
-  "id": "1408491410722368",
-  "title": "2018 Ford expedition max",
-  "price": 13995,
-  "year": 2018,
-  "make": "Ford",
-  "model": "Expedition",
-  "trim": "Max",
-  "mileage": null,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1408491410722368/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 22000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": ""
+  "notes": "REBUILT/BRANDED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "2020 Ford Expedition XLT, $24,999, 79,779 miles, EcoBoost 3.5L twin turbo 375hp, 4WD, seats 8. **NE BRANDED TITLE/REBUILT TITLE** Greenline Motors, Bellevue NE. Financing available.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "1682448096220110",
@@ -782,35 +842,19 @@
   "make": "Ford",
   "model": "Expedition",
   "trim": "Xl",
-  "mileage": null,
+  "mileage": 78209,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1682448096220110/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 30000,
+  "market_value": 28400,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
- },
- {
-  "id": "27632999399694760",
-  "title": "2018 Ford expedition Limited",
-  "price": 14500,
-  "year": 2018,
-  "make": "Ford",
-  "model": "Expedition",
-  "trim": "Limited",
-  "mileage": null,
-  "category": "suv",
-  "location": "Seneca, KS",
-  "url": "https://www.facebook.com/marketplace/item/27632999399694760/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 24000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": ""
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ]
  },
  {
   "id": "995579583180219",
@@ -829,7 +873,7 @@
   "market_value": 17500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing",
+  "notes": "",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -842,19 +886,21 @@
   "make": "Ford",
   "model": "Explorer",
   "trim": "XLT",
-  "mileage": null,
+  "mileage": 56462,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1297936895466638/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 22000,
+  "market_value": 23200,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "price drop from $22,900; mileage not shown - check listing",
+  "notes": "price drop from $22,900",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
+  ],
+  "description": "2021 Ford Explorer XLT 4WD. Fully loaded XLT: panoramic sunroof, premium leather, heated front seats, remote start, Apple CarPlay, navigation, blind spot monitoring, adaptive cruise. Excellent condition."
  },
  {
   "id": "1372403154575750",
@@ -863,17 +909,22 @@
   "year": 2017,
   "make": "Ford",
   "model": "Explorer",
-  "trim": null,
-  "mileage": null,
+  "trim": "Limited",
+  "mileage": 70000,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1372403154575750/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 14000,
+  "market_value": 17500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "price drop from $14,800; mileage not shown - check listing"
+  "notes": "price drop from $14,800",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "2017 Ford Explorer Limited. Mileage: 70k. Price $13,500. No mechanical issues. Vehicle has LIGHT HAIL DAMAGE. 3.5L V6, AWD. Massage seats, self parking, dual-panel moonroof. Gratify Auto Sales."
  },
  {
   "id": "1555368559631905",
@@ -892,7 +943,7 @@
   "market_value": 18000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "REBUILT TITLE (FB listing field); mileage not shown - check listing",
+  "notes": "REBUILT TITLE (FB listing field)",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -914,7 +965,7 @@
   "market_value": 19100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "SALVAGE TITLE (FB listing field); price drop from $15,800; mileage not shown - check listing",
+  "notes": "SALVAGE TITLE (FB listing field); price drop from $15,800",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -947,16 +998,21 @@
   "make": "Ford",
   "model": "Explorer",
   "trim": "Limited",
-  "mileage": null,
+  "mileage": 112599,
   "category": "suv",
   "location": "Blair, NE",
   "url": "https://www.facebook.com/marketplace/item/1186916636958172/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 13000,
+  "market_value": 16000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "For sale by dealer - Ask for Ross. 2015 Ford Explorer Limited, 3.5 V6, 112,599 miles. Runs and drives great. Clean title, no accidents, non smoker, luxury package. Value lot: not inspected, sold AS IS. Discounted due to tire tread depth.",
+  "title_status_desc": "clean"
  },
  {
   "id": "940189812052531",
@@ -965,17 +1021,22 @@
   "year": 2020,
   "make": "Ford",
   "model": "Explorer",
-  "trim": null,
-  "mileage": null,
+  "trim": "XLT",
+  "mileage": 66000,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/940189812052531/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 19500,
+  "market_value": 21000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "2020 Ford Explorer XLT. Mileage 66k. Price $17,995. 1 owner, no mechanical issues. EcoBoost 2.3L turbo I4, 10-speed, AWD. Power liftgate, heated seats, SYNC 3. Gratify Auto Sales."
  },
  {
   "id": "1039713935679734",
@@ -984,17 +1045,23 @@
   "year": 2018,
   "make": "Ford",
   "model": "Explorer",
-  "trim": null,
-  "mileage": null,
+  "trim": "XLT",
+  "mileage": 85360,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1039713935679734/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 16000,
+  "market_value": 18000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "mileage not shown - check listing"
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "2018 Ford Explorer XLT, 85,360 miles, $16,000. No payment plans, full payment due at purchase. 4WD, 7 passenger with 3rd row, V6. Havelock Auto Sales, 3846 Touzalin Ave, Lincoln NE.",
+  "title_status_desc": "clean"
  },
  {
   "id": "2793092411051925",
@@ -1013,7 +1080,7 @@
   "market_value": 17500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "SALVAGE TITLE (FB listing field); mileage not shown - check listing",
+  "notes": "SALVAGE TITLE (FB listing field)",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -1025,17 +1092,23 @@
   "year": 2019,
   "make": "Ford",
   "model": "Explorer",
-  "trim": null,
-  "mileage": null,
+  "trim": "XLT",
+  "mileage": 107762,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1965568120792143/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 18000,
+  "market_value": 17200,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": ""
+  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "I want to sell my Ford Explorer XLT. The car is in good condition, everything works perfectly, tires and battery good. Very smooth to drive, ready for any 4x4 test drive. It is previously salvaged.",
+  "title_status_desc": "salvage"
  },
  {
   "id": "27879392358361224",
@@ -1045,19 +1118,22 @@
   "make": "Ford",
   "model": "Explorer",
   "trim": "XLT",
-  "mileage": null,
+  "mileage": 98200,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/27879392358361224/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 11000,
+  "market_value": 13800,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "",
+  "notes": "clean title per listing",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
+  ],
+  "description": "2015 Ford Explorer XLT with 98,200 miles. Well maintained, runs and drives great, no issues. OBO. Clean title in hand. Brand new tires (<3,000 miles), fresh oil change, AWD, 3.5L V6, 3-row. Private seller, Lincoln.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1364383049236610",
@@ -1067,16 +1143,20 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Bighorn",
-  "mileage": null,
+  "mileage": 90400,
   "category": "truck",
   "location": "Papillion, NE",
   "url": "https://www.facebook.com/marketplace/item/1364383049236610/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 21000,
+  "market_value": 21600,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "quarter panel replaced after parking-lot dent (body shop repair, title clean per seller)",
+  "recovered": [
+   "mileage:description"
+  ],
+  "description": "2019 Ram Bighorn 1500 4x4 with the 5.7L hemi. It currently has 90400 miles on it but husband drives it daily so miles will go up. Kept clean, garage parked, bought used a few years ago. No accidents except a parking-lot dent next to right tail light - right side quarter panel replaced at Thorpe auto body in Papillion. Tires have 18000 miles. Right side exhaust manifold replaced (cracked - common Ram flaw). No leaks, does not use oil. Private seller."
  },
  {
   "id": "1512293526947709",
@@ -1087,16 +1167,21 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Laramie",
-  "mileage": null,
+  "mileage": 73406,
   "category": "truck",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1512293526947709/",
   "image": null,
   "first_seen": "2026-07-21",
-  "market_value": 26000,
+  "market_value": 26900,
   "value_source": "KBB/Edmunds anchors + 41 local comps, mileage-adjusted",
   "value_confidence": "medium",
-  "notes": "Likely duplicate listing of the other Lincoln 2020 Laramie"
+  "notes": "REBUILT/BRANDED TITLE (FB listing); Likely duplicate listing of the other Lincoln 2020 Laramie",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2020 Ram 1500 Laramie 4X4 Crew Cab, 73K miles, 5.7L V8, 8-speed. $25,500. Remote start, navigation, heated/cooled leather. Please note that this Ram 1500 comes with a branded title! Legacy Motors.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "2588592851597412",
@@ -1106,16 +1191,21 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Warlock",
-  "mileage": null,
+  "mileage": 59000,
   "category": "truck",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/2588592851597412/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 20000,
+  "market_value": 23100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "1 owner adult-owned 2019 Ram Classic 1500 Quad cab Warlock, 59,000 miles, clean title, no accidents, new Pirelli tires, 5.7 Hemi 8spd, 4x4, 3.92 gears, posi. Bank has the title so cash or cashier's check only, no trades. $24,999 OBO.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1451835893158658",
@@ -1126,16 +1216,21 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Sport",
-  "mileage": null,
+  "mileage": 80586,
   "category": "truck",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1451835893158658/",
   "image": null,
   "first_seen": "2026-07-21",
-  "market_value": 21000,
+  "market_value": 24400,
   "value_source": "KBB/Edmunds anchors + 41 local comps, mileage-adjusted",
   "value_confidence": "low",
-  "notes": "Same truck listed twice in Lincoln; price drop from $23,950"
+  "notes": "REBUILT/BRANDED TITLE (FB listing); Same truck listed twice in Lincoln; price drop from $23,950",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2017 Ram 1500 Sport 4X4 Crew Cab, 80K miles, 5.7L V8, lift kit, air suspension. $21,950. Please note this Ram 1500 comes with a branded title! Legacy Motors.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "995662213304894",
@@ -1145,16 +1240,20 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Bighorn",
-  "mileage": null,
+  "mileage": 71008,
   "category": "truck",
   "location": "Palmyra, NE",
   "url": "https://www.facebook.com/marketplace/item/995662213304894/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 23500,
+  "market_value": 24600,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Selling my 2020 Dodge Ram 1500 HEMI. Runs and drives great. 5.7 V8, all black, clean interior, few scratches & dings, cold A/C, well maintained. Private seller, Palmyra."
  },
  {
   "id": "1603282994078400",
@@ -1165,16 +1264,20 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Big Horn",
-  "mileage": null,
+  "mileage": 120000,
   "category": "truck",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1603282994078400/",
   "image": null,
   "first_seen": "2026-07-21",
-  "market_value": 19500,
+  "market_value": 17700,
   "value_source": "KBB/Edmunds anchors + 41 local comps, mileage-adjusted",
   "value_confidence": "medium",
-  "notes": "Classic-gen Big Horn - asking is $6k over book even after price drop; price drop from $27,000"
+  "notes": "Classic-gen Big Horn - asking is $6k over book even after price drop; price drop from $27,000; seller account joined Facebook 2026",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Everything up to date, beautiful interior, spectacular sound system (loud). Offers can be negotiated. SELLER ACCOUNT JOINED FACEBOOK 2026 - very new account."
  },
  {
   "id": "1527358245053070",
@@ -1204,16 +1307,21 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Bighorn",
-  "mileage": null,
+  "mileage": 92000,
   "category": "truck",
   "location": "Bellevue, NE",
   "url": "https://www.facebook.com/marketplace/item/1886844976054018/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 18000,
+  "market_value": 21600,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2016 Ram with the 5.7 Hemi. Bed cover, professional detail 3 months ago, regular maintenance, new tires less than a year ago. 22K OBO. Clean title. Private seller, Bellevue.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1594268042054716",
@@ -1223,16 +1331,20 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Bighorn",
-  "mileage": null,
+  "mileage": 73980,
   "category": "truck",
   "location": "Blair, NE",
   "url": "https://www.facebook.com/marketplace/item/1594268042054716/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 19500,
+  "market_value": 23500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "seller account joined Facebook 2026",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Beautiful 2-owner no-accident Ram 1500 Bighorn crew cab EcoDiesel with only 76k miles, all service done at Woodhouse CDJR. Call Tim Fancher. Dealer listing (Blair) despite new FB account."
  },
  {
   "id": "3950229368611558",
@@ -1243,16 +1355,20 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Warlock",
-  "mileage": null,
+  "mileage": 83000,
   "category": "truck",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/3950229368611558/",
   "image": null,
   "first_seen": "2026-07-21",
-  "market_value": 22000,
+  "market_value": 21100,
   "value_source": "KBB/Edmunds anchors + 41 local comps, mileage-adjusted",
   "value_confidence": "medium",
-  "notes": "Classic-gen Warlock priced $5k+ over book despite $4.5k price drop; price drop from $32,000"
+  "notes": "Classic-gen Warlock priced $5k+ over book despite $4.5k price drop; price drop from $32,000",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "My Ram Warlock, not in a rush to sell, seeing offers. Brand new engine with 2,100 miles on it with paperwork. Miles will go up as it's my daily. Private seller, Lincoln."
  },
  {
   "id": "1561910878618495",
@@ -1262,16 +1378,21 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Bighorn",
-  "mileage": null,
+  "mileage": 69385,
   "category": "truck",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1561910878618495/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 28500,
+  "market_value": 27600,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "REBUILT/BRANDED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Inspected and reconditioned, 5-Day Exchange Program. Please note that this vehicle has a branded title. 2022 Ram 1500 Big Horn 4x4 Crew Cab 5'7 Box, 3.6L V6 eTorque, 8-speed auto.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "1528810645379169",
@@ -1281,16 +1402,21 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Laramie",
-  "mileage": null,
+  "mileage": 124373,
   "category": "truck",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1528810645379169/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 31000,
+  "market_value": 25700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2022 Ram 1500 Laramie, 1-owner truck under 30k price and all highway miles. Heated and ventilated seats, remote start, panoramic sunroof, 12in NAV. VIN 1C6SRFJT0NN121963. Sid Dillon CDJR Lincoln, ask for Dalton.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1286909130271669",
@@ -1301,38 +1427,21 @@
   "make": "Ram",
   "model": "1500",
   "trim": "Big Horn",
-  "mileage": null,
+  "mileage": 53430,
   "category": "truck",
   "location": "Bellevue, NE",
   "url": "https://www.facebook.com/marketplace/item/1286909130271669/",
   "image": null,
   "first_seen": "2026-07-21",
-  "market_value": 31000,
+  "market_value": 30400,
   "value_source": "KBB/Edmunds anchors + 41 local comps, mileage-adjusted",
   "value_confidence": "medium",
-  "notes": "Newest truck in the band - slightly under book if miles are average"
- },
- {
-  "id": "1509287920517771",
-  "title": "Chevy Suburban LT 2017",
-  "price": 13000,
-  "year": 2017,
-  "make": "Chevrolet",
-  "model": "Suburban",
-  "trim": "LT",
-  "mileage": null,
-  "category": "suv",
-  "location": "Waterloo, NE",
-  "url": "https://www.facebook.com/marketplace/item/1509287920517771/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 21000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "low",
-  "notes": "mileage not shown - check listing",
+  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing); Newest truck in the band - slightly under book if miles are average",
   "recovered": [
-   "trim"
-  ]
+   "mileage:fb-field"
+  ],
+  "description": "2023 RAM 1500 Big Horn, 53,430 miles, VIN 1C6SRFBT9PN596920, 4X4, 5.7L. 4 brand new tires. Title Status: Nebraska - Previously Salvaged. Global Auto Sales, financing available.",
+  "title_status_desc": "salvage"
  },
  {
   "id": "1393232619660704",
@@ -1351,7 +1460,7 @@
   "market_value": 28100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "clean title per listing field; mileage not shown - check listing",
+  "notes": "clean title per listing field",
   "recovered": [
    "trim",
    "mileage:fb-field"
@@ -1365,16 +1474,20 @@
   "make": "Chevrolet",
   "model": "Suburban",
   "trim": null,
-  "mileage": null,
+  "mileage": 93420,
   "category": "suv",
   "location": "Springfield, NE",
   "url": "https://www.facebook.com/marketplace/item/860317740080841/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 17000,
+  "market_value": 21200,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Reliable 1-owner 2015 Chevrolet Suburban. Flexible financing. Sarpy County Motors, 15112 S Hwy, Springfield NE."
  },
  {
   "id": "2440944529691037",
@@ -1393,7 +1506,7 @@
   "market_value": 28400,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "REBUILT TITLE (FB listing field); mileage not shown - check listing",
+  "notes": "REBUILT TITLE (FB listing field)",
   "recovered": [
    "trim",
    "mileage:fb-field"
@@ -1407,16 +1520,20 @@
   "make": "Chevrolet",
   "model": "Suburban",
   "trim": "Premier",
-  "mileage": null,
+  "mileage": 71459,
   "category": "suv",
   "location": "Fremont, NE",
   "url": "https://www.facebook.com/marketplace/item/1659779918378065/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 28000,
+  "market_value": 30100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2019 Chevrolet Suburban Premier, V8 EcoTec3 6.2L, 71K miles only, 10-speed, 4WD. Bose surround, navigation, heated & ventilated seats, lane keep assist."
  },
  {
   "id": "1516742279893642",
@@ -1446,16 +1563,21 @@
   "make": "Chevrolet",
   "model": "Suburban",
   "trim": "Premier",
-  "mileage": null,
+  "mileage": 108711,
   "category": "suv",
   "location": "Soldier, IA",
   "url": "https://www.facebook.com/marketplace/item/1003375015873330/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 25500,
+  "market_value": 25600,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Nice 2018 Chevy Suburban with Premier pkg. Heated and cooled leather seats. Loaded with options. Soldier, IA.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1696805161462660",
@@ -1465,19 +1587,22 @@
   "make": "Chevrolet",
   "model": "Tahoe",
   "trim": "LT",
-  "mileage": null,
+  "mileage": 84509,
   "category": "suv",
   "location": "Valparaiso, NE",
   "url": "https://www.facebook.com/marketplace/item/1696805161462660/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 18000,
+  "market_value": 22200,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "mileage not shown - check listing",
+  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing)",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
+  ],
+  "description": "2016 Chevy Tahoe LT, driven only 84K miles. 5.3L V8, 4x4, leather, rear DVD, remote start, 7 passenger, new tires. Please notice, this vehicle comes with previously Salvaged Title. VIN 1GNSKBKC1GR483310. Supreme Brothers Auto LLC, Valparaiso NE.",
+  "title_status_desc": "salvage"
  },
  {
   "id": "1920989588585578",
@@ -1496,7 +1621,7 @@
   "market_value": 17100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing",
+  "notes": "",
   "recovered": [
    "trim",
    "mileage:fb-field"
@@ -1509,17 +1634,23 @@
   "year": 2017,
   "make": "Chevrolet",
   "model": "Tahoe",
-  "trim": null,
-  "mileage": null,
+  "trim": "LT",
+  "mileage": 90000,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/27375509295474287/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 20000,
+  "market_value": 22700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": ""
+  "notes": "REBUILT/BRANDED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "2017 Chevrolet Tahoe LT, EcoTec3 5.3L Flex Fuel V8, 6-speed auto. Comes with Nebraska Rebuilt title that reflects on the price. Fully loaded with only 90k miles. Runs and drives great. Excellent condition. Red City Auto, 2601 N 72nd St, Omaha.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "1532661601645070",
@@ -1529,19 +1660,21 @@
   "make": "Chevrolet",
   "model": "Tahoe",
   "trim": "LT",
-  "mileage": null,
+  "mileage": 125700,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1532661601645070/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 24500,
+  "market_value": 22200,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
   "notes": "",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
+  ],
+  "description": "Purchased from the owner of a dealership in Beatrice, used as their vacation vehicle only. Windshield has a crack, will be replaced before sale. New tires less than a year ago. No mechanical issues. Built-in DVD, heated leather seats, heated wheel, remote start, third row never used. Private seller."
  },
  {
   "id": "1496172335537600",
@@ -1551,16 +1684,21 @@
   "make": "Chevrolet",
   "model": "Tahoe",
   "trim": null,
-  "mileage": null,
+  "mileage": 106000,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1496172335537600/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 16000,
+  "market_value": 19500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "price drop from $17,750; mileage not shown - check listing"
+  "notes": "price drop from $17,750; clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Real nice Tahoe. Nothing wrong with it, just trying to sell to get a pickup truck. Truck comes from California, no rust, clean title. Private seller, Omaha.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1657033662247456",
@@ -1579,7 +1717,7 @@
   "market_value": 24100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing",
+  "notes": "",
   "recovered": [
    "trim",
    "mileage:fb-field"
@@ -1593,16 +1731,21 @@
   "make": "Chevrolet",
   "model": "Tahoe",
   "trim": "Ltz",
-  "mileage": null,
+  "mileage": 120000,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/2018908668663111/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 18500,
+  "market_value": 20900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": "price drop from $20,995"
+  "notes": "REBUILT/BRANDED TITLE (FB listing); price drop from $20,995",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2015 Chevy Tahoe LTZ, mileage 120k, $19,950. No mechanical issues. EcoTec3 5.3L V8, 4WD. Heated/cooled leather, navigation, Bose, DVD. Branded Title from very light hail.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "970333895411145",
@@ -1612,19 +1755,22 @@
   "make": "Chevrolet",
   "model": "Tahoe",
   "trim": "LT",
-  "mileage": null,
+  "mileage": 119488,
   "category": "suv",
   "location": "Gretna, NE",
   "url": "https://www.facebook.com/marketplace/item/970333895411145/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 22000,
+  "market_value": 21300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "",
+  "notes": "clean title per listing",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
+  ],
+  "description": "Really nice 2018 Chevy Tahoe LT 4x4. 5.3L V8 with 119k miles, runs and drives great, new tires, leather, 3rd row captain seats, clean title, no accidents, 1 owner. Financing available. Ask for Tyler. Gretna, NE.",
+  "title_status_desc": "clean"
  },
  {
   "id": "989364957112902",
@@ -1634,16 +1780,21 @@
   "make": "Chevrolet",
   "model": "Tahoe",
   "trim": "Ltz",
-  "mileage": null,
+  "mileage": 120000,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/989364957112902/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 18500,
+  "market_value": 20900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "REBUILT/BRANDED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2015 Chevy Tahoe LTZ, mileage 120k, $19,950. EcoTec3 5.3L V8, 4WD. Branded Title from very light hail. DUPLICATE of listing 2018908668663111 (same car).",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "4329815510614862",
@@ -1653,19 +1804,22 @@
   "make": "Chevrolet",
   "model": "Tahoe",
   "trim": "LT",
-  "mileage": null,
+  "mileage": 147000,
   "category": "suv",
   "location": "Crete, NE",
   "url": "https://www.facebook.com/marketplace/item/4329815510614862/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 20000,
+  "market_value": 18100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "price drop from $21,995; mileage not shown - check listing",
+  "notes": "price drop from $21,995; clean title per listing",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
+  ],
+  "description": "PRE-OWNED 2017 Chevrolet Tahoe LT 4WD. Three rows, leather, touchscreen, backup camera, V8. Sid Dillon in Crete, Nebraska. Ask for Ethan.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1567117374849733",
@@ -1675,19 +1829,22 @@
   "make": "Chevrolet",
   "model": "Tahoe",
   "trim": "LT",
-  "mileage": null,
+  "mileage": 130127,
   "category": "suv",
   "location": "Wahoo, NE",
   "url": "https://www.facebook.com/marketplace/item/1567117374849733/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 20000,
+  "market_value": 19500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "",
+  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing)",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
+  ],
+  "description": "Tailgate Motor Co, Wahoo NE. Financing available + trade-ins accepted. Salvage Title.",
+  "title_status_desc": "salvage"
  },
  {
   "id": "1430190165592502",
@@ -1706,7 +1863,7 @@
   "market_value": 19400,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "REBUILT TITLE (FB listing field); seller account joined 2025 - verify carefully; mileage not shown - check listing",
+  "notes": "REBUILT TITLE (FB listing field); seller account joined 2025 - verify carefully",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -1719,16 +1876,20 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "L",
-  "mileage": null,
+  "mileage": 88057,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1656561862314297/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 17000,
+  "market_value": 16700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2020 Chevy Traverse, runs and drives nice and smooth. Rear camera, cruise, third row seat, all four good tires, fresh oil change. Price $15,600 OBO. ALPHA AND OMEGA Auto Sales, Lincoln."
  },
  {
   "id": "3895091680623475",
@@ -1747,7 +1908,7 @@
   "market_value": 22100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "Same 39k-mile Traverse appears listed twice in Lincoln; price drop from $18,600; mileage not shown - check listing",
+  "notes": "Same 39k-mile Traverse appears listed twice in Lincoln; price drop from $18,600",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -1760,16 +1921,21 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "L",
-  "mileage": null,
+  "mileage": 52000,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1496870021970846/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 19500,
+  "market_value": 21100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "price drop from $18,950; mileage not shown - check listing"
+  "notes": "REBUILT/BRANDED TITLE (FB listing); price drop from $18,950",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2021 Chevy Traverse LT, mileage 52k, $17,950, 1 owner. 3.6L V6, 9-speed, 4WD. Remote start, Apple CarPlay, heated seats, second-row captain's chairs. Branded Title.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "1679010820062361",
@@ -1788,7 +1954,7 @@
   "market_value": 17900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "clean title per listing field; mileage not shown - check listing",
+  "notes": "clean title per listing field",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -1801,16 +1967,20 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "L",
-  "mileage": null,
+  "mileage": 42000,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/995087069970818/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 25000,
+  "market_value": 25300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2023 CHEVROLET TRAVERSE 4x4 with only 42k miles. Clean interior and exterior, fully loaded, 360 camera, active cruise, leather, heated seats and wheel, remote start. Private seller, Omaha."
  },
  {
   "id": "2103367943893719",
@@ -1820,16 +1990,21 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "Rs",
-  "mileage": null,
+  "mileage": 87917,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/2103367943893719/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 13500,
+  "market_value": 16900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "REBUILT/BRANDED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2016 Chevy Traverse LT AWD, clean inside and out, runs and drives good, 87K miles, cash price $8,490. 3.6 V6, remote start, 3rd row. Nebraska branded title. USA Auto Sales LLC. Free 3 months/3,000-mile warranty.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "1479969837495635",
@@ -1839,16 +2014,21 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "Rs",
-  "mileage": null,
+  "mileage": 65136,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1479969837495635/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 26000,
+  "market_value": 25500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2022 Chevrolet Traverse RS, V6 3.6L, 65xxx miles, AWD. Blind zone alert, navigation, backup camera, dual moonroof, adaptive cruise. 2 owner, Clean Title, Carfax with service records.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1402033058688932",
@@ -1858,16 +2038,20 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "L",
-  "mileage": null,
+  "mileage": 42000,
   "category": "suv",
   "location": "Bellevue, NE",
   "url": "https://www.facebook.com/marketplace/item/1402033058688932/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 25000,
+  "market_value": 25300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2023 Chevrolet Traverse LT Leather 4x4, 1 owner, 42k miles, AWD. 3.6L V6. Heated front seats, tri-zone climate, Apple CarPlay. Elite Motors, 7016 Railroad Ave."
  },
  {
   "id": "984728717636031",
@@ -1877,16 +2061,21 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "L",
-  "mileage": null,
+  "mileage": 61800,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/984728717636031/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 19500,
+  "market_value": 20300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "price drop from $18,900; mileage not shown - check listing"
+  "notes": "REBUILT/BRANDED TITLE (FB listing); price drop from $18,900",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Selling for my friend - 2021 Chevrolet Traverse LT AWD, 62k miles, 3-row. Runs and drives excellent. Backup camera, Apple CarPlay. Rebuilt title. Well maintained. Private seller, Omaha.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "1676399426812040",
@@ -1896,16 +2085,20 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "Premier",
-  "mileage": null,
+  "mileage": 64000,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1676399426812040/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 22000,
+  "market_value": 23600,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2020 Chevrolet Traverse Premier 4X4, 64K miles, $20,650. Silver Ice Metallic, 3.6L V6 310hp. Lexington Auto LLC, financing regardless of credit, free 3 month/4500 mile warranty."
  },
  {
   "id": "1759281228400865",
@@ -1915,16 +2108,20 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "L",
-  "mileage": null,
+  "mileage": 88297,
   "category": "suv",
   "location": "York, NE",
   "url": "https://www.facebook.com/marketplace/item/1759281228400865/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 15000,
+  "market_value": 15700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "seller account joined Facebook 2026",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "Janssen Ford York dealer listing - 2019 Chevrolet Traverse Premier, VIN 1GNEVKKW0KJ200126. York, NE."
  },
  {
   "id": "4686906814874370",
@@ -1954,16 +2151,21 @@
   "make": "Chevrolet",
   "model": "Traverse",
   "trim": "L",
-  "mileage": null,
+  "mileage": 65136,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/2080195682864109/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 22000,
+  "market_value": 21500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2022 Chevrolet Traverse RS, V6 3.6L, 65xxx miles, AWD. 2 owner, Clean Title, Carfax available. DUPLICATE of listing 1479969837495635 (same car, two dealers/posts).",
+  "title_status_desc": "clean"
  },
  {
   "id": "1435402728312094",
@@ -1982,7 +2184,7 @@
   "market_value": 24500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing",
+  "notes": "",
   "recovered": [
    "trim",
    "mileage:fb-field"
@@ -2015,17 +2217,23 @@
   "year": 2016,
   "make": "GMC",
   "model": "Yukon XL",
-  "trim": null,
-  "mileage": null,
+  "trim": "SLT",
+  "mileage": 126840,
   "category": "suv",
   "location": "Bellevue, NE",
   "url": "https://www.facebook.com/marketplace/item/1503013921105339/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 18500,
+  "market_value": 19300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "mileage not shown - check listing"
+  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field",
+   "trim"
+  ],
+  "description": "2016 GMC Yukon XL SLT, 5.3L V8 EcoTec3, 6-speed, 4WD. Remote start, premium sound, heated & cooled seats. This vehicle holds a NE Previously Salvage Title. Carfax available. Bellevue location, 4207 Harrison St.",
+  "title_status_desc": "salvage"
  },
  {
   "id": "1868501397161115",
@@ -2035,19 +2243,22 @@
   "make": "GMC",
   "model": "Yukon XL",
   "trim": "SLT",
-  "mileage": null,
+  "mileage": 131600,
   "category": "suv",
   "location": "Bellevue, NE",
   "url": "https://www.facebook.com/marketplace/item/1868501397161115/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 18500,
+  "market_value": 18900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "",
+  "notes": "clean title per listing",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
+  ],
+  "description": "2016 GMC Yukon XL SLT 4x4, 131k miles, Clean Title, 2 owners. Runs and drives great, zero mechanical issues. Leather, heated seats, DVD, remote start. Elite Motors, 7016 Railroad Ave.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1035732178950886",
@@ -2057,16 +2268,21 @@
   "make": "GMC",
   "model": "Yukon XL",
   "trim": "Denali",
-  "mileage": null,
+  "mileage": 130478,
   "category": "suv",
   "location": "Gretna, NE",
   "url": "https://www.facebook.com/marketplace/item/1035732178950886/",
   "image": null,
   "first_seen": "2026-07-23",
-  "market_value": 25500,
+  "market_value": 23900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "mileage not shown - check listing"
+  "notes": "clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2018 GMC Yukon XL Denali. Premium leather, heated/cooled seats, navigation, Bose, sunroof. Financing available, trade-ins welcome. Aaron Baptiste, Gretna Auto Outlet.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1371303344941336",
@@ -2085,7 +2301,7 @@
   "market_value": 19600,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "SALVAGE TITLE (FB listing field); mileage not shown - check listing",
+  "notes": "SALVAGE TITLE (FB listing field)",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -2098,16 +2314,21 @@
   "make": "GMC",
   "model": "Yukon XL",
   "trim": "Denali",
-  "mileage": null,
+  "mileage": 78868,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/1033022585874665/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 23500,
+  "market_value": 27100,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": ""
+  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing)",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2017 GMC Yukon Denali, 6.2L V8 420hp, 8 passenger. 3 months warranty, trade-ins acceptable. NEBRASKA Previously salvaged title, due to an accident.",
+  "title_status_desc": "salvage"
  },
  {
   "id": "1535008067528345",
@@ -2126,7 +2347,7 @@
   "market_value": 26900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
-  "notes": "SALVAGE TITLE (FB listing field); price drop from $179,000; mileage not shown - check listing",
+  "notes": "SALVAGE TITLE (FB listing field); price drop from $179,000",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -2139,38 +2360,22 @@
   "make": "GMC",
   "model": "Yukon XL",
   "trim": "SLT",
-  "mileage": null,
+  "mileage": 73620,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1886578365350367/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 28000,
+  "market_value": 28900,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "",
+  "notes": "REBUILT/BRANDED TITLE (FB listing)",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
- },
- {
-  "id": "1021123997548025",
-  "title": "2015 GMC yukon beautiful black on black !!",
-  "price": 16988,
-  "year": 2015,
-  "make": "GMC",
-  "model": "Yukon XL",
-  "trim": null,
-  "mileage": null,
-  "category": "suv",
-  "location": "Gretna, NE",
-  "url": "https://www.facebook.com/marketplace/item/1021123997548025/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 16500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": ""
+  ],
+  "description": "2020 GMC Yukon 4WD SLT, 6.2L EcoTec3 V8. Fully inspected and reconditioned, 5-Day Exchange Program. Please note that this vehicle has a branded title.",
+  "title_status_desc": "rebuilt"
  },
  {
   "id": "4298853720402695",
@@ -2180,16 +2385,21 @@
   "make": "GMC",
   "model": "Yukon XL",
   "trim": "Denali",
-  "mileage": null,
+  "mileage": 145000,
   "category": "suv",
   "location": "Lincoln, NE",
   "url": "https://www.facebook.com/marketplace/item/4298853720402695/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 25500,
+  "market_value": 22700,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": "price drop from $25,500"
+  "notes": "price drop from $25,500; clean title per listing",
+  "recovered": [
+   "mileage:fb-field"
+  ],
+  "description": "2018 GMC Yukon XL Denali, 6.2L, 145K miles, 4X4, Clean Title. Forward collision alert, lane keep assist, dual DVD, heated/cooled leather, 4 captain's chairs, 22-inch Denali wheels.",
+  "title_status_desc": "clean"
  },
  {
   "id": "1547344970728974",
@@ -2198,57 +2408,22 @@
   "year": 2016,
   "make": "GMC",
   "model": "Yukon XL",
-  "trim": null,
-  "mileage": null,
+  "trim": "SLT",
+  "mileage": 126840,
   "category": "suv",
   "location": "Omaha, NE",
   "url": "https://www.facebook.com/marketplace/item/1547344970728974/",
   "image": null,
   "first_seen": "2026-07-24",
-  "market_value": 18500,
+  "market_value": 19300,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": ""
- },
- {
-  "id": "1011782814768499",
-  "title": "2016 GMC yukon xl slt",
-  "price": 12868,
-  "year": 2016,
-  "make": "GMC",
-  "model": "Yukon XL",
-  "trim": "SLT",
-  "mileage": null,
-  "category": "suv",
-  "location": "Hastings, NE",
-  "url": "https://www.facebook.com/marketplace/item/1011782814768499/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 18500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "",
+  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing)",
   "recovered": [
+   "mileage:fb-field",
    "trim"
-  ]
- },
- {
-  "id": "854559790290129",
-  "title": "2016 GMC yukon xl",
-  "price": 14999,
-  "year": 2016,
-  "make": "GMC",
-  "model": "Yukon XL",
-  "trim": null,
-  "mileage": null,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/854559790290129/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 18500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "price drop from $15,999"
+  ],
+  "description": "2016 GMC Yukon XL SLT, 5.3L V8 EcoTec3, 4WD. Remote start, premium sound, heated & cooled seats. This vehicle holds a NE Previously Salvage Title. Bellevue location. DUPLICATE listing of 1503013921105339 (same car/dealer).",
+  "title_status_desc": "salvage"
  }
 ]

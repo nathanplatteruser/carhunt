@@ -112,7 +112,7 @@ def enrich(listings, threshold):
         l["rating_key"], l["rating_label"] = key, label
         l["flagged"] = l["deal_pct"] is not None and l["deal_pct"] >= threshold
         blob = ((l.get("notes") or "") + " " + (l.get("title") or "")).lower()
-        if "salvage" in blob or "rebuilt" in blob:
+        if "salvage" in blob or "rebuilt" in blob or "branded" in blob:
             l["flag"] = "salvage"
         elif "scam" in blob or "rebuilder" in blob or "lemon" in blob or "implausible" in blob:
             l["flag"] = "suspect"
