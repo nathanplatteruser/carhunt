@@ -102,6 +102,19 @@ def enrich(listings, threshold):
     for l in listings:
         l = dict(l)
         price, mv = l.get("price"), l.get("market_value")
+        blob = ((l.get("notes") or "") + " " + (l.get("title") or "")).lower()
+        if "salvage" in blob or "rebuilt" in blob or "branded" in blob:
+            l["flag"] = "salvage"
+        elif "scam" in blob or "rebuilder" in blob or "lemon" in blob or "implausible" in blob:
+            l["flag"] = "suspect"
+        else:
+            l["flag"] = "valid"
+        # rebuilt/salvage/branded titles are worth ~25% less than clean-title book -
+        # applied at render time (idempotent per build) so listings.json stays clean-book
+        if l["flag"] == "salvage" and mv and "haircut" not in (l.get("value_source") or ""):
+            mv = int(round(mv * 0.75, -2))
+            l["market_value"] = mv
+            l["value_source"] = (l.get("value_source") or "") + " · 25% rebuilt-title haircut"
         if price and mv:
             l["deal_pct"] = round((mv - price) / mv * 100, 1)
             l["savings"] = int(mv - price)
@@ -111,13 +124,6 @@ def enrich(listings, threshold):
         key, label = rating_for(l["deal_pct"])
         l["rating_key"], l["rating_label"] = key, label
         l["flagged"] = l["deal_pct"] is not None and l["deal_pct"] >= threshold
-        blob = ((l.get("notes") or "") + " " + (l.get("title") or "")).lower()
-        if "salvage" in blob or "rebuilt" in blob or "branded" in blob:
-            l["flag"] = "salvage"
-        elif "scam" in blob or "rebuilder" in blob or "lemon" in blob or "implausible" in blob:
-            l["flag"] = "suspect"
-        else:
-            l["flag"] = "valid"
         flip_score(l)
         out.append(l)
     out.sort(key=lambda x: -x.get("flip_score", 0))
