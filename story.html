@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Hunt — 191 trucks, 3 worth your time</title>
+<style>
+  :root {
+    --ink: oklch(0.20 0.015 60);
+    --paperless: oklch(1 0 0);
+    --deep: oklch(0.23 0.032 60);
+    --deep-2: oklch(0.28 0.04 60);
+    --amber: oklch(0.72 0.15 68);
+    --amber-ink: oklch(0.49 0.125 60);
+    --muted: oklch(0.44 0.018 60);
+    --faint: oklch(0.62 0.015 60);
+    --line: oklch(0.89 0.008 60);
+    --pos: oklch(0.47 0.115 155);
+    --neg: oklch(0.50 0.135 27);
+    --danger-bg: oklch(0.955 0.024 27);
+    --danger-ink: oklch(0.44 0.14 27);
+    --warn-bg: oklch(0.955 0.028 78);
+    --warn-ink: oklch(0.42 0.085 65);
+    --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+    --sans: -apple-system, "Segoe UI", system-ui, Roboto, Helvetica, Arial, sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body { background: var(--paperless); color: var(--ink); font: 16px/1.6 var(--sans); }
+  .measure { max-width: 680px; margin: 0 auto; padding: 0 22px; }
+
+  .hero { background: var(--deep); color: oklch(0.94 0.02 75); padding: 52px 0 46px; }
+  .hero .kicker-line { font-family: var(--mono); font-size: 12px; letter-spacing: .04em; color: var(--amber); margin-bottom: 22px; }
+  .hero h1 { font-family: var(--serif); font-weight: 600; font-size: clamp(2rem, 7vw, 3.4rem); line-height: 1.08; letter-spacing: -0.015em; text-wrap: balance; }
+  .hero h1 em { font-style: normal; color: var(--amber); }
+  .hero .dek { margin-top: 18px; font-size: 17px; line-height: 1.55; color: oklch(0.82 0.02 75); max-width: 46ch; }
+  .hero .meta { margin-top: 26px; font-family: var(--mono); font-size: 12.5px; color: oklch(0.68 0.03 70); }
+
+  .band { border-bottom: 1px solid var(--line); }
+  .figures { display: flex; flex-wrap: wrap; gap: 4px 34px; padding: 18px 0; }
+  .figures div { font-size: 14px; color: var(--muted); }
+  .figures b { font-family: var(--mono); font-size: 15px; color: var(--ink); font-weight: 600; }
+
+  section { padding: 40px 0 8px; }
+  h2 { font-family: var(--serif); font-weight: 600; font-size: 27px; letter-spacing: -0.01em; margin-bottom: 6px; text-wrap: balance; }
+  .lede { color: var(--muted); margin-bottom: 26px; max-width: 58ch; }
+
+  .pick { border-top: 1px solid var(--line); padding: 22px 0 26px; }
+  .pick .rank { font-family: var(--mono); font-size: 12px; color: var(--amber-ink); font-weight: 700; }
+  .pick h3 { font-family: var(--serif); font-size: 21px; font-weight: 600; margin: 4px 0 2px; }
+  .pick .where { color: var(--faint); font-size: 13.5px; }
+  .pricerow { display: flex; align-items: baseline; gap: 12px; margin: 12px 0 4px; flex-wrap: wrap; }
+  .pricerow .ask { font-family: var(--mono); font-size: 26px; font-weight: 700; }
+  .pricerow .vs { font-family: var(--mono); font-size: 14px; color: var(--pos); font-weight: 600; }
+  .pricerow .book { font-size: 13px; color: var(--faint); }
+  .pick p { font-size: 15px; color: var(--muted); max-width: 62ch; }
+  .pick .go { display: inline-block; margin-top: 12px; font-weight: 600; font-size: 14px; color: var(--amber-ink); }
+  .caveat { font-size: 13.5px; margin-top: 10px; color: var(--warn-ink); background: var(--warn-bg); display: inline-block; padding: 3px 10px; border-radius: 2px; }
+
+  .catches { background: oklch(0.972 0.005 75); border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); padding: 40px 0 34px; margin-top: 34px; }
+  .catch { display: grid; grid-template-columns: 86px 1fr; gap: 16px; padding: 14px 0; border-top: 1px solid var(--line); }
+  .catch:first-of-type { border-top: none; }
+  .catch .n { font-family: var(--serif); font-size: 40px; font-weight: 600; color: var(--neg); line-height: 1; text-align: right; }
+  .catch .n.warn { color: var(--warn-ink); }
+  .catch h4 { font-size: 15.5px; margin-bottom: 3px; }
+  .catch p { font-size: 14px; color: var(--muted); max-width: 60ch; }
+
+  details { border-top: 1px solid var(--line); }
+  details summary { cursor: pointer; padding: 15px 0; font-weight: 600; font-size: 15px; list-style: none; display: flex; justify-content: space-between; align-items: center; }
+  details summary::after { content: "+"; font-family: var(--mono); color: var(--amber-ink); font-size: 18px; transition: transform .18s ease; }
+  details[open] summary::after { transform: rotate(45deg); }
+  details .body { padding: 0 0 18px; font-size: 14.5px; color: var(--muted); max-width: 62ch; }
+  details .body p + p { margin-top: 10px; }
+
+  .cta { padding: 40px 0 12px; }
+  .cta a.button { display: inline-block; background: var(--amber-ink); color: #fff; font-weight: 650; font-size: 15px; padding: 12px 22px; border-radius: 3px; }
+  .cta a.button:hover { background: oklch(0.42 0.11 60); }
+  .cta .aside { margin-top: 10px; font-size: 13px; color: var(--faint); }
+
+  footer { padding: 30px 0 48px; color: var(--faint); font-size: 12.5px; }
+  a { color: inherit; text-decoration: none; }
+  .pick .go:hover, details summary:hover { text-decoration: underline; }
+  @media (max-width: 560px) {
+    .catch { grid-template-columns: 58px 1fr; }
+    .catch .n { font-size: 30px; }
+  }
+  @media (prefers-reduced-motion: reduce) { details summary::after { transition: none; } }
+</style>
+</head>
+<body>
+
+<header class="hero"><div class="measure">
+  <div class="kicker-line">CARHUNT · FIELD REPORT · JULY 21, 2026</div>
+  <h1>We scanned 191 trucks so you only have to look at <em>three</em>.</h1>
+  <p class="dek">One afternoon, one AI copilot, every Ram 1500 between $20–30k within a thousand miles of Lincoln — priced against Kelley Blue Book, scrubbed for scams and salvage titles, and ranked.</p>
+  <div class="meta">Built by Nathan · Lincoln, Nebraska</div>
+</div></header>
+
+<div class="band"><div class="measure figures">
+  <div><b>191</b> trucks tracked</div>
+  <div><b>5</b> hub-city searches</div>
+  <div><b>7</b> priced ≥15% under book</div>
+  <div><b>11</b> red flags caught</div>
+</div></div>
+
+<section><div class="measure">
+  <h2>The three worth a phone call</h2>
+  <p class="lede">Out of everything on Facebook Marketplace right now, these survived mileage checks, title checks, and seller-history checks.</p>
+
+  <article class="pick">
+    <div class="rank">PICK 01 · THE LOCAL ONE</div>
+    <h3>2023 Ram 1500 Tradesman quad cab</h3>
+    <div class="where">Lincoln, Nebraska — 22,000 miles</div>
+    <div class="pricerow"><span class="ask">$23,500</span><span class="vs">−11% vs book</span><span class="book">est. market $26,500</span></div>
+    <p>The lowest-mileage value on the entire board, and it's in town. If it turns out to be 4x4, it's closer to 15% under book. First question for the seller: two-wheel or four-wheel drive?</p>
+    <a class="go" href="https://www.facebook.com/marketplace/item/897743073125770/" target="_blank" rel="noopener">See the listing →</a>
+  </article>
+
+  <article class="pick">
+    <div class="rank">PICK 02 · THE HEMI BARGAIN</div>
+    <h3>2022 Ram 1500 Big Horn crew cab 4x4, 5.7L Hemi</h3>
+    <div class="where">Arlington, Texas — 110,000 miles</div>
+    <div class="pricerow"><span class="ask">$20,995</span><span class="vs">−14% vs book</span><span class="book">est. market $24,500</span></div>
+    <p>Claimed clean title, seller account established 2009. The discount has an honest explanation — the odometer — which is exactly the kind of "catch" you want.</p>
+    <span class="caveat">High miles: budget for wear items</span><br>
+    <a class="go" href="https://www.facebook.com/marketplace/item/1073710252000618/" target="_blank" rel="noopener">See the listing →</a>
+  </article>
+
+  <article class="pick">
+    <div class="rank">PICK 03 · THE HOUSTON HEMI</div>
+    <h3>2021 Ram 1500 Big Horn crew cab, 5.7L Hemi</h3>
+    <div class="where">Houston, Texas — 93,000 miles</div>
+    <div class="pricerow"><span class="ask">$21,000</span><span class="vs">−13% vs book</span><span class="book">est. market $24,100</span></div>
+    <p>Clean-title claim, long-established seller, fair miles for the year. A road trip, but the math holds even after a plane ticket.</p>
+    <a class="go" href="https://www.facebook.com/marketplace/item/1621817782466775/" target="_blank" rel="noopener">See the listing →</a>
+  </article>
+</div></section>
+
+<div class="catches"><div class="measure">
+  <h2>What didn't make the cut</h2>
+  <p class="lede">The engine's real job isn't finding cheap trucks — it's explaining why they're cheap.</p>
+  <div class="catch"><div class="n">4</div><div>
+    <h4>Probable scams</h4>
+    <p>Including the "best deal on the board" — a 2022 Laramie at 23% under market, listed by a Facebook account created this year. Price too good + brand-new seller is the oldest play on Marketplace.</p>
+  </div></div>
+  <div class="catch"><div class="n warn">7</div><div>
+    <h4>Rebuilt &amp; salvage titles</h4>
+    <p>One had just 20,900 miles and a "clean" title field — with "prior salvage" quietly buried in the description. Re-valued at 75% of clean book, most of these flip from bargain to overpriced.</p>
+  </div></div>
+  <div class="catch"><div class="n warn">2</div><div>
+    <h4>Double-listed trucks</h4>
+    <p>Same truck, two listings, twice the apparent inventory. Deduplicated before ranking.</p>
+  </div></div>
+</div></div>
+
+<section><div class="measure">
+  <h2>How it works</h2>
+  <details>
+    <summary>Where the trucks come from</summary>
+    <div class="body"><p>Facebook Marketplace caps any search at 500 miles, so the engine tiles five overlapping searches — Lincoln, Denver, Dallas, Memphis, Chicago — to cover a ~1,000-mile ring, then deduplicates by listing ID.</p></div>
+  </details>
+  <details>
+    <summary>How a truck gets priced</summary>
+    <div class="body"><p>Every asking price is compared to a private-party value triangulated from Kelley Blue Book fair-purchase data, Edmunds appraisals by trim, and the median asking price of comparable trucks in the same dataset — adjusted about nine cents per mile against typical mileage.</p>
+    <p>Rebuilt titles get a 25% haircut. Anything 15%+ under book is flagged, then verified by hand: mileage, title status, seller account age.</p></div>
+  </details>
+  <details>
+    <summary>Why most "deals" die on inspection</summary>
+    <div class="body"><p>Of 31 listings that looked 10%+ under market, most collapsed once the detail page was opened: six-figure odometers, branded titles, or sellers who joined Facebook last month. Three survived. That ratio — 31 to 3 — is the whole reason to run the numbers before falling in love with a truck.</p></div>
+  </details>
+</div></section>
+
+<section class="cta"><div class="measure">
+  <a class="button" href="https://www.facebook.com/marketplace/item/897743073125770/" target="_blank" rel="noopener">Start with the Lincoln truck</a>
+  <p class="aside">Snapshot of July 21, 2026 — Marketplace moves fast; verify availability before driving anywhere.</p>
+</div></section>
+
+<footer><div class="measure">Estimates are approximate. Inspect in person, verify VIN and title history, never send a deposit for a truck you haven't seen. Data: Facebook Marketplace listings · KBB &amp; Edmunds private-party anchors · 41-truck local comp set.</div></footer>
+
+</body>
+</html>
