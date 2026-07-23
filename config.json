@@ -1,0 +1,71 @@
+{
+  "buyer": "Nathan",
+  "location": {
+    "city": "Lincoln, Nebraska",
+    "fb_location_slug": "lincoln",
+    "latitude": 40.8136,
+    "longitude": -96.7026,
+    "radius_miles": 100,
+    "hub_strategy": "single Lincoln search at 100 mi"
+  },
+  "deal_threshold_pct": 15,
+  "max_budget": null,
+  "searches": [
+    {
+      "query": "Chevrolet Suburban",
+      "category": "suv"
+    },
+    {
+      "query": "Chevrolet Tahoe",
+      "category": "suv"
+    },
+    {
+      "query": "GMC Yukon XL",
+      "category": "suv"
+    },
+    {
+      "query": "Ford Expedition",
+      "category": "suv"
+    },
+    {
+      "query": "Toyota Sequoia",
+      "category": "suv"
+    },
+    {
+      "query": "Nissan Armada",
+      "category": "suv"
+    },
+    {
+      "query": "Dodge Durango",
+      "category": "suv"
+    },
+    {
+      "query": "Chevrolet Traverse",
+      "category": "suv"
+    },
+    {
+      "query": "Ford Explorer",
+      "category": "suv"
+    },
+    {
+      "query": "Ram 1500",
+      "category": "truck",
+      "min_price": 20000
+    }
+  ],
+  "listing_filters": {
+    "min_price": 8000,
+    "max_price": 30000,
+    "min_year": 2015,
+    "max_mileage": 150000,
+    "exclude_keywords": [
+      "parts only",
+      "salvage",
+      "scrap",
+      "wanted",
+      "looking for",
+      "rent"
+    ]
+  },
+  "scope_label": "3-row SUVs + Ram 1500 \u00b7 2015+ \u00b7 \u2264$30k \u00b7 \u2264150k mi"
+}
