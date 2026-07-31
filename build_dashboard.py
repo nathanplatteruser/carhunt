@@ -118,9 +118,21 @@ def enrich(listings, threshold):
         if price and mv:
             l["deal_pct"] = round((mv - price) / mv * 100, 1)
             l["savings"] = int(mv - price)
+            # dealer trade-in estimate: KBB/Edmunds ladder puts trade-in 12-18% below
+            # private party (wider for older + luxury; near-wholesale for branded titles)
+            age = 2026 - (l.get("year") or 2020)
+            ratio = 0.88 if age <= 5 else 0.85 if age <= 9 else 0.82
+            if (l.get("make") or "") in ("Cadillac", "Lincoln", "Infiniti"): ratio -= 0.03
+            if l["flag"] == "salvage": ratio = 0.60  # most franchise dealers pass entirely on branded titles
+            l["trade_value"] = int(round(mv * ratio, -2))
+            l["fb_roi"] = round((mv - price) / price * 100, 1)
+            l["dealer_roi"] = round((l["trade_value"] - price) / price * 100, 1)
         else:
             l["deal_pct"] = None
             l["savings"] = None
+            l["trade_value"] = None
+            l["fb_roi"] = None
+            l["dealer_roi"] = None
         key, label = rating_for(l["deal_pct"])
         l["rating_key"], l["rating_label"] = key, label
         l["flagged"] = l["deal_pct"] is not None and l["deal_pct"] >= threshold
@@ -361,8 +373,9 @@ TEMPLATE = r"""<!DOCTYPE html>
       <th data-k="flip_score" class="right" title="FlipScore 0-10: margin vs market + cost per remaining mile + model quality + proximity to Lincoln + listing validity + title status">Score <span class="dir"></span></th>
       <th data-k="mileage" class="right">Miles <span class="dir"></span></th>
       <th data-k="price" class="right">Asking <span class="dir"></span></th>
-      <th data-k="market_value" class="right">Est. market <span class="dir"></span></th>
-      <th data-k="deal_pct" class="right">vs market <span class="dir"></span></th>
+      <th data-k="market_value" class="right" title="Estimated private-party (Facebook-style) resale value: model/year/trim tables calibrated to KBB private-party + Edmunds appraisal ranges, mileage-adjusted, 25% haircut on rebuilt/branded titles">Est. FB resale <span class="dir"></span></th>
+      <th data-k="fb_roi" class="right" title="Margin if you buy at asking and resell privately on Marketplace at est. FB resale: (FB resale − asking) ÷ asking">FB flip ROI <span class="dir"></span></th>
+      <th data-k="dealer_roi" class="right" title="Margin if you buy at asking and sell to a dealer. Dealer trade-in est. = FB resale × 0.82–0.88 (KBB/Edmunds trade-in vs private-party ladder; luxury −3pts; branded titles ×0.60 — many dealers won't take them)">Dealer exit <span class="dir"></span></th>
       <th data-k="flag">Status <span class="dir"></span></th>
       <th></th>
     </tr></thead>
@@ -406,8 +419,9 @@ function row(l) {
     <td class="right" data-l="SCORE"><span class="mrow"><span class="score ${l.flip_score >= 7 ? "hi" : l.flip_score >= 4 ? "mid" : "lo"}" title="${l.score_parts || ""}">${l.flip_score.toFixed(1)}</span></span></td>
     <td class="right" data-l="MILES"><span class="mrow"><span class="num">${fmtMi(l.mileage)}${rec("mileage")}</span></span></td>
     <td class="right" data-l="ASKING"><span class="mrow"><span class="num" style="font-weight:650">${fmt(l.price)}</span></span></td>
-    <td class="right" data-l="EST. MARKET"><span class="mrow"><span class="num" style="color:var(--muted)">${fmt(l.market_value)}</span>${conf}</span></td>
-    <td class="right" data-l="VS MARKET"><span class="mrow"><span class="delta ${dcls}">${dtxt}</span>${sav}${bar}</span></td>
+    <td class="right" data-l="EST. FB RESALE"><span class="mrow"><span class="num" style="color:var(--muted)">${fmt(l.market_value)}</span>${conf}</span></td>
+    <td class="right" data-l="FB FLIP ROI"><span class="mrow"><span class="delta ${l.fb_roi == null ? "zero" : l.fb_roi >= 3 ? "pos" : l.fb_roi <= -3 ? "neg" : "zero"}" title="resell privately at ${fmt(l.market_value)}">${l.fb_roi == null ? "—" : (l.fb_roi > 0 ? "+" : "") + l.fb_roi.toFixed(0) + "%"}</span>${sav}${bar}</span></td>
+    <td class="right" data-l="DEALER EXIT"><span class="mrow"><span class="delta ${l.dealer_roi == null ? "zero" : l.dealer_roi >= 3 ? "pos" : l.dealer_roi <= -3 ? "neg" : "zero"}" title="dealer trade-in est. ${fmt(l.trade_value)}">${l.dealer_roi == null ? "—" : (l.dealer_roi > 0 ? "+" : "") + l.dealer_roi.toFixed(0) + "%"}</span></span></td>
     <td class="statuscell"><span class="status ${l.flag}">${STATUS[l.flag]}</span></td>
     <td class="right opencell"><a class="open" href="${l.url}" target="_blank" rel="noopener">Open ↗</a></td>
   </tr>`;
