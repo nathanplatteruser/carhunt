@@ -6,6 +6,7 @@ A personal vehicle deal-finding engine with live public dashboards. Built by [Na
 
 * **Lincoln, NE** → [nathanplatteruser.github.io/carhunt](https://nathanplatteruser.github.io/carhunt/) — 3-row SUVs + Ram 1500, thru 2024, $20k–$50k band, 60-mile radius
 * **Denver, CO** → [nathanplatteruser.github.io/carhunt/denver.html](https://nathanplatteruser.github.io/carhunt/denver.html) — full-size 3-row SUVs + Ram 1500, thru 2024, $20k–$50k, 100-mile radius
+* **Kansas City, MO/KS** → [nathanplatteruser.github.io/carhunt/kc.html](https://nathanplatteruser.github.io/carhunt/kc.html) — full-size 3-row SUVs + Ram 1500, thru 2024, $20k–$50k, 100-mile radius covering both the Missouri and Kansas sides
 
 ## What it does
 
@@ -42,7 +43,7 @@ Confidence is tracked per listing (high / medium / low) and shown in the UI. Hov
 
 ```
 collect (browser session, read-only)
-   → data/listings.json + data/denver_listings.json   (the datasets — owned & updated by me)
+   → data/listings.json + denver_listings.json + kc_listings.json   (the datasets — owned & updated by me)
    → data/listing_cache.json                          (persistent per-listing knowledge base)
    → build_dashboard.py                               (renders single-file HTML apps)
    → GitHub Pages                                     (this repo → permanent public URLs)
@@ -54,6 +55,7 @@ Pages:
 
 * `index.html` — the Lincoln, NE deal board (sortable ledger, make/model + title-status filters, FlipScore slider, search)
 * `denver.html` — the Denver, CO deal board (same engine, Denver-centered distance scoring)
+* `kc.html` — the Kansas City deal board (same engine, KC-centered, spans MO + KS)
 * `story.html` — an editorial "field report" from the first hunt: 191 Ram 1500s scanned, 3 survived verification
 
 ## Disclaimers
