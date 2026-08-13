@@ -4,9 +4,11 @@ A personal vehicle deal-finding engine with live public dashboards. Built by [Na
 
 **Live dashboards:**
 
-* **Lincoln, NE** → [nathanplatteruser.github.io/carhunt](https://nathanplatteruser.github.io/carhunt/) — 3-row SUVs + Ram 1500, thru 2024, $20k–$50k band, 60-mile radius
+* **All markets (flagship)** → [nathanplatteruser.github.io/carhunt](https://nathanplatteruser.github.io/carhunt/) — every tracked listing across all three metros on one board, with a Market dropdown to slice by Lincoln–Omaha Metro, Denver Metro, or Kansas City Metro
 * **Denver, CO** → [nathanplatteruser.github.io/carhunt/denver.html](https://nathanplatteruser.github.io/carhunt/denver.html) — full-size 3-row SUVs + Ram 1500, thru 2024, $20k–$50k, 100-mile radius
-* **Kansas City, MO/KS** → [nathanplatteruser.github.io/carhunt/kc.html](https://nathanplatteruser.github.io/carhunt/kc.html) — full-size 3-row SUVs + Ram 1500, thru 2024, $20k–$50k, 100-mile radius covering both the Missouri and Kansas sides
+* **Kansas City, MO/KS** → [nathanplatteruser.github.io/carhunt/kc.html](https://nathanplatteruser.github.io/carhunt/kc.html) — same scope, 100-mile radius covering both the Missouri and Kansas sides
+
+FlipScore's proximity factor is computed per listing against its **own** metro hub, so a Denver truck isn't penalized for being far from Nebraska.
 
 ## What it does
 
@@ -53,7 +55,7 @@ The dashboards are zero-dependency single HTML files: inline CSS/JS, OKLCH color
 
 Pages:
 
-* `index.html` — the Lincoln, NE deal board (sortable ledger, make/model + title-status filters, FlipScore slider, search)
+* `index.html` — the combined all-markets deal board (sortable ledger, market/make/model + title-status filters, FlipScore slider, search)
 * `denver.html` — the Denver, CO deal board (same engine, Denver-centered distance scoring)
 * `kc.html` — the Kansas City deal board (same engine, KC-centered, spans MO + KS)
 * `story.html` — an editorial "field report" from the first hunt: 191 Ram 1500s scanned, 3 survived verification

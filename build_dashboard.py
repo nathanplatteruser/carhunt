@@ -74,8 +74,9 @@ def flip_score(l):
         parts["cost_per_mile"] = 0.6  # unknown mileage: below-average default
     # 3. Vehicle quality for the price point (0-1.5)
     parts["quality"] = quality
-    # 4. Proximity to downtown Lincoln (0-1.5): 0 mi -> 1.5, 250+ mi -> 0
-    d = dist_from_lincoln(l.get("location"))
+    # 4. Proximity to the board's home market (0-1.5): 0 mi -> 1.5, 250+ mi -> 0
+    #    multi-market boards precompute _dist per listing from its own metro hub
+    d = l.get("_dist") if l.get("_dist") is not None else dist_from_lincoln(l.get("location"))
     parts["proximity"] = round(max(0, min(1.5, (250 - d) / 250 * 1.5)), 2)
     l["distance_mi"] = d
     # 5. Listing/seller validity (0-1.5)
@@ -164,9 +165,11 @@ def build(data_dir, out_path):
 
     makes = sorted({l.get("make") for l in listings if l.get("make")})
     models = sorted({l.get("model") for l in listings if l.get("model")})
+    markets = sorted({l.get("market") for l in listings if l.get("market")})
     page = TEMPLATE
     page = page.replace("__MAKES__", json.dumps(makes))
     page = page.replace("__MODELS__", json.dumps(models))
+    page = page.replace("__MARKETS__", json.dumps(markets))
     page = page.replace("__DATA__", json.dumps(listings))
     page = page.replace("__THRESHOLD__", str(threshold))
     for k, v in {
@@ -331,6 +334,7 @@ TEMPLATE = r"""<!DOCTYPE html>
 
 <div class="toolbar"><div class="wrap">
   <input type="search" id="q" placeholder="Search trim, city, note…" aria-label="Search listings">
+  <select id="marketF" aria-label="Market filter" style="display:none"></select>
   <div class="dd" id="makeDD">
     <button id="makeBtn" type="button" aria-haspopup="true">Make: all</button>
     <div class="menu" id="makeMenu"></div>
@@ -370,7 +374,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   <table id="tbl">
     <thead><tr>
       <th data-k="title">Truck <span class="dir"></span></th>
-      <th data-k="flip_score" class="right" title="FlipScore 0-10: margin vs market + cost per remaining mile + model quality + proximity to Lincoln + listing validity + title status">Score <span class="dir"></span></th>
+      <th data-k="flip_score" class="right" title="FlipScore 0-10: margin vs market + cost per remaining mile + model quality + proximity to its metro hub + listing validity + title status">Score <span class="dir"></span></th>
       <th data-k="mileage" class="right">Miles <span class="dir"></span></th>
       <th data-k="price" class="right">Asking <span class="dir"></span></th>
       <th data-k="market_value" class="right" title="Estimated private-party (Facebook-style) resale value: model/year/trim tables calibrated to KBB private-party + Edmunds appraisal ranges, mileage-adjusted, 25% haircut on rebuilt/branded titles">Est. FB resale <span class="dir"></span></th>
@@ -384,14 +388,15 @@ TEMPLATE = r"""<!DOCTYPE html>
   <div class="empty" id="empty" style="display:none"><b>No listings match</b>Clear a filter, or run a fresh Marketplace sweep to add inventory.</div>
 </div></main>
 
-<footer><div class="wrap">Estimated market values: KBB / Edmunds private-party anchors adjusted for mileage and title status, cross-checked against local asking-price comps. FlipScore (0.0–10.0) is an internal v1 index: discount vs market (30%) + cost per expected remaining mile (20%) + model quality-for-price (15%) + proximity to downtown Lincoln (15%) + listing/seller validity (15%) + title status (5%). Hover a score for its breakdown. 10 = slam dunk, 0 = seller wins. Estimates are approximate — inspect in person and verify VIN, title, and history before buying. Never send deposits for a truck you haven't seen.</div></footer>
+<footer><div class="wrap">Estimated market values: KBB / Edmunds private-party anchors adjusted for mileage and title status, cross-checked against local asking-price comps. FlipScore (0.0–10.0) is an internal v1 index: discount vs market (30%) + cost per expected remaining mile (20%) + model quality-for-price (15%) + proximity to the board's home metro (15%) + listing/seller validity (15%) + title status (5%). Hover a score for its breakdown. 10 = slam dunk, 0 = seller wins. Estimates are approximate — inspect in person and verify VIN, title, and history before buying. Never send deposits for a truck you haven't seen.</div></footer>
 
 <script>
 const DATA = __DATA__;
 const MAKES = __MAKES__;
 const MODELS = __MODELS__;
+const MARKETS = __MARKETS__;
 const STATUS = { valid: "NO FLAGS", salvage: "REBUILT/SALVAGE", suspect: "SCAM RISK" };
-const state = { q: "", flags: new Set(["valid","salvage","suspect"]), rating: "all", maxP: null,
+const state = { q: "", market: "all", flags: new Set(["valid","salvage","suspect"]), rating: "all", maxP: null,
   sort: { k: "flip_score", d: -1 },
   makeMode: "include", makeSel: new Set(MAKES),
   modelMode: "include", modelSel: new Set(MODELS),
@@ -413,7 +418,7 @@ function row(l) {
   return `<tr>
     <td class="truck">
       <div class="name"><a href="${l.url}" target="_blank" rel="noopener">${l.title}</a></div>
-      <div class="sub">${l.location || "—"}${l.trim ? " · " + l.trim + rec("trim") : ""}${l.title_status_desc ? " · desc: " + l.title_status_desc + " title" : ""}</div>
+      <div class="sub">${l.location || "—"}${l.market ? " · " + l.market : ""}${l.trim ? " · " + l.trim + rec("trim") : ""}${l.title_status_desc ? " · desc: " + l.title_status_desc + " title" : ""}</div>
       ${l.notes ? `<div class="note${alert ? " alert" : ""}">${l.notes}</div>` : ""}
     </td>
     <td class="right" data-l="SCORE"><span class="mrow"><span class="score ${l.flip_score >= 7 ? "hi" : l.flip_score >= 4 ? "mid" : "lo"}" title="${l.score_parts || ""}">${l.flip_score.toFixed(1)}</span></span></td>
@@ -432,7 +437,8 @@ function render() {
   const makeOK = l => state.makeMode === "include" ? state.makeSel.has(l.make) : !state.makeSel.has(l.make);
   const modelOK = l => state.modelMode === "include" ? state.modelSel.has(l.model) : !state.modelSel.has(l.model);
   let rows = DATA.filter(l =>
-    state.flags.has(l.flag)
+    (state.market === "all" || l.market === state.market)
+    && state.flags.has(l.flag)
     && makeOK(l) && modelOK(l)
     && l.flip_score >= state.sMin - 1e-9 && l.flip_score <= state.sMax + 1e-9
     && (state.rating === "all" || (state.rating === "great" ? l.rating_key === "great" : ["great","good"].includes(l.rating_key)))
@@ -455,6 +461,14 @@ function render() {
 }
 
 document.getElementById("q").oninput = e => { state.q = e.target.value; render(); };
+// ── Market dropdown (only shown on multi-market boards) ──
+const marketF = document.getElementById("marketF");
+if (MARKETS.length > 1) {
+  marketF.style.display = "";
+  marketF.innerHTML = `<option value="all">All markets</option>` +
+    MARKETS.map(m => `<option value="${m}">${m}</option>`).join("");
+  marketF.onchange = e => { state.market = e.target.value; render(); };
+}
 document.getElementById("ratingF").onchange = e => { state.rating = e.target.value; render(); };
 document.getElementById("maxP").oninput = e => { state.maxP = e.target.value ? +e.target.value : null; render(); };
 document.querySelectorAll("thead th[data-k]").forEach(th => th.onclick = () => {
