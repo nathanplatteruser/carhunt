@@ -11,12 +11,23 @@
 // description (first 900 chars) so the ETL can be re-run later on stored data
 // without re-opening a single listing. Read-only; never messages anyone.
 //
+// SOLD FILTER (bronze-layer exclusion): if "Sold" appears in the listing
+// title (FB prefixes sold listings like "Sold · 2019 Ford Expedition Max"),
+// the record is flagged sold:true and must be SKIPPED before grabbing
+// description/metadata — a sold vehicle can never be pursued, so it is
+// excluded from the silver/gold data layers and every dashboard build.
+//
 // Usage: substitute LISTING_ID; run after navigation + a See-more click.
 
 const s = ms => new Promise(r => setTimeout(r, ms));
 [...document.querySelectorAll('span')].find(e => /^See more$/.test(e.innerText))?.click();
 await s(720);
 const t = document.body.innerText;
+
+// SOLD check first — a sold listing is dead inventory; skip all further capture
+const sold = /(^|\s)Sold\s*·/.test(document.title) || /^Sold\s*·/m.test(t)
+          || /\bSold\b\s*·/.test(t.slice(0, 400));
+if (sold) JSON.stringify({ id: 'LISTING_ID', sold: true });
 const g = re => { const m = t.match(re); return m ? m[1].replace(/,/g, '') : null; };
 
 // Plans A + B

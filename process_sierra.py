@@ -62,6 +62,7 @@ def main():
             title = txt[0] if txt else ""
             loc = txt[1] if len(txt) > 1 else ""
             tl = title.lower()
+            if re.search(r"\bsold\b", tl): skipped += 1; continue  # sold = dead inventory, bronze-layer exclusion
             if EXCLUDE.search(tl): skipped += 1; continue
             ym = re.search(r"\b(20[0-2]\d)\b", title)
             year = int(ym.group(0)) if ym else None

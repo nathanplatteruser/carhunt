@@ -22,6 +22,8 @@ The interesting part isn't finding cheap vehicles — it's explaining why they'r
 
 The dashboard tags every listing (`NO FLAGS` / `REBUILT-SALVAGE` / `SCAM RISK`) with the research note explaining the verdict, so a viewer can filter to clean-title deals only — or browse the graveyard of trucks that looked great until someone read the odometer.
 
+**Sold filter (bronze-layer exclusion).** Any listing whose title contains "Sold" (Facebook prefixes sold inventory like `Sold · 2019 Ford Expedition Max`) is treated as dead at the raw-scrape (bronze) layer: it is skipped before descriptions or metadata are fetched, and never enters the processed (silver) data files or the scored (gold) dashboards — a sold vehicle can't be pursued, so it isn't worth a single extra request.
+
 ## Description recovery
 
 Mileage extraction runs three plans in strict order. **Plan A** is always Facebook's structured mileage field ("Driven 158,868 miles"). **Plan B** is labeled text patterns ("Mileage - 141,512", "odometer: 158600", "has 90,000 miles"). **Plan C** is an exhaustive candidate scan of the full listing text that catches emoji-bulleted bare statements ("✅ 158,600 miles") and shorthand ("158.6k mi") while excluding years, VIN fragments, service intervals ("every 5,000 miles"), warranty figures ("up to 100,000 miles"), and "N miles ago" phrases — then keeps the largest surviving candidate. Every detail-page visit also persists the seller's description into the listing knowledge base, so parser upgrades re-run over stored data instead of re-scraping (`scripts/sweep_extract.js` is the canonical in-page extractor).

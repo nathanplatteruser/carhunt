@@ -55,7 +55,7 @@ KC_MI = {"Kansas City, MO":0,"Kansas City, KS":5,"Overland Park, KS":12,"Olathe,
 
 def main():
     cache = json.load(open("/root/carhunt/data/listing_cache.json"))
-    seen, out, skipped = set(), [], {"dupe":0,"excl":0,"year":0,"price":0,"nomatch":0,"dist":0}
+    seen, out, skipped = set(), [], {"dupe":0,"sold":0,"excl":0,"year":0,"price":0,"nomatch":0,"dist":0}
     for path in sorted(glob.glob("/root/carhunt/rawkc/*.json")):
         for it in json.load(open(path)):
             i = it["i"]
@@ -69,6 +69,7 @@ def main():
             title = txt[0] if txt else ""
             loc = txt[1] if len(txt) > 1 else ""
             tl = title.lower()
+            if re.search(r"\bsold\b", tl): skipped["sold"] += 1; continue  # sold = dead inventory, bronze-layer exclusion
             if EXCLUDE.search(tl): skipped["excl"] += 1; continue
             ym = re.search(r"\b(20[0-2]\d)\b", title)
             year = int(ym.group(0)) if ym else None

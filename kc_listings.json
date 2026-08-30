@@ -1305,7 +1305,7 @@
   "market_value": 21000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": "no odometer published on detail page"
+  "notes": "no odometer published on detail page; mi read 173,000 - repeated cross-page value, likely related-listings tile contamination; treated as null"
  },
  {
   "id": "1360837672268826",
@@ -1705,7 +1705,7 @@
   "market_value": 36000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": "no odometer published on detail page; vague title; seller joined FB 2024"
+  "notes": "no odometer published on detail page; vague title; seller joined FB 2024; mi read 173,000 - identical value seen on 3+ other pages, likely picked up from a related-listings tile; treating as null"
  },
  {
   "id": "1545509403883557",
@@ -2187,7 +2187,7 @@
   "market_value": 15000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": "",
+  "notes": "mi read 173,000 - identical value seen on 3+ other pages, likely picked up from a related-listings tile; treating as null",
   "region": "kc"
  },
  {
@@ -2207,7 +2207,7 @@
   "market_value": 15500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "price drop from $22,500",
+  "notes": "price drop from $22,500; mi read 173,000 - repeated cross-page value, likely related-listings tile contamination; treated as null",
   "region": "kc"
  },
  {
@@ -2218,17 +2218,18 @@
   "make": "GMC",
   "model": "Sierra 1500",
   "trim": "AT4",
-  "mileage": null,
+  "mileage": 76663,
   "category": "truck",
   "location": "Blue Springs, MO",
   "url": "https://www.facebook.com/marketplace/item/1049267877649288/",
   "image": null,
   "first_seen": "2026-08-13",
-  "market_value": 31500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
+  "market_value": 32100,
+  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail-page odometer",
   "value_confidence": "medium",
   "notes": "",
-  "region": "kc"
+  "region": "kc",
+  "description": "FRESH ARRIVAL - Ask for Hayden in Sales - 1500 NW S Outer Rd, Blue Springs MO - VIN: 1GTP9EED6LZ109432 - Trim AT4 - Gas V8 5.3L - 10-Speed Auto (dealer listing)"
  },
  {
   "id": "28314416294821287",
@@ -2238,17 +2239,18 @@
   "make": "GMC",
   "model": "Sierra 1500",
   "trim": "AT4",
-  "mileage": null,
+  "mileage": 119000,
   "category": "truck",
   "location": "Eldon, MO",
   "url": "https://www.facebook.com/marketplace/item/28314416294821287/",
   "image": null,
   "first_seen": "2026-08-13",
-  "market_value": 34000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
+  "market_value": 30200,
+  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail-page odometer",
   "value_confidence": "medium",
   "notes": "",
-  "region": "kc"
+  "region": "kc",
+  "description": "1 owner"
  },
  {
   "id": "1567967301397580",
@@ -2258,14 +2260,14 @@
   "make": "GMC",
   "model": "Sierra 1500",
   "trim": "SLT",
-  "mileage": null,
+  "mileage": 49300,
   "category": "truck",
   "location": "Lake Ozark, MO",
   "url": "https://www.facebook.com/marketplace/item/1567967301397580/",
   "image": null,
   "first_seen": "2026-08-13",
-  "market_value": 17500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
+  "market_value": 21900,
+  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail-page odometer",
   "value_confidence": "medium",
   "notes": "",
   "region": "kc"
@@ -2278,14 +2280,14 @@
   "make": "GMC",
   "model": "Sierra 1500",
   "trim": "Elevation",
-  "mileage": null,
+  "mileage": 135353,
   "category": "truck",
   "location": "Manhattan, KS",
   "url": "https://www.facebook.com/marketplace/item/2442234309602496/",
   "image": null,
   "first_seen": "2026-08-13",
-  "market_value": 18000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
+  "market_value": 17100,
+  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail-page odometer",
   "value_confidence": "medium",
   "notes": "",
   "region": "kc"
@@ -2307,7 +2309,7 @@
   "market_value": 32500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": "",
+  "notes": "mi read 173,000 - repeated cross-page value, likely related-listings tile contamination; treated as null",
   "region": "kc"
  },
  {
@@ -2327,7 +2329,7 @@
   "market_value": 26000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": "",
+  "notes": "mi read 173,000 - repeated cross-page value, likely related-listings tile contamination; treated as null",
   "region": "kc"
  },
  {
@@ -2338,14 +2340,14 @@
   "make": "GMC",
   "model": "Sierra 1500",
   "trim": null,
-  "mileage": null,
+  "mileage": 88197,
   "category": "truck",
   "location": "Kansas City, MO",
   "url": "https://www.facebook.com/marketplace/item/1184704910280307/",
   "image": null,
   "first_seen": "2026-08-13",
-  "market_value": 33000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
+  "market_value": 29600,
+  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail-page odometer",
   "value_confidence": "low",
   "notes": "",
   "region": "kc"
@@ -2358,16 +2360,17 @@
   "make": "GMC",
   "model": "Sierra 1500",
   "trim": "SLT",
-  "mileage": null,
+  "mileage": 105164,
   "category": "truck",
   "location": "Kansas City, MO",
   "url": "https://www.facebook.com/marketplace/item/1530571508364295/",
   "image": null,
   "first_seen": "2026-08-13",
-  "market_value": 28500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
+  "market_value": 26800,
+  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail-page odometer",
   "value_confidence": "medium",
   "notes": "",
-  "region": "kc"
+  "region": "kc",
+  "description": "Stock #: P25396 (dealer listing)"
  }
 ]

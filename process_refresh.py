@@ -44,7 +44,7 @@ def main():
     dsm = json.load(open("/root/carhunt/data/desmoines_listings.json"))
     have = {l["id"] for l in lin} | {l["id"] for l in dsm} | set(cache.keys())
     lin_city = dict(list(bd.CITY_MI.items()) + list(LINCOLN_EXTRA.items()) + list(EXTRA_MI.items()))
-    seen, new_lin, new_dsm, skipped = set(), [], [], {"dupe":0,"excl":0,"year":0,"price":0,"nomatch":0,"dist":0,"known":0}
+    seen, new_lin, new_dsm, skipped = set(), [], [], {"dupe":0,"sold":0,"excl":0,"year":0,"price":0,"nomatch":0,"dist":0,"known":0}
     for path in sorted(glob.glob("/root/carhunt/rawrefresh/*.json")):
         for it in json.load(open(path)):
             i = it["i"]
@@ -59,6 +59,7 @@ def main():
             title = txt[0] if txt else ""
             loc = txt[1] if len(txt) > 1 else ""
             tl = title.lower()
+            if re.search(r"\bsold\b", tl): skipped["sold"] += 1; continue  # sold = dead inventory, bronze-layer exclusion
             if EXCLUDE.search(tl): skipped["excl"] += 1; continue
             ym = re.search(r"\b(20[0-2]\d)\b", title)
             year = int(ym.group(0)) if ym else None
