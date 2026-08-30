@@ -350,75 +350,6 @@
   "title_status_desc": "clean"
  },
  {
-  "id": "1346595076898553",
-  "title": "2020 Dodge durango sxt",
-  "price": 16600,
-  "year": 2020,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "SXT",
-  "mileage": 75200,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1346595076898553/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 19700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "seller account joined 2024 - verify carefully",
-  "recovered": [
-   "trim",
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1253703323398089",
-  "title": "2018 Dogde durango GT sports SUV AWD",
-  "price": 11500,
-  "year": 2018,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "Gt",
-  "mileage": 125000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1253703323398089/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 16500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "",
-  "description": "2018 Dodge Durango AWD 125k miles. GT Sport Utility 4D, 3.6L V6 Pentastar. 7-passenger, 3 rows black leather/suede. Premium Sony touchscreen, wireless Apple CarPlay. Private-style listing, Lincoln.",
-  "recovered": [
-   "mileage"
-  ]
- },
- {
-  "id": "764978693363818",
-  "title": "2018 Dodge durango GT",
-  "price": 15400,
-  "year": 2018,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "Gt",
-  "mileage": 104850,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/764978693363818/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 17000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "AVA Auto Sales LLC. 2018 DODGE DURANGO GT AWD, cash price $15,400. Description claims 76,515 miles but FB field says Driven 104,850 miles - MILEAGE CONFLICT. 3.6L V6, 8-speed auto, remote start, Apple CarPlay."
- },
- {
   "id": "1657365248815085",
   "title": "2018 Dodge durango R/T Sport Utility 4D",
   "price": 25000,
@@ -440,29 +371,6 @@
    "mileage:fb-field"
   ],
   "description": "Selling my 2018 Dodge Durango RT. Purchased over a year ago from dealership. Only replaced the radiator fan (done at Dodge). Perfect condition, runs and drives great. Private seller, Omaha."
- },
- {
-  "id": "971177972585757",
-  "title": "2019 Dodge durango SXT Sport Utility 4D",
-  "price": 13000,
-  "year": 2019,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "SXT",
-  "mileage": 100000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/971177972585757/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 16800,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "SALVAGE TITLE (FB listing field); seller account joined 2025 - verify carefully",
-  "recovered": [
-   "trim",
-   "mileage:fb-field"
-  ]
  },
  {
   "id": "2739891129715226",
@@ -487,28 +395,6 @@
   ],
   "description": "2018 Dodge Durango SRT AWD, 89K miles, 6.4L V8 475HP, 8-speed. Heated/cooled seats, navigation, blind spot. Please note that this Dodge Durango comes with a branded title! $28,950.",
   "title_status_desc": "rebuilt"
- },
- {
-  "id": "1177479612117391",
-  "title": "2016 Dodge durango Limited Sport Utility 4D",
-  "price": 9900,
-  "year": 2016,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "Limited",
-  "mileage": 121000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1177479612117391/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 14700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
  },
  {
   "id": "1419069523421268",
@@ -610,28 +496,6 @@
   "title_status_desc": "rebuilt"
  },
  {
-  "id": "1679252926449065",
-  "title": "2018 Ford Expedition Limited",
-  "price": 16000,
-  "year": 2018,
-  "make": "Ford",
-  "model": "Expedition",
-  "trim": "Limited",
-  "mileage": 141512,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1679252926449065/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 21500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "First question: odometer reading; price drop from $18,750",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1921789875887300",
   "title": "2021 Ford expedition",
   "price": 25995,
@@ -719,30 +583,6 @@
   "recovered": [
    "mileage:fb-field"
   ]
- },
- {
-  "id": "1515462070355161",
-  "title": "2017 Ford expedition Platinum Sport Utility 4D",
-  "price": 11750,
-  "year": 2017,
-  "make": "Ford",
-  "model": "Expedition",
-  "trim": "Platinum",
-  "mileage": 139616,
-  "category": "suv",
-  "location": "Blair, NE",
-  "url": "https://www.facebook.com/marketplace/item/1515462070355161/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 19700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "low",
-  "notes": "LIKELY SCAM OR MAJOR DAMAGE: price is implausibly low (44% under book) with no mileage shown. Assume the worst until VIN and title check out; clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "For sale by dealer - Ask for Ross. 2017 Ford Expedition Platinum 4x4, 3.5 V6, 139,616 miles. Runs and drives great. Clean title, no accidents, one owner, non smoker. Value lot: not inspected, sold as is. Blair, NE.",
-  "title_status_desc": "clean"
  },
  {
   "id": "2126427191552284",
@@ -857,52 +697,6 @@
   ]
  },
  {
-  "id": "995579583180219",
-  "title": "2017 Ford Explorer",
-  "price": 11999,
-  "year": 2017,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": null,
-  "mileage": 77000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/995579583180219/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 17500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1297936895466638",
-  "title": "2021 Ford explorer XLT Sport Utility 4D",
-  "price": 21250,
-  "year": 2021,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": "XLT",
-  "mileage": 56462,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1297936895466638/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 23200,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "low",
-  "notes": "price drop from $22,900",
-  "recovered": [
-   "mileage:fb-field",
-   "trim"
-  ],
-  "description": "2021 Ford Explorer XLT 4WD. Fully loaded XLT: panoramic sunroof, premium leather, heated front seats, remote start, Apple CarPlay, navigation, blind spot monitoring, adaptive cruise. Excellent condition."
- },
- {
   "id": "1372403154575750",
   "title": "2017 Ford Explorer",
   "price": 13500,
@@ -925,28 +719,6 @@
    "trim"
   ],
   "description": "2017 Ford Explorer Limited. Mileage: 70k. Price $13,500. No mechanical issues. Vehicle has LIGHT HAIL DAMAGE. 3.5L V6, AWD. Massage seats, self parking, dual-panel moonroof. Gratify Auto Sales."
- },
- {
-  "id": "1555368559631905",
-  "title": "2018 Ford Explorer",
-  "price": 12900,
-  "year": 2018,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": null,
-  "mileage": 85759,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1555368559631905/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 18000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "REBUILT TITLE (FB listing field)",
-  "recovered": [
-   "mileage:fb-field"
-  ]
  },
  {
   "id": "1446591437151610",
@@ -989,30 +761,6 @@
   "value_confidence": "high",
   "notes": "REBUILT TITLE. Low miles for year, but rebuilt caps the value - priced about right for what it is",
   "title_status_desc": "rebuilt"
- },
- {
-  "id": "1186916636958172",
-  "title": "2015 Ford explorer Limited Sport Utility 4D",
-  "price": 9500,
-  "year": 2015,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": "Limited",
-  "mileage": 112599,
-  "category": "suv",
-  "location": "Blair, NE",
-  "url": "https://www.facebook.com/marketplace/item/1186916636958172/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 16000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "For sale by dealer - Ask for Ross. 2015 Ford Explorer Limited, 3.5 V6, 112,599 miles. Runs and drives great. Clean title, no accidents, non smoker, luxury package. Value lot: not inspected, sold AS IS. Discounted due to tire tread depth.",
-  "title_status_desc": "clean"
  },
  {
   "id": "940189812052531",
@@ -1064,28 +812,6 @@
   "title_status_desc": "clean"
  },
  {
-  "id": "2793092411051925",
-  "title": "2017 Ford Explorer",
-  "price": 12500,
-  "year": 2017,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": null,
-  "mileage": 77000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/2793092411051925/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 17500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "SALVAGE TITLE (FB listing field)",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1965568120792143",
   "title": "2019 Ford Explorer",
   "price": 10999,
@@ -1109,54 +835,6 @@
   ],
   "description": "I want to sell my Ford Explorer XLT. The car is in good condition, everything works perfectly, tires and battery good. Very smooth to drive, ready for any 4x4 test drive. It is previously salvaged.",
   "title_status_desc": "salvage"
- },
- {
-  "id": "27879392358361224",
-  "title": "2015 Ford explorer XLT Sport Utility 4D",
-  "price": 12500,
-  "year": 2015,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": "XLT",
-  "mileage": 98200,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/27879392358361224/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 13800,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field",
-   "trim"
-  ],
-  "description": "2015 Ford Explorer XLT with 98,200 miles. Well maintained, runs and drives great, no issues. OBO. Clean title in hand. Brand new tires (<3,000 miles), fresh oil change, AWD, 3.5L V6, 3-row. Private seller, Lincoln.",
-  "title_status_desc": "clean"
- },
- {
-  "id": "1364383049236610",
-  "title": "2019 RAM 1500 Big Horn 4x4 HEMI 5.7L",
-  "price": 25500,
-  "year": 2019,
-  "make": "Ram",
-  "model": "1500",
-  "trim": "Bighorn",
-  "mileage": 90400,
-  "category": "truck",
-  "location": "Papillion, NE",
-  "url": "https://www.facebook.com/marketplace/item/1364383049236610/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 21600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "quarter panel replaced after parking-lot dent (body shop repair, title clean per seller)",
-  "recovered": [
-   "mileage:description"
-  ],
-  "description": "2019 Ram Bighorn 1500 4x4 with the 5.7L hemi. It currently has 90400 miles on it but husband drives it daily so miles will go up. Kept clean, garage parked, bought used a few years ago. No accidents except a parking-lot dent next to right tail light - right side quarter panel replaced at Thorpe auto body in Papillion. Tires have 18000 miles. Right side exhaust manifold replaced (cracked - common Ram flaw). No leaks, does not use oil. Private seller."
  },
  {
   "id": "1512293526947709",
@@ -1231,73 +909,6 @@
   ],
   "description": "2017 Ram 1500 Sport 4X4 Crew Cab, 80K miles, 5.7L V8, lift kit, air suspension. $21,950. Please note this Ram 1500 comes with a branded title! Legacy Motors.",
   "title_status_desc": "rebuilt"
- },
- {
-  "id": "995662213304894",
-  "title": "2020 Dodge ram 1500 crew cab",
-  "price": 29700,
-  "year": 2020,
-  "make": "Ram",
-  "model": "1500",
-  "trim": "Bighorn",
-  "mileage": 71008,
-  "category": "truck",
-  "location": "Palmyra, NE",
-  "url": "https://www.facebook.com/marketplace/item/995662213304894/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 24600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "Selling my 2020 Dodge Ram 1500 HEMI. Runs and drives great. 5.7 V8, all black, clean interior, few scratches & dings, cold A/C, well maintained. Private seller, Palmyra."
- },
- {
-  "id": "1603282994078400",
-  "title": "2019 Ram 1500 classic crew cab Big Horn Pickup 4D 6 1/3 ft",
-  "price": 25500,
-  "old_price": 27000,
-  "year": 2019,
-  "make": "Ram",
-  "model": "1500",
-  "trim": "Big Horn",
-  "mileage": 120000,
-  "category": "truck",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1603282994078400/",
-  "image": null,
-  "first_seen": "2026-07-21",
-  "market_value": 17700,
-  "value_source": "KBB/Edmunds anchors + 41 local comps, mileage-adjusted",
-  "value_confidence": "medium",
-  "notes": "Classic-gen Big Horn - asking is $6k over book even after price drop; price drop from $27,000; seller account joined Facebook 2026",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "Everything up to date, beautiful interior, spectacular sound system (loud). Offers can be negotiated. SELLER ACCOUNT JOINED FACEBOOK 2026 - very new account."
- },
- {
-  "id": "1527358245053070",
-  "title": "2022 Ram 1500 crew cab tradesman 4wd - 66,286 miles - clean title",
-  "price": 25925,
-  "old_price": null,
-  "year": 2022,
-  "make": "Ram",
-  "model": "1500",
-  "trim": "Tradesman",
-  "mileage": 66286,
-  "category": "truck",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1527358245053070/",
-  "image": null,
-  "first_seen": "2026-07-21",
-  "market_value": 24500,
-  "value_source": "KBB/Edmunds anchors + 41 local comps, mileage-adjusted",
-  "value_confidence": "medium",
-  "notes": "4WD, clean title per listing, but 66k mi is above average for 2022"
  },
  {
   "id": "1886844976054018",
@@ -1605,54 +1216,6 @@
   "title_status_desc": "salvage"
  },
  {
-  "id": "1920989588585578",
-  "title": "2015 Chevrolet tahoe LT Sport Utility 4D",
-  "price": 14000,
-  "year": 2015,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": "LT",
-  "mileage": 136000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1920989588585578/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 17100,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "trim",
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "27375509295474287",
-  "title": "2017 Chevrolet tahoe",
-  "price": 18495,
-  "year": 2017,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": "LT",
-  "mileage": 90000,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/27375509295474287/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 22700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "REBUILT/BRANDED TITLE (FB listing)",
-  "recovered": [
-   "mileage:fb-field",
-   "trim"
-  ],
-  "description": "2017 Chevrolet Tahoe LT, EcoTec3 5.3L Flex Fuel V8, 6-speed auto. Comes with Nebraska Rebuilt title that reflects on the price. Fully loaded with only 90k miles. Runs and drives great. Excellent condition. Red City Auto, 2601 N 72nd St, Omaha.",
-  "title_status_desc": "rebuilt"
- },
- {
   "id": "1532661601645070",
   "title": "2019 Chevrolet tahoe LT Sport Utility 4D",
   "price": 22000,
@@ -1869,51 +1432,6 @@
   ]
  },
  {
-  "id": "1656561862314297",
-  "title": "2020 Chevrolet traverse LT Sport Utility 4D",
-  "price": 15600,
-  "year": 2020,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "L",
-  "mileage": 88057,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1656561862314297/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 16700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "2020 Chevy Traverse, runs and drives nice and smooth. Rear camera, cruise, third row seat, all four good tires, fresh oil change. Price $15,600 OBO. ALPHA AND OMEGA Auto Sales, Lincoln."
- },
- {
-  "id": "3895091680623475",
-  "title": "2021 Chevrolet traverse L Sport Utility 4D",
-  "price": 14500,
-  "year": 2021,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "L",
-  "mileage": 39000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/3895091680623475/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 22100,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "Same 39k-mile Traverse appears listed twice in Lincoln; price drop from $18,600",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1496870021970846",
   "title": "2021 Chevrolet traverse LT Sport Utility 4D",
   "price": 17950,
@@ -1960,53 +1478,6 @@
   ]
  },
  {
-  "id": "995087069970818",
-  "title": "2023 Chevrolet traverse 4x4",
-  "price": 27900,
-  "year": 2023,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "L",
-  "mileage": 42000,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/995087069970818/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 25300,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "2023 CHEVROLET TRAVERSE 4x4 with only 42k miles. Clean interior and exterior, fully loaded, 360 camera, active cruise, leather, heated seats and wheel, remote start. Private seller, Omaha."
- },
- {
-  "id": "2103367943893719",
-  "title": "2016 Chevrolet traverse lt sport utility 4d awd",
-  "price": 8490,
-  "year": 2016,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "Rs",
-  "mileage": 87917,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/2103367943893719/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 16900,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing)",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "2016 Chevy Traverse LT AWD, clean inside and out, runs and drives good, 87K miles, cash price $8,490. 3.6 V6, remote start, 3rd row. Nebraska branded title. USA Auto Sales LLC. Free 3 months/3,000-mile warranty.",
-  "title_status_desc": "rebuilt"
- },
- {
   "id": "1479969837495635",
   "title": "2022 Chevrolet traverse rs awd",
   "price": 25650,
@@ -2029,29 +1500,6 @@
   ],
   "description": "2022 Chevrolet Traverse RS, V6 3.6L, 65xxx miles, AWD. Blind zone alert, navigation, backup camera, dual moonroof, adaptive cruise. 2 owner, Clean Title, Carfax with service records.",
   "title_status_desc": "clean"
- },
- {
-  "id": "1402033058688932",
-  "title": "2023 Chevrolet traverse lt leather 4x4 4dr suv",
-  "price": 27950,
-  "year": 2023,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "L",
-  "mileage": 42000,
-  "category": "suv",
-  "location": "Bellevue, NE",
-  "url": "https://www.facebook.com/marketplace/item/1402033058688932/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 25300,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "2023 Chevrolet Traverse LT Leather 4x4, 1 owner, 42k miles, AWD. 3.6L V6. Heated front seats, tri-zone climate, Apple CarPlay. Elite Motors, 7016 Railroad Ave."
  },
  {
   "id": "984728717636031",
@@ -2078,29 +1526,6 @@
   "title_status_desc": "rebuilt"
  },
  {
-  "id": "1676399426812040",
-  "title": "2020 Chevrolet traverse premier 4x4 4dr suv",
-  "price": 20650,
-  "year": 2020,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "Premier",
-  "mileage": 64000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1676399426812040/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 23600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "2020 Chevrolet Traverse Premier 4X4, 64K miles, $20,650. Silver Ice Metallic, 3.6L V6 310hp. Lexington Auto LLC, financing regardless of credit, free 3 month/4500 mile warranty."
- },
- {
   "id": "1759281228400865",
   "title": "2019 Chevrolet traverse",
   "price": 23889,
@@ -2122,50 +1547,6 @@
    "mileage:fb-field"
   ],
   "description": "Janssen Ford York dealer listing - 2019 Chevrolet Traverse Premier, VIN 1GNEVKKW0KJ200126. York, NE."
- },
- {
-  "id": "4686906814874370",
-  "title": "2021 Chevrolet traverse LT Sport Utility 4D",
-  "price": 14500,
-  "year": 2021,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "L",
-  "mileage": 39000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/4686906814874370/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 23000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "low",
-  "notes": "Same 39k-mile Traverse appears listed twice in Lincoln; SUSPICIOUS: 39k miles at 37% under book, description says 'revitalized' - likely rebuilt/auction rebuild. Title status unstated. Treat as rebuilt until proven otherwise",
-  "title_status_desc": "rebuilt"
- },
- {
-  "id": "2080195682864109",
-  "title": "2022 Chevrolet traverse",
-  "price": 25650,
-  "year": 2022,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "L",
-  "mileage": 65136,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/2080195682864109/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 21500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ],
-  "description": "2022 Chevrolet Traverse RS, V6 3.6L, 65xxx miles, AWD. 2 owner, Clean Title, Carfax available. DUPLICATE of listing 1479969837495635 (same car, two dealers/posts).",
-  "title_status_desc": "clean"
  },
  {
   "id": "1435402728312094",
@@ -2191,76 +1572,6 @@
   ]
  },
  {
-  "id": "1756177018756761",
-  "title": "2017 GMC yukon xl SLE Sport Utility 4D",
-  "price": 11555,
-  "year": 2017,
-  "make": "GMC",
-  "model": "Yukon XL",
-  "trim": "Sle",
-  "mileage": 144000,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1756177018756761/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 12200,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "high",
-  "notes": "PREVIOUSLY SALVAGE title (side swipe, per seller). Salvage-adjusted it's priced about right",
-  "title_status_desc": "salvage"
- },
- {
-  "id": "1503013921105339",
-  "title": "2016 GMC yukon xl 4wd",
-  "price": 17950,
-  "year": 2016,
-  "make": "GMC",
-  "model": "Yukon XL",
-  "trim": "SLT",
-  "mileage": 126840,
-  "category": "suv",
-  "location": "Bellevue, NE",
-  "url": "https://www.facebook.com/marketplace/item/1503013921105339/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 19300,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "low",
-  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing)",
-  "recovered": [
-   "mileage:fb-field",
-   "trim"
-  ],
-  "description": "2016 GMC Yukon XL SLT, 5.3L V8 EcoTec3, 6-speed, 4WD. Remote start, premium sound, heated & cooled seats. This vehicle holds a NE Previously Salvage Title. Carfax available. Bellevue location, 4207 Harrison St.",
-  "title_status_desc": "salvage"
- },
- {
-  "id": "1868501397161115",
-  "title": "2016 GMC yukon xl slt 4x4 4dr suv",
-  "price": 19950,
-  "year": 2016,
-  "make": "GMC",
-  "model": "Yukon XL",
-  "trim": "SLT",
-  "mileage": 131600,
-  "category": "suv",
-  "location": "Bellevue, NE",
-  "url": "https://www.facebook.com/marketplace/item/1868501397161115/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 18900,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field",
-   "trim"
-  ],
-  "description": "2016 GMC Yukon XL SLT 4x4, 131k miles, Clean Title, 2 owners. Runs and drives great, zero mechanical issues. Leather, heated seats, DVD, remote start. Elite Motors, 7016 Railroad Ave.",
-  "title_status_desc": "clean"
- },
- {
   "id": "1035732178950886",
   "title": "2018 GMC yukon xl Denali Sport Utility 4D",
   "price": 26988,
@@ -2283,28 +1594,6 @@
   ],
   "description": "2018 GMC Yukon XL Denali. Premium leather, heated/cooled seats, navigation, Bose, sunroof. Financing available, trade-ins welcome. Aaron Baptiste, Gretna Auto Outlet.",
   "title_status_desc": "clean"
- },
- {
-  "id": "1371303344941336",
-  "title": "2015 GMC yukon xl denali sport awd",
-  "price": 16800,
-  "year": 2015,
-  "make": "GMC",
-  "model": "Yukon XL",
-  "trim": "Denali",
-  "mileage": 148529,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1371303344941336/",
-  "image": null,
-  "first_seen": "2026-07-23",
-  "market_value": 19600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
-  "value_confidence": "medium",
-  "notes": "SALVAGE TITLE (FB listing field)",
-  "recovered": [
-   "mileage:fb-field"
-  ]
  },
  {
   "id": "1033022585874665",
@@ -2351,31 +1640,6 @@
   "recovered": [
    "mileage:fb-field"
   ]
- },
- {
-  "id": "1886578365350367",
-  "title": "2020 GMC yukon SLT",
-  "price": 28995,
-  "year": 2020,
-  "make": "GMC",
-  "model": "Yukon XL",
-  "trim": "SLT",
-  "mileage": 73620,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1886578365350367/",
-  "image": null,
-  "first_seen": "2026-07-24",
-  "market_value": 28900,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "REBUILT/BRANDED TITLE (FB listing)",
-  "recovered": [
-   "mileage:fb-field",
-   "trim"
-  ],
-  "description": "2020 GMC Yukon 4WD SLT, 6.2L EcoTec3 V8. Fully inspected and reconditioned, 5-Day Exchange Program. Please note that this vehicle has a branded title.",
-  "title_status_desc": "rebuilt"
  },
  {
   "id": "4298853720402695",
@@ -2537,28 +1801,6 @@
   ]
  },
  {
-  "id": "1037475582019493",
-  "title": "2023 GMC acadia",
-  "price": 39500,
-  "year": 2023,
-  "make": "GMC",
-  "model": "Acadia",
-  "trim": null,
-  "mileage": 26469,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1037475582019493/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 31500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1637142387467290",
   "title": "2019 GMC acadia",
   "price": 20995,
@@ -2581,28 +1823,6 @@
   ]
  },
  {
-  "id": "1559328675595575",
-  "title": "2019 GMC acadia",
-  "price": 21950,
-  "year": 2019,
-  "make": "GMC",
-  "model": "Acadia",
-  "trim": null,
-  "mileage": 76920,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1559328675595575/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 21600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1678501253135925",
   "title": "2019 GMC acadia",
   "price": 21995,
@@ -2620,28 +1840,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
   "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "2248878915516481",
-  "title": "2019 GMC acadia denali sport awd",
-  "price": 20800,
-  "year": 2019,
-  "make": "GMC",
-  "model": "Acadia",
-  "trim": "Denali",
-  "mileage": 60448,
-  "category": "suv",
-  "location": "Bellevue, NE",
-  "url": "https://www.facebook.com/marketplace/item/2248878915516481/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 25500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "SALVAGE/PREVIOUSLY-SALVAGED TITLE (FB listing); ",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -2735,28 +1933,6 @@
   ]
  },
  {
-  "id": "2119837648889874",
-  "title": "2019 Nissan armada SL Sport Utility 4D",
-  "price": 20377,
-  "year": 2019,
-  "make": "Nissan",
-  "model": "Armada",
-  "trim": "Sl",
-  "mileage": 114371,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/2119837648889874/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 18700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "2263169074495112",
   "title": "2021 Infiniti qx80 4wd",
   "price": 24995,
@@ -2776,29 +1952,6 @@
   "notes": "REBUILT/BRANDED TITLE (FB listing); ",
   "recovered": [
    "mileage:fb-field"
-  ]
- },
- {
-  "id": "1010685145126926",
-  "title": "2020 Nissan pathfinder sv 4wd - 76,965 miles - clean title",
-  "price": 24975,
-  "year": 2020,
-  "make": "Nissan",
-  "model": "Pathfinder",
-  "trim": "SV",
-  "mileage": 76965,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1010685145126926/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 23600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "",
-  "title_status_desc": "clean",
-  "recovered": [
-   "trim"
   ]
  },
  {
@@ -2935,28 +2088,6 @@
   ]
  },
  {
-  "id": "4088523274616726",
-  "title": "2022 Subaru ascent Onyx Edition Sport Utility 4D",
-  "price": 21995,
-  "year": 2022,
-  "make": "Subaru",
-  "model": "Ascent",
-  "trim": "Onyx",
-  "mileage": 64573,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/4088523274616726/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 27500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "; seller account joined Facebook 2026",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1214052934106954",
   "title": "2023 Subaru ascent limited 8 passenegr awd",
   "price": 24950,
@@ -3023,28 +2154,6 @@
   ]
  },
  {
-  "id": "1024144013414457",
-  "title": "2020 Subaru ascent touring awd 4dr suv",
-  "price": 20900,
-  "year": 2020,
-  "make": "Subaru",
-  "model": "Ascent",
-  "trim": "Touring",
-  "mileage": 45585,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1024144013414457/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 28100,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "2772311939805657",
   "title": "2022 Subaru ascent touring",
   "price": 25450,
@@ -3062,50 +2171,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": ""
- },
- {
-  "id": "2353912708352717",
-  "title": "2020 Subaru ascent touring awd 4dr suv",
-  "price": 20900,
-  "year": 2020,
-  "make": "Subaru",
-  "model": "Ascent",
-  "trim": "Touring",
-  "mileage": 45585,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/2353912708352717/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 28100,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "duplicate listing of 1024144013414457",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "2194874201300311",
-  "title": "2021 Subaru ascent",
-  "price": 22950,
-  "year": 2021,
-  "make": "Subaru",
-  "model": "Ascent",
-  "trim": null,
-  "mileage": 66538,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/2194874201300311/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 25400,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
  },
  {
   "id": "1500814454997693",
@@ -3259,28 +2324,6 @@
   ]
  },
  {
-  "id": "2152283918958899",
-  "title": "2023 Volkswagen atlas",
-  "price": 25950,
-  "year": 2023,
-  "make": "Volkswagen",
-  "model": "Atlas",
-  "trim": null,
-  "mileage": 26916,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/2152283918958899/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 31500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1386472290012915",
   "title": "2023 Volkswagen atlas SE Sport Utility 4D",
   "price": 27988,
@@ -3391,28 +2434,6 @@
   ]
  },
  {
-  "id": "1007873048722195",
-  "title": "2020 Volkswagen atlas SE R-Line 4Motion w/Tech Pkg Sport Utility 4D",
-  "price": 22999,
-  "year": 2020,
-  "make": "Volkswagen",
-  "model": "Atlas",
-  "trim": null,
-  "mileage": 80779,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1007873048722195/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 23300,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1691415168428428",
   "title": "2024 Volkswagen atlas se 4motion",
   "price": 27950,
@@ -3435,28 +2456,6 @@
   ]
  },
  {
-  "id": "1663762918072051",
-  "title": "2024 Dodge durango rt",
-  "price": 33995,
-  "year": 2024,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "Rt",
-  "mileage": 16551,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1663762918072051/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 37300,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "881234591298441",
   "title": "2019 Dodge durango SRT 392 Sport Utility 4D",
   "price": 32290,
@@ -3474,28 +2473,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "2314414789308686",
-  "title": "2021 Dodge durango gt",
-  "price": 23999,
-  "year": 2021,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "Gt",
-  "mileage": 67910,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/2314414789308686/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 23800,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -3589,50 +2566,6 @@
   ]
  },
  {
-  "id": "2107451899990845",
-  "title": "2019 Dodge durango r/t awd",
-  "price": 29995,
-  "year": 2019,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "R/T",
-  "mileage": 24937,
-  "category": "suv",
-  "location": "Bellevue, NE",
-  "url": "https://www.facebook.com/marketplace/item/2107451899990845/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 26200,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1732205798193117",
-  "title": "2022 Dodge durango srt 392 awd",
-  "price": 47950,
-  "year": 2022,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "Srt",
-  "mileage": 62000,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1732205798193117/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 32700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1627501332326990",
   "title": "2019 Dodge durango SRT Sport Utility 4D",
   "price": 31991,
@@ -3672,50 +2605,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "969684779006212",
-  "title": "2024 Dodge durango r/t premium awd",
-  "price": 42176,
-  "year": 2024,
-  "make": "Dodge",
-  "model": "Durango",
-  "trim": "R/T",
-  "mileage": 38534,
-  "category": "suv",
-  "location": "Plattsmouth, NE",
-  "url": "https://www.facebook.com/marketplace/item/969684779006212/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 35500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "price drop from $44,787; clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1044474394681640",
-  "title": "2019 Buick enclave Premium",
-  "price": 21000,
-  "year": 2019,
-  "make": "Buick",
-  "model": "Enclave",
-  "trim": "Premium",
-  "mileage": 76173,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1044474394681640/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 23700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -3853,28 +2742,6 @@
   ]
  },
  {
-  "id": "918971247397959",
-  "title": "2021 Buick enclave essence 4x4",
-  "price": 20950,
-  "year": 2021,
-  "make": "Buick",
-  "model": "Enclave",
-  "trim": null,
-  "mileage": 48000,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/918971247397959/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 26900,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "2432777073871765",
   "title": "2019 Buick enclave",
   "price": 22485,
@@ -3892,28 +2759,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
   "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "2556946024745014",
-  "title": "2024 Buick enclave",
-  "price": 29499,
-  "year": 2024,
-  "make": "Buick",
-  "model": "Enclave",
-  "trim": null,
-  "mileage": 13189,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/2556946024745014/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 35500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -3955,50 +2800,6 @@
   "image": null,
   "first_seen": "2026-07-27",
   "market_value": 27700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "2238750840280054",
-  "title": "2021 Ford expedition Limited Sport Utility 4D",
-  "price": 37950,
-  "year": 2021,
-  "make": "Ford",
-  "model": "Expedition",
-  "trim": "Limited",
-  "mileage": 54794,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/2238750840280054/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 33300,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1556672742863226",
-  "title": "2022 Ford expedition max Limited Sport Utility 4D",
-  "price": 48998,
-  "year": 2022,
-  "make": "Ford",
-  "model": "Expedition",
-  "trim": "Limited",
-  "mileage": 64779,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1556672742863226/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 34500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "clean title per listing",
@@ -4117,28 +2918,6 @@
   ]
  },
  {
-  "id": "1718562415850086",
-  "title": "2021 Ford explorer XLT Sport Utility 4D",
-  "price": 25500,
-  "year": 2021,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": "Xlt",
-  "mileage": 62000,
-  "category": "suv",
-  "location": "Bennington, NE",
-  "url": "https://www.facebook.com/marketplace/item/1718562415850086/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 23800,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "902753272264413",
   "title": "2022 Ford explorer xlt awd 4dr suv",
   "price": 23950,
@@ -4161,28 +2940,6 @@
   ]
  },
  {
-  "id": "2124702678089243",
-  "title": "2022 Ford explorer 3.0 Twin Turbo",
-  "price": 21000,
-  "year": 2022,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": null,
-  "mileage": 63500,
-  "category": "suv",
-  "location": "Bellevue, NE",
-  "url": "https://www.facebook.com/marketplace/item/2124702678089243/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 23600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "4192206764257229",
   "title": "2021 Ford explorer",
   "price": 22500,
@@ -4200,28 +2957,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
   "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1034377475794999",
-  "title": "2023 Ford explorer Timberline Sport Utility 4D",
-  "price": 26495,
-  "year": 2023,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": "Timberline",
-  "mileage": 40615,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1034377475794999/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 29400,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ; seller account joined Facebook 2026",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -4266,50 +3001,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "922667024165664",
-  "title": "2022 Ford explorer xlt awd 4dr suv",
-  "price": 21500,
-  "year": 2022,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": "Xlt",
-  "mileage": 42921,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/922667024165664/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 26200,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1568695971288004",
-  "title": "2020 Ford Explorer",
-  "price": 20000,
-  "year": 2020,
-  "make": "Ford",
-  "model": "Explorer",
-  "trim": null,
-  "mileage": 97440,
-  "category": "suv",
-  "location": "Beatrice, NE",
-  "url": "https://www.facebook.com/marketplace/item/1568695971288004/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 18500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing; seller account joined Facebook 2026",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -4425,28 +3116,6 @@
   ]
  },
  {
-  "id": "1332747595733731",
-  "title": "2018 Toyota highlander XLE Sport Utility 4D",
-  "price": 22950,
-  "year": 2018,
-  "make": "Toyota",
-  "model": "Highlander",
-  "trim": "Xle",
-  "mileage": 137000,
-  "category": "suv",
-  "location": "Bellevue, NE",
-  "url": "https://www.facebook.com/marketplace/item/1332747595733731/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 23400,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "2810131009341382",
   "title": "2018 Toyota highlander",
   "price": 22999,
@@ -4505,28 +3174,6 @@
   "image": null,
   "first_seen": "2026-07-27",
   "market_value": 29000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "2143841823141869",
-  "title": "2017 Toyota highlander XLE Sport Utility 4D",
-  "price": 23700,
-  "year": 2017,
-  "make": "Toyota",
-  "model": "Highlander",
-  "trim": "Xle",
-  "mileage": 111416,
-  "category": "suv",
-  "location": "Elkhorn, NE",
-  "url": "https://www.facebook.com/marketplace/item/2143841823141869/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 24500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "clean title per listing",
@@ -4601,28 +3248,6 @@
   ]
  },
  {
-  "id": "1609045363727647",
-  "title": "2017 Toyota highlander SE Sport Utility 4D",
-  "price": 20500,
-  "year": 2017,
-  "make": "Toyota",
-  "model": "Highlander",
-  "trim": "Se",
-  "mileage": 138000,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1609045363727647/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 21800,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "3038286126359818",
   "title": "2018 Toyota highlander hybrid",
   "price": 28995,
@@ -4684,26 +3309,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": ""
- },
- {
-  "id": "1542399680949925",
-  "title": "2024 Hyundai palisade sel premium awd - 73,493 miles - clean title",
-  "price": 28925,
-  "year": 2024,
-  "make": "Hyundai",
-  "model": "Palisade",
-  "trim": "Sel",
-  "mileage": 73493,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1542399680949925/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 32700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "",
-  "title_status_desc": "clean"
  },
  {
   "id": "1503219281403265",
@@ -4860,28 +3465,6 @@
   ]
  },
  {
-  "id": "875250178881426",
-  "title": "2021 Hyundai palisade Calligraphy Sport Utility 4D",
-  "price": 24000,
-  "year": 2021,
-  "make": "Hyundai",
-  "model": "Palisade",
-  "trim": "Calligraphy",
-  "mileage": 102000,
-  "category": "suv",
-  "location": "South Bend, NE",
-  "url": "https://www.facebook.com/marketplace/item/875250178881426/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 28100,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "2414135322431126",
   "title": "2022 Hyundai palisade sel awd",
   "price": 23495,
@@ -4949,28 +3532,6 @@
   ]
  },
  {
-  "id": "1748458816467604",
-  "title": "2022 Nissan pathfinder Platinum Sport Utility 4D",
-  "price": 28950,
-  "year": 2022,
-  "make": "Nissan",
-  "model": "Pathfinder",
-  "trim": "Platinum",
-  "mileage": 24792,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1748458816467604/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 32700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1478753273574667",
   "title": "2023 Nissan pathfinder",
   "price": 36300,
@@ -4988,28 +3549,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
   "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1360053102187377",
-  "title": "2022 Nissan pathfinder platinum 4dr suv",
-  "price": 28950,
-  "year": 2022,
-  "make": "Nissan",
-  "model": "Pathfinder",
-  "trim": "Platinum",
-  "mileage": 24792,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1360053102187377/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 32700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -5098,50 +3637,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1575238720801294",
-  "title": "2021 Honda pilot EX-L w/Navi & RES Sport Utility 4D",
-  "price": 23500,
-  "year": 2021,
-  "make": "Honda",
-  "model": "Pilot",
-  "trim": "Ex-L",
-  "mileage": 41600,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1575238720801294/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 30400,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1038133628548096",
-  "title": "2018 Honda pilot Elite Sport Utility 4D",
-  "price": 20311,
-  "year": 2018,
-  "make": "Honda",
-  "model": "Pilot",
-  "trim": "Elite",
-  "mileage": 51080,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1038133628548096/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 28800,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); price drop from $30,311",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -5433,25 +3928,6 @@
   ]
  },
  {
-  "id": "1454277536151331",
-  "title": "2021 Chevrolet suburban 113774 miles",
-  "price": 35990,
-  "year": 2021,
-  "make": "Chevrolet",
-  "model": "Suburban",
-  "trim": null,
-  "mileage": 113774,
-  "category": "suv",
-  "location": "Fremont, NE",
-  "url": "https://www.facebook.com/marketplace/item/1454277536151331/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 28600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": ""
- },
- {
   "id": "1867077447295870",
   "title": "2024 Chevrolet suburban",
   "price": 47495,
@@ -5540,28 +4016,6 @@
   ]
  },
  {
-  "id": "1032745282678661",
-  "title": "2019 Chevrolet suburban premier- 3rd row- 4wd",
-  "price": 25500,
-  "year": 2019,
-  "make": "Chevrolet",
-  "model": "Suburban",
-  "trim": "Premier",
-  "mileage": 133309,
-  "category": "suv",
-  "location": "Lincoln, NE",
-  "url": "https://www.facebook.com/marketplace/item/1032745282678661/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 25100,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "2209327143181444",
   "title": "2022 Chevrolet tahoe z71 suv",
   "price": 49897,
@@ -5606,28 +4060,6 @@
   ]
  },
  {
-  "id": "1454051622874739",
-  "title": "2021 Chevrolet suburban 1500 LTZ Sport Utility 4D",
-  "price": 33750,
-  "year": 2021,
-  "make": "Chevrolet",
-  "model": "Suburban",
-  "trim": "Ltz",
-  "mileage": 132000,
-  "category": "suv",
-  "location": "Council Bluffs, IA",
-  "url": "https://www.facebook.com/marketplace/item/1454051622874739/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 29700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "price drop from $39,900; clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "795875670229577",
   "title": "2019 GMC yukon xl SLT Sport Utility 4D",
   "price": 20950,
@@ -5645,50 +4077,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1531120308366130",
-  "title": "2022 Chevrolet suburban Z71 Sport Utility 4D",
-  "price": 41950,
-  "year": 2022,
-  "make": "Chevrolet",
-  "model": "Suburban",
-  "trim": "Z71",
-  "mileage": 77272,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1531120308366130/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 37500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "4491713204479501",
-  "title": "2017 Chevrolet suburban",
-  "price": 24995,
-  "year": 2017,
-  "make": "Chevrolet",
-  "model": "Suburban",
-  "trim": null,
-  "mileage": 101546,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/4491713204479501/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 22800,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -5761,28 +4149,6 @@
   ]
  },
  {
-  "id": "2214544636057067",
-  "title": "2018 Chevrolet suburban",
-  "price": 20550,
-  "year": 2018,
-  "make": "Chevrolet",
-  "model": "Suburban",
-  "trim": null,
-  "mileage": 116345,
-  "category": "suv",
-  "location": "Marysville, KS",
-  "url": "https://www.facebook.com/marketplace/item/2214544636057067/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 22500,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1053319184014577",
   "title": "2022 GMC yukon xl Denali Sport Utility 4D",
   "price": 49648,
@@ -5827,28 +4193,6 @@
   ]
  },
  {
-  "id": "1493921169226728",
-  "title": "2015 Cadillac escalade esv Premium Luxury Sport Utility 4D",
-  "price": 24950,
-  "year": 2015,
-  "make": "Cadillac",
-  "model": "Escalade",
-  "trim": "Premium",
-  "mileage": 107791,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1493921169226728/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 30800,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1325125233100475",
   "title": "2021 GMC yukon denali Denali",
   "price": 48999,
@@ -5865,28 +4209,6 @@
   "market_value": 35500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "960300510391254",
-  "title": "2021 Chevrolet tahoe",
-  "price": 23999,
-  "year": 2021,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": null,
-  "mileage": 127069,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/960300510391254/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 26600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
   "notes": "",
   "recovered": [
    "mileage:fb-field"
@@ -5915,29 +4237,6 @@
   ]
  },
  {
-  "id": "4364981850443348",
-  "title": "2021 Chevrolet suburban 1500 LT Sport Utility 4D",
-  "price": 31900,
-  "year": 2021,
-  "make": "Chevrolet",
-  "model": "Suburban",
-  "trim": "LT",
-  "mileage": 132000,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/4364981850443348/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 27200,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "price drop from $35,900; clean title per listing",
-  "recovered": [
-   "mileage:fb-field",
-   "trim"
-  ]
- },
- {
   "id": "1031011296505796",
   "title": "2021 Cadillac escalade Platinum Sport Utility 4D",
   "price": 48500,
@@ -5952,28 +4251,6 @@
   "image": null,
   "first_seen": "2026-07-27",
   "market_value": 42700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1035263115727753",
-  "title": "2019 Lincoln navigator l reserve 4wd",
-  "price": 33995,
-  "year": 2019,
-  "make": "Lincoln",
-  "model": "Navigator",
-  "trim": "Reserve",
-  "mileage": 79741,
-  "category": "suv",
-  "location": "Seward, NE",
-  "url": "https://www.facebook.com/marketplace/item/1035263115727753/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 41400,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "",
@@ -6004,28 +4281,6 @@
   ]
  },
  {
-  "id": "2302322207202543",
-  "title": "2018 Cadillac Escalade ESV",
-  "price": 32690,
-  "year": 2018,
-  "make": "Cadillac",
-  "model": "Escalade",
-  "trim": "Esv",
-  "mileage": 94876,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/2302322207202543/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 35700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1000791242911436",
   "title": "2021 GMC yukon denali",
   "price": 41999,
@@ -6043,28 +4298,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "price drop from $46,999; clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1013375941050260",
-  "title": "2022 Chevrolet tahoe Z71 Sport Utility 4D",
-  "price": 45950,
-  "year": 2022,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": "Z71",
-  "mileage": 45079,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1013375941050260/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 39100,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -6136,50 +4369,6 @@
   ]
  },
  {
-  "id": "993810996749668",
-  "title": "2021 Chevrolet tahoe",
-  "price": 39999,
-  "year": 2021,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": null,
-  "mileage": 78932,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/993810996749668/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 30400,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1010483875225070",
-  "title": "2016 Chevrolet tahoe ltz 3e4d61",
-  "price": 21988,
-  "year": 2016,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": "Ltz",
-  "mileage": 135073,
-  "category": "suv",
-  "location": "Gretna, NE",
-  "url": "https://www.facebook.com/marketplace/item/1010483875225070/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 20600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "885554917823380",
   "title": "2022 Chevrolet suburban Z71 SUV",
   "price": 39995,
@@ -6219,51 +4408,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": ""
- },
- {
-  "id": "3166499416892187",
-  "title": "2018 Chevrolet tahoe LT Sport Utility 4D",
-  "price": 22995,
-  "year": 2018,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": "LT",
-  "mileage": 143550,
-  "category": "suv",
-  "location": "Beatrice, NE",
-  "url": "https://www.facebook.com/marketplace/item/3166499416892187/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 19400,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field",
-   "trim"
-  ]
- },
- {
-  "id": "1026808596764609",
-  "title": "2021 GMC yukon",
-  "price": 40950,
-  "year": 2021,
-  "make": "GMC",
-  "model": "Yukon",
-  "trim": null,
-  "mileage": 111102,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1026808596764609/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 29800,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
  },
  {
   "id": "2116875295825201",
@@ -6311,50 +4455,6 @@
   ]
  },
  {
-  "id": "1505309520617115",
-  "title": "2020 Chevrolet tahoe",
-  "price": 32900,
-  "year": 2020,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": null,
-  "mileage": 40589,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1505309520617115/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 31000,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1019954883739889",
-  "title": "2020 Chevrolet tahoe",
-  "price": 21850,
-  "year": 2020,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": null,
-  "mileage": 99000,
-  "category": "suv",
-  "location": "Fremont, NE",
-  "url": "https://www.facebook.com/marketplace/item/1019954883739889/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 26300,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "low",
-  "notes": "price drop from $24,850",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1434352385066736",
   "title": "2023 Chevrolet suburban",
   "price": 33995,
@@ -6371,28 +4471,6 @@
   "market_value": 36500,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "2508457676289298",
-  "title": "2022 Chevrolet tahoe z71 4dr suv",
-  "price": 45950,
-  "year": 2022,
-  "make": "Chevrolet",
-  "model": "Tahoe",
-  "trim": "Z71",
-  "mileage": 45079,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/2508457676289298/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 39100,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
   "notes": "REBUILT/BRANDED TITLE (FB listing); ",
   "recovered": [
    "mileage:fb-field"
@@ -6708,28 +4786,6 @@
   ]
  },
  {
-  "id": "1019336194056620",
-  "title": "2022 Kia telluride SX Sport Utility 4D",
-  "price": 27900,
-  "year": 2022,
-  "make": "Kia",
-  "model": "Telluride",
-  "trim": "Sx",
-  "mileage": 119489,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1019336194056620/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 28100,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
   "id": "1701474741068375",
   "title": "2021 Kia telluride s",
   "price": 20990,
@@ -6813,50 +4869,6 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "medium",
   "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1587306456296298",
-  "title": "2021 Chevrolet traverse",
-  "price": 23995,
-  "year": 2021,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "Rs",
-  "mileage": 69338,
-  "category": "suv",
-  "location": "Seward, NE",
-  "url": "https://www.facebook.com/marketplace/item/1587306456296298/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 23700,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "clean title per listing",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "3369522773195096",
-  "title": "2023 Chevrolet traverse RS Sport Utility 4D",
-  "price": 25999,
-  "year": 2023,
-  "make": "Chevrolet",
-  "model": "Traverse",
-  "trim": "Rs",
-  "mileage": 26041,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/3369522773195096/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 30600,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); price drop from $27,999",
   "recovered": [
    "mileage:fb-field"
   ]
@@ -6988,28 +5000,6 @@
   "market_value": 32000,
   "value_source": "trim/year value table (KBB/Edmunds-anchored)",
   "value_confidence": "low",
-  "notes": "REBUILT/BRANDED TITLE (FB listing); ",
-  "recovered": [
-   "mileage:fb-field"
-  ]
- },
- {
-  "id": "1354852033239002",
-  "title": "2022 GMC yukon at4",
-  "price": 47495,
-  "year": 2022,
-  "make": "GMC",
-  "model": "Yukon",
-  "trim": "At4",
-  "mileage": 34872,
-  "category": "suv",
-  "location": "Omaha, NE",
-  "url": "https://www.facebook.com/marketplace/item/1354852033239002/",
-  "image": null,
-  "first_seen": "2026-07-27",
-  "market_value": 42400,
-  "value_source": "trim/year value table (KBB/Edmunds-anchored)",
-  "value_confidence": "medium",
   "notes": "REBUILT/BRANDED TITLE (FB listing); ",
   "recovered": [
    "mileage:fb-field"
