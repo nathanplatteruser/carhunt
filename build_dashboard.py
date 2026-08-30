@@ -139,11 +139,19 @@ def enrich(listings, threshold):
         else:
             l["flag"] = "valid"
         # rebuilt/salvage/branded titles are worth ~25% less than clean-title book -
-        # applied at render time (idempotent per build) so listings.json stays clean-book
-        if l["flag"] == "salvage" and mv and "haircut" not in (l.get("value_source") or ""):
-            mv = int(round(mv * 0.75, -2))
-            l["market_value"] = mv
-            l["value_source"] = (l.get("value_source") or "") + " · 25% rebuilt-title haircut"
+        # applied at render time (idempotent per build) so listings.json stays clean-book.
+        # BOTH values are kept: clean_value = what the same vehicle would be worth with a
+        # clean title (the functional/comparable value), market_value = as-titled resale.
+        if l["flag"] == "salvage" and mv:
+            if "haircut" in (l.get("value_source") or ""):
+                l["clean_value"] = int(round(mv / 0.75, -2))  # reconstruct pre-haircut book
+            else:
+                l["clean_value"] = mv
+                mv = int(round(mv * 0.75, -2))
+                l["market_value"] = mv
+                l["value_source"] = (l.get("value_source") or "") + " · 25% rebuilt-title haircut"
+        else:
+            l["clean_value"] = mv  # clean title: comparable == as-titled
         if price and mv:
             l["deal_pct"] = round((mv - price) / mv * 100, 1)
             l["savings"] = int(mv - price)
@@ -419,7 +427,8 @@ TEMPLATE = r"""<!DOCTYPE html>
       <th data-k="flip_score" class="right" title="FlipScore 0-10: margin vs market + cost per remaining mile + model quality + proximity to its metro hub + listing validity + title status">Score <span class="dir"></span></th>
       <th data-k="mileage" class="right">Miles <span class="dir"></span></th>
       <th data-k="price" class="right">Asking <span class="dir"></span></th>
-      <th data-k="market_value" class="right" title="Estimated private-party (Facebook-style) resale value: model/year/trim tables calibrated to KBB private-party + Edmunds appraisal ranges, mileage-adjusted, 25% haircut on rebuilt/branded titles">Est. FB resale <span class="dir"></span></th>
+      <th data-k="market_value" class="right" title="Estimated private-party (Facebook-style) resale value AS TITLED: model/year/trim tables calibrated to KBB private-party + Edmunds appraisal ranges, mileage-adjusted, 25% haircut on rebuilt/branded titles">Est. FB resale <span class="dir"></span></th>
+      <th data-k="clean_value" class="right" title="What the SAME vehicle would be worth with a clean title (the functional/comparable value). For rebuilt/salvage rows this shows the clean-title comp and the gap vs the as-titled value; for clean-title rows it equals Est. FB resale.">Clean-title comp <span class="dir"></span></th>
       <th data-k="fb_roi" class="right" title="Margin if you buy at asking and resell privately on Marketplace at est. FB resale: (FB resale − asking) ÷ asking">FB flip ROI <span class="dir"></span></th>
       <th data-k="dealer_roi" class="right" title="Margin if you buy at asking and sell to a dealer. Dealer trade-in est. = FB resale × 0.82–0.88 (KBB/Edmunds trade-in vs private-party ladder; luxury −3pts; branded titles ×0.60 — many dealers won't take them)">Dealer exit <span class="dir"></span></th>
       <th data-k="flag">Status <span class="dir"></span></th>
@@ -480,6 +489,7 @@ function row(l) {
     <td class="right" data-l="MILES"><span class="mrow"><span class="num">${fmtMi(l.mileage)}${rec("mileage")}</span></span></td>
     <td class="right" data-l="ASKING"><span class="mrow"><span class="num" style="font-weight:650">${fmt(l.price)}</span></span></td>
     <td class="right" data-l="EST. FB RESALE"><span class="mrow"><span class="num" style="color:var(--muted)">${fmt(l.market_value)}</span>${conf}</span></td>
+    <td class="right" data-l="CLEAN-TITLE COMP">${l.flag === "salvage" && l.clean_value ? `<span class="mrow"><span class="num" title="clean-title comparable ${fmt(l.clean_value)} vs as-titled ${fmt(l.market_value)}">${fmt(l.clean_value)}</span></span><div class="sub" style="font-size:11px;color:var(--warn-ink)">title gap −${fmt(l.clean_value - l.market_value)}</div>` : `<span class="mrow"><span class="num" style="color:var(--muted)">${l.clean_value ? "=" : "—"}</span></span>`}</td>
     <td class="right" data-l="FB FLIP ROI"><span class="mrow"><span class="delta ${l.fb_roi == null ? "zero" : l.fb_roi >= 3 ? "pos" : l.fb_roi <= -3 ? "neg" : "zero"}" title="resell privately at ${fmt(l.market_value)}">${l.fb_roi == null ? "—" : (l.fb_roi > 0 ? "+" : "") + l.fb_roi.toFixed(0) + "%"}</span>${sav}${bar}</span></td>
     <td class="right" data-l="DEALER EXIT"><span class="mrow"><span class="delta ${l.dealer_roi == null ? "zero" : l.dealer_roi >= 3 ? "pos" : l.dealer_roi <= -3 ? "neg" : "zero"}" title="dealer trade-in est. ${fmt(l.trade_value)}">${l.dealer_roi == null ? "—" : (l.dealer_roi > 0 ? "+" : "") + l.dealer_roi.toFixed(0) + "%"}</span></span></td>
     <td class="statuscell"><span class="status ${l.flag}">${STATUS[l.flag]}</span></td>
