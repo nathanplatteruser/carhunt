@@ -98,6 +98,34 @@ def flip_score(l):
     l["score_parts"] = " · ".join(f"{k} {v:g}" for k, v in parts.items())
     return l
 
+def compose_dm(l):
+    """Per-listing seller DM draft: interest + clarifying questions chosen from
+    THIS listing's actual gaps and flags. Generated at build time; the dashboard
+    only reveals it on click, and nothing is ever sent automatically."""
+    name = " ".join(str(x) for x in [l.get("year"), l.get("make"), l.get("model")] if x)
+    trim = f" {l['trim']}" if l.get("trim") else ""
+    notes = (l.get("notes") or "").lower()
+    qs = []
+    if l.get("mileage") is None:
+        qs.append("How many miles are on it?")
+    elif l["mileage"] >= 100000:
+        qs.append(f"At {l['mileage']:,} miles, has the regular maintenance been kept up (fluids, brakes, transmission service)?")
+    if l.get("flag") == "salvage" or "rebuilt" in notes or "branded" in notes or "salvage" in notes:
+        qs.append("I noticed the title is rebuilt/branded - what was the original damage, and do you have photos or repair documentation from the rebuild?")
+    else:
+        qs.append("Is the title clean and in your name, with no liens?")
+    qs.append("Could you send me the VIN so I can run a Carfax/AutoCheck history report before we meet?")
+    qs.append("Any accidents, warning lights, or mechanical issues I should know about?")
+    if (l.get("deal_pct") or 0) >= 15:
+        qs.append("The price looks very fair - is there anything about the condition that's reflected in it?")
+    if "duplicate listing" in notes:
+        qs.append("I've seen this vehicle posted more than once - are you the owner or selling on consignment?")
+    body = "\n".join("- " + q for q in qs[:5])
+    return (f"Hi! I saw your listing for the {name}{trim} and I'm interested - is it still available?\n\n"
+            f"A few quick questions:\n{body}\n\n"
+            "If everything checks out, I'd love to take a look and test drive it this week. "
+            "Happy to meet somewhere public whenever works for you. Thanks!")
+
 def enrich(listings, threshold):
     out = []
     for l in listings:
@@ -138,6 +166,7 @@ def enrich(listings, threshold):
         l["rating_key"], l["rating_label"] = key, label
         l["flagged"] = l["deal_pct"] is not None and l["deal_pct"] >= threshold
         flip_score(l)
+        l["dm"] = compose_dm(l)
         out.append(l)
     out.sort(key=lambda x: -x.get("flip_score", 0))
     return out
@@ -289,6 +318,19 @@ TEMPLATE = r"""<!DOCTYPE html>
   .conf { display: block; margin-top: 4px; color: var(--faint); font-size: 11px; }
   .rec { color: var(--brand-ink); font-weight: 700; cursor: help; }
   .open { font-size: 12.5px; font-weight: 600; white-space: nowrap; }
+  .dmbtn { border: 1px solid var(--line-strong); background: var(--bg); color: var(--brand-ink); border-radius: 3px; padding: 4px 8px; font-size: 12px; font-weight: 600; cursor: pointer; white-space: nowrap; }
+  .dmbtn:hover { border-color: var(--brand-ink); }
+  .dmoverlay { display: none; position: fixed; inset: 0; background: oklch(0.2 0.01 60 / .45); z-index: 40; }
+  .dmoverlay.on { display: flex; align-items: center; justify-content: center; padding: 18px; }
+  .dmbox { background: var(--bg); border: 1px solid var(--line-strong); border-radius: 6px; width: min(640px, 100%); max-height: 90vh; display: flex; flex-direction: column; box-shadow: 0 12px 40px oklch(0.2 0.01 60 / .25); }
+  .dmbox header { display: flex; align-items: center; gap: 10px; padding: 12px 16px; border-bottom: 1px solid var(--line); font-weight: 700; font-size: 14px; }
+  .dmbox header .x { margin-left: auto; cursor: pointer; border: none; background: none; font-size: 18px; color: var(--muted); }
+  .dmbox .hint { padding: 8px 16px 0; font-size: 12px; color: var(--faint); }
+  .dmbox textarea { margin: 10px 16px; min-height: 260px; resize: vertical; border: 1px solid var(--line-strong); border-radius: 4px; padding: 10px; font: 13px/1.5 inherit; color: var(--ink); background: var(--bg); }
+  .dmbox .row { display: flex; gap: 8px; padding: 0 16px 14px; }
+  .dmbox .row button, .dmbox .row a { border: 1px solid var(--line-strong); border-radius: 4px; padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; }
+  .dmbox .row .primary { background: var(--brand-ink); border-color: var(--brand-ink); color: #fff; }
+  .dmbox .row a { color: var(--brand-ink); background: var(--bg); }
   .empty { padding: 56px 10px; color: var(--muted); }
   .empty b { display: block; color: var(--ink); font-size: 15px; margin-bottom: 4px; }
   footer { border-top: 1px solid var(--line); color: var(--faint); font-size: 12px; padding: 14px 24px 28px; }
@@ -311,7 +353,7 @@ TEMPLATE = r"""<!DOCTYPE html>
     .mrow { display: inline-block; }
     .bar { display: none; }
     .conf { display: none; }
-    td.statuscell, td.opencell { display: inline-block; margin-right: 16px; vertical-align: bottom; }
+    td.statuscell, td.opencell, td.dmcell { display: inline-block; margin-right: 16px; vertical-align: bottom; }
   }
   @media (prefers-reduced-motion: reduce) {
     tbody tr { transition: none; }
@@ -381,12 +423,25 @@ TEMPLATE = r"""<!DOCTYPE html>
       <th data-k="fb_roi" class="right" title="Margin if you buy at asking and resell privately on Marketplace at est. FB resale: (FB resale − asking) ÷ asking">FB flip ROI <span class="dir"></span></th>
       <th data-k="dealer_roi" class="right" title="Margin if you buy at asking and sell to a dealer. Dealer trade-in est. = FB resale × 0.82–0.88 (KBB/Edmunds trade-in vs private-party ladder; luxury −3pts; branded titles ×0.60 — many dealers won't take them)">Dealer exit <span class="dir"></span></th>
       <th data-k="flag">Status <span class="dir"></span></th>
+      <th title="Per-listing seller message draft: interest + clarifying questions (title, VIN for Carfax, mileage, service history) generated from this listing's own data. You review, edit, copy, and send it yourself - nothing is sent automatically.">Reach out</th>
       <th></th>
     </tr></thead>
     <tbody id="rows"></tbody>
   </table>
   <div class="empty" id="empty" style="display:none"><b>No listings match</b>Clear a filter, or run a fresh Marketplace sweep to add inventory.</div>
 </div></main>
+
+<div class="dmoverlay" id="dmOverlay" role="dialog" aria-modal="true" aria-label="Seller message draft">
+  <div class="dmbox">
+    <header><span id="dmTitle">Seller message draft</span><button type="button" class="x" id="dmClose" aria-label="Close">✕</button></header>
+    <div class="hint">Drafted from this listing's own data (title status, mileage gaps, VIN check). Edit anything below, then copy and paste it into Facebook Messenger yourself - nothing is sent for you.</div>
+    <textarea id="dmText" spellcheck="true"></textarea>
+    <div class="row">
+      <button type="button" class="primary" id="dmCopy">Copy message</button>
+      <a id="dmOpen" href="#" target="_blank" rel="noopener">Open listing ↗</a>
+    </div>
+  </div>
+</div>
 
 <footer><div class="wrap">Estimated market values: KBB / Edmunds private-party anchors adjusted for mileage and title status, cross-checked against local asking-price comps. FlipScore (0.0–10.0) is an internal v1 index: discount vs market (30%) + cost per expected remaining mile (20%) + model quality-for-price (15%) + proximity to the board's home metro (15%) + listing/seller validity (15%) + title status (5%). Hover a score for its breakdown. 10 = slam dunk, 0 = seller wins. Estimates are approximate — inspect in person and verify VIN, title, and history before buying. Never send deposits for a truck you haven't seen.</div></footer>
 
@@ -428,6 +483,7 @@ function row(l) {
     <td class="right" data-l="FB FLIP ROI"><span class="mrow"><span class="delta ${l.fb_roi == null ? "zero" : l.fb_roi >= 3 ? "pos" : l.fb_roi <= -3 ? "neg" : "zero"}" title="resell privately at ${fmt(l.market_value)}">${l.fb_roi == null ? "—" : (l.fb_roi > 0 ? "+" : "") + l.fb_roi.toFixed(0) + "%"}</span>${sav}${bar}</span></td>
     <td class="right" data-l="DEALER EXIT"><span class="mrow"><span class="delta ${l.dealer_roi == null ? "zero" : l.dealer_roi >= 3 ? "pos" : l.dealer_roi <= -3 ? "neg" : "zero"}" title="dealer trade-in est. ${fmt(l.trade_value)}">${l.dealer_roi == null ? "—" : (l.dealer_roi > 0 ? "+" : "") + l.dealer_roi.toFixed(0) + "%"}</span></span></td>
     <td class="statuscell"><span class="status ${l.flag}">${STATUS[l.flag]}</span></td>
+    <td class="dmcell"><button type="button" class="dmbtn" data-id="${l.id}">✉ Draft DM</button></td>
     <td class="right opencell"><a class="open" href="${l.url}" target="_blank" rel="noopener">Open ↗</a></td>
   </tr>`;
 }
@@ -557,6 +613,33 @@ document.getElementById("flagMenu").addEventListener("change", () => {
     (on.length === 3 ? "all" : on.length === 0 ? "none" : on.map(v => names[v]).join(", "));
   render();
 });
+// ── Seller DM drafts: reveal on click, copy manually - never auto-sent ──
+const dmOverlay = document.getElementById("dmOverlay");
+const dmText = document.getElementById("dmText");
+const dmOpen = document.getElementById("dmOpen");
+const dmTitle = document.getElementById("dmTitle");
+const dmCopy = document.getElementById("dmCopy");
+document.getElementById("rows").addEventListener("click", e => {
+  const btn = e.target.closest(".dmbtn");
+  if (!btn) return;
+  const l = DATA.find(x => String(x.id) === btn.dataset.id);
+  if (!l) return;
+  dmTitle.textContent = "Message draft — " + (l.title || "").slice(0, 48);
+  dmText.value = l.dm || "";
+  dmOpen.href = l.url;
+  dmCopy.textContent = "Copy message";
+  dmOverlay.classList.add("on");
+  dmText.focus();
+});
+document.getElementById("dmClose").onclick = () => dmOverlay.classList.remove("on");
+dmOverlay.addEventListener("click", e => { if (e.target === dmOverlay) dmOverlay.classList.remove("on"); });
+document.addEventListener("keydown", e => { if (e.key === "Escape") dmOverlay.classList.remove("on"); });
+dmCopy.onclick = async () => {
+  try { await navigator.clipboard.writeText(dmText.value); }
+  catch (err) { dmText.select(); document.execCommand("copy"); }
+  dmCopy.textContent = "Copied ✓";
+  setTimeout(() => dmCopy.textContent = "Copy message", 1600);
+};
 render();
 </script>
 </body>

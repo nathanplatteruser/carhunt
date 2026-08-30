@@ -30,6 +30,10 @@ Sellers routinely leave listing fields blank (or garbage: "1 mile", "$200") whil
 
 Every listing gets a 0.0–10.0 FlipScore — a v1 composite for flip-hunting, sortable and range-filterable on the dashboard: discount vs market (30%) + cost per expected remaining mile using per-model lifespans (20%) + model quality-for-price (15%) + proximity to the board's home market (15%) + listing/seller validity (15%) + title status (5%). Probable scams are hard-capped at 4.9. Hover any score for its factor breakdown.
 
+## Seller outreach drafts
+
+Every listing row has a **✉ Draft DM** button. Clicking it opens an editable, per-listing message draft: an interest opener plus clarifying questions chosen from that listing's own data — missing odometer, rebuilt/branded title (asks for rebuild documentation), VIN for a Carfax/AutoCheck pull, service history, and a consignment check when the vehicle is posted under multiple accounts. Drafts are generated in the build pipeline, reviewed and edited by me in the dashboard, then copied and pasted into Messenger by hand. **Nothing is ever sent automatically.**
+
 ## How valuation works
 
 Each asking price is compared against an **estimated private-party (Facebook-style) resale value** triangulated from three signals: KBB private-party data, Edmunds appraisal values by trim, and the median asking price of comparable listings in the same dataset. Values are mileage-adjusted (~$0.08–0.09/mile against typical), and rebuilt/branded titles take a 25% haircut.
