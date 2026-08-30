@@ -4,8 +4,8 @@ A personal vehicle deal-finding engine with live public dashboards. Built by [Na
 
 **Live dashboards:**
 
-* **All markets (flagship)** → [nathanplatteruser.github.io/carhunt](https://nathanplatteruser.github.io/carhunt/) — every tracked listing across all three metros on one board, with a Market dropdown to slice by Lincoln–Omaha Metro, Denver Metro, or Kansas City Metro
-* **Denver, CO** → [nathanplatteruser.github.io/carhunt/denver.html](https://nathanplatteruser.github.io/carhunt/denver.html) — full-size 3-row SUVs + Ram 1500, thru 2024, $20k–$50k, 100-mile radius
+* **All markets (flagship)** → [nathanplatteruser.github.io/carhunt](https://nathanplatteruser.github.io/carhunt/) — every tracked listing across all four metros on one board — 3-row SUVs plus Ram 1500 and GMC Sierra 1500 pickups — with a Market dropdown to slice by Lincoln–Omaha, Denver, Kansas City, or Des Moines Metro
+* **Denver, CO** → [nathanplatteruser.github.io/carhunt/denver.html](https://nathanplatteruser.github.io/carhunt/denver.html) — full-size 3-row SUVs + Ram 1500 + Sierra 1500, thru 2024, $20k–$50k, 100-mile radius
 * **Kansas City, MO/KS** → [nathanplatteruser.github.io/carhunt/kc.html](https://nathanplatteruser.github.io/carhunt/kc.html) — same scope, 100-mile radius covering both the Missouri and Kansas sides
 
 FlipScore's proximity factor is computed per listing against its **own** metro hub, so a Denver truck isn't penalized for being far from Nebraska.
@@ -45,7 +45,7 @@ Confidence is tracked per listing (high / medium / low) and shown in the UI. Hov
 
 ```
 collect (browser session, read-only)
-   → data/listings.json + denver_listings.json + kc_listings.json   (the datasets — owned & updated by me)
+   → data/listings.json + denver_listings.json + kc_listings.json + desmoines_listings.json   (the datasets — owned & updated by me)
    → data/listing_cache.json                          (persistent per-listing knowledge base)
    → build_dashboard.py                               (renders single-file HTML apps)
    → GitHub Pages                                     (this repo → permanent public URLs)

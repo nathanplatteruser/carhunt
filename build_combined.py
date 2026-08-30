@@ -35,13 +35,22 @@ LINCOLN_EXTRA = {"Beatrice, NE":40,"Fairbury, NE":65,"Sutton, NE":75,"Missouri V
  "Council Bluffs, IA":60,"Carter Lake, IA":60,"South Bend, NE":35,"Bennington, NE":50,
  "Waverly, NE":12,"Mead, NE":30,"Waterloo, NE":42,"Adams, NE":25,"Marysville, KS":62,
  "Fremont, NE":55,"Columbus, NE":75,"Plattsmouth, NE":55,"La Vista, NE":50,
- "Springfield, NE":50,"Valparaiso, NE":20,"Wahoo, NE":30,"Denton, NE":10,"Gretna, NE":45}
+ "Springfield, NE":50,"Valparaiso, NE":20,"Wahoo, NE":30,"Denton, NE":10,"Gretna, NE":45,
+ "Geneva, NE":55,"Albion, NE":110,"Crete, NE":25,"Norfolk, NE":95}
+DSM_MI = {"Des Moines, IA":0,"West Des Moines, IA":8,"Clive, IA":8,"Urbandale, IA":8,
+ "Johnston, IA":10,"Ankeny, IA":12,"Altoona, IA":12,"Pleasant Hill, IA":8,"Norwalk, IA":12,
+ "Waukee, IA":12,"Grimes, IA":12,"Carlisle, IA":12,"Indianola, IA":20,"Adel, IA":20,
+ "Perry, IA":30,"Winterset, IA":35,"Newton, IA":35,"Ames, IA":35,"Boone, IA":45,
+ "Story City, IA":45,"Pella, IA":45,"Knoxville, IA":40,"Osceola, IA":45,"Marshalltown, IA":55,
+ "Grinnell, IA":55,"Chariton, IA":55,"Oskaloosa, IA":60,"Albia, IA":70,"Creston, IA":75,
+ "Carroll, IA":85,"Audubon, IA":75,"Ottumwa, IA":85,"Fort Dodge, IA":90}
 
 MARKETS = [
-    ("listings.json",        "Lincoln–Omaha Metro",  dict(list(bd.CITY_MI.items()) + list(LINCOLN_EXTRA.items())),
+    ("listings.json",           "Lincoln–Omaha Metro",  dict(list(bd.CITY_MI.items()) + list(LINCOLN_EXTRA.items())),
      {"NE":70,"IA":120,"KS":200,"MO":220,"SD":175}),
-    ("denver_listings.json", "Denver Metro",         DENVER_MI, {"CO":60,"WY":110}),
-    ("kc_listings.json",     "Kansas City Metro",    KC_MI,     {"MO":60,"KS":60}),
+    ("denver_listings.json",    "Denver Metro",         DENVER_MI, {"CO":60,"WY":110}),
+    ("kc_listings.json",        "Kansas City Metro",    KC_MI,     {"MO":60,"KS":60}),
+    ("desmoines_listings.json", "Des Moines Metro",     DSM_MI,    {"IA":60}),
 ]
 
 def main():
@@ -72,9 +81,9 @@ def main():
     tmp = tempfile.mkdtemp(prefix="carhunt_all")
     cfg = json.load(open(os.path.join(DATA, "config.json")))
     cfg["location"] = dict(cfg.get("location") or {})
-    cfg["location"]["city"] = "Lincoln–Omaha · Denver · Kansas City"
+    cfg["location"]["city"] = "Lincoln–Omaha · Denver · Kansas City · Des Moines"
     cfg["location"]["radius_miles"] = 100
-    cfg["scope_label"] = "All markets — full-size & 3-row SUVs + Ram 1500 · thru 2024 · $20k–$50k"
+    cfg["scope_label"] = "All markets — 3-row SUVs + Ram 1500 + Sierra 1500 · thru 2024 · $20k–$50k"
     json.dump(cfg, open(os.path.join(tmp, "config.json"), "w"))
     shutil.copy(os.path.join(DATA, "all_listings.json"), os.path.join(tmp, "listings.json"))
     out = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "index.html")
