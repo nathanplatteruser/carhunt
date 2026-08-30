@@ -39,21 +39,51 @@ def invalid_mileage(v):
 def invalid_price(v):
     return v is not None and v < 4000
 
+def scan_mileage(t, year=None):
+    """Option C: exhaustive candidate scan when the labeled patterns (A/B) miss.
+
+    Collects EVERY number attached to a miles keyword - including emoji-bulleted
+    bare statements like '[checkmark] 158,600 miles' - then discards years, VIN
+    fragments, and interval/warranty phrases ('every 5,000 miles', 'warranty up
+    to 100,000 miles', 'tires 2,000 miles ago'), and returns the most plausible
+    odometer figure (largest surviving candidate; intervals skew small)."""
+    EXCLUDE_BEFORE = re.compile(r"(?:every|per|each|up\s*to|warranty|next|within|last|first|added|towing|tow|range)\s*[\d,\.]*\s*$", re.I)
+    EXCLUDE_AFTER = re.compile(r"^\s*(?:miles?|mi)\s*(?:ago|of\s+(?:warranty|range))", re.I)
+    cands = []
+    for m in re.finditer(r"([\d]{1,3}(?:,\d{3})+|\d{4,6})\s*(?:miles|mi\b)|(\d{2,3}(?:\.\d)?)\s*k\s*(?:miles|mi\b)", t, re.I):
+        v = int(m.group(1).replace(",", "")) if m.group(1) else int(round(float(m.group(2)) * 1000))
+        if not (1000 <= v <= 400000):
+            continue
+        if 1990 <= v <= 2026 and "," not in (m.group(1) or ""):
+            continue  # bare 4-digit number in the year band without commas: probably a year
+        before = t[max(0, m.start() - 28):m.start()]
+        after = t[m.end() - len("miles"):m.end() + 14]
+        if EXCLUDE_BEFORE.search(before) or EXCLUDE_AFTER.search(after):
+            continue
+        cands.append(v)
+    if not cands:
+        return None
+    return max(cands)  # odometer is the largest plausible figure; intervals run small
+
 def extract_from_text(text):
     """Pull every recoverable field candidate out of free text."""
     t = " " + (text or "").lower().replace("\n", " ") + " "
     out = {}
-    # mileage - checked most-specific first:
-    #   FB structured field: "Driven 162,532 miles"
-    #   FB details field:    "Mileage - 141,512" / "Mileage · 141,512"
-    #   free text:           "167,000 miles", "167k miles", "mileage: 167000"
+    # mileage, three plans in strict order:
+    #   A (field):   "Driven 162,532 miles" - FB's structured field, always wins
+    #   B (labeled): "Mileage - 141,512", "odometer: 158600", "has 90,000 miles"
+    #   C (scan):    exhaustive candidate scan with context exclusions (scan_mileage)
     m = (re.search(r"driven\s+([\d,]+)\s*(?:miles|mi\b)", t)
          or re.search(r"mileage\s*[-–·:]*\s*([\d,]{4,7})", t)
-         or re.search(r"([\d]{1,3}(?:,\d{3})+|\d{4,6})\s*(?:miles|mi\b)", t)
-         or re.search(r"(\d{2,3})\s*k\s*(?:miles|mi\b)", t))
+         or re.search(r"odometer\s*(?:reads|reading|shows|at|is)?\s*[-–·:]*\s*([\d,]{4,7})", t)
+         or re.search(r"(?:has|with|only|@|at)\s+([\d,]{4,7})\s+(?:miles|mi\b)", t))
     if m:
         v = m.group(1).replace(",", "")
         out["mileage"] = int(v) * (1000 if len(v) <= 3 else 1)
+    else:
+        c = scan_mileage(t)
+        if c is not None:
+            out["mileage"] = c
     # price: "asking $12,800", "price: 12800", "$12,800 obo"
     m = re.search(r"(?:asking|price)[^$\d]{0,12}\$?\s*([\d]{1,3}(?:,\d{3})+|\d{4,6})", t) \
         or re.search(r"\$\s*([\d]{1,3}(?:,\d{3})+|\d{4,6})\b", t)

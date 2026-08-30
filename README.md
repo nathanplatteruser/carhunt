@@ -24,6 +24,10 @@ The dashboard tags every listing (`NO FLAGS` / `REBUILT-SALVAGE` / `SCAM RISK`) 
 
 ## Description recovery
 
+Mileage extraction runs three plans in strict order. **Plan A** is always Facebook's structured mileage field ("Driven 158,868 miles"). **Plan B** is labeled text patterns ("Mileage - 141,512", "odometer: 158600", "has 90,000 miles"). **Plan C** is an exhaustive candidate scan of the full listing text that catches emoji-bulleted bare statements ("✅ 158,600 miles") and shorthand ("158.6k mi") while excluding years, VIN fragments, service intervals ("every 5,000 miles"), warranty figures ("up to 100,000 miles"), and "N miles ago" phrases — then keeps the largest surviving candidate. Every detail-page visit also persists the seller's description into the listing knowledge base, so parser upgrades re-run over stored data instead of re-scraping (`scripts/sweep_extract.js` is the canonical in-page extractor).
+
+### Field recovery
+
 Sellers routinely leave listing fields blank (or garbage: "1 mile", "$200") while stating the real facts in the description. A recovery layer (`enrich_listing.py`) treats listing fields as the source of truth, invalidates obviously-bogus values (mileage < 1,000 or > 500,000; price < $4,000), then fuzzy-matches the description text to fill the gaps — model aliases ("chevy suburban" → Chevrolet Suburban), mileage ("167,000 miles", "167k"), year, trim, price, and title-status phrases. Recovered values are marked with a ° on the dashboard so it's always visible which numbers came from the seller's fields versus their prose.
 
 ## FlipScore
