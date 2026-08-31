@@ -7,7 +7,7 @@ No cards, no gradients, no emojis.
 
 Usage: python3 build_dashboard.py [--data-dir DIR] [--out FILE]
 """
-import argparse, json, html, os, datetime
+import argparse, json, html, os, re, datetime
 
 RATINGS = [
     ("great", "Great deal", 15),
@@ -126,6 +126,50 @@ def compose_dm(l):
             "If everything checks out, I'd love to take a look and test drive it this week. "
             "Happy to meet somewhere public whenever works for you. Thanks!")
 
+# ── 3rd-row seating classification ──────────────────────────────────────────
+# GUARANTEED: the model ships with a 3rd row on essentially every config, or the
+# seller's own description confirms one. SOMETIMES: trim/config dependent —
+# verify with the seller. NEVER: physically no 3rd row (pickups).
+ROW3_GUARANTEED = ("suburban", "tahoe", "yukon", "expedition", "sequoia", "armada",
+                   "escalade", "navigator", "qx80", "traverse", "explorer", "telluride",
+                   "palisade", "pilot", "highlander", "ascent", "atlas", "aviator",
+                   "enclave", "pathfinder", "wagoneer", "cx-9", "cx9")
+ROW3_SOMETIMES = ("durango", "acadia", "sorento", "santa fe", "outlander", "journey",
+                  "grand cherokee")
+ROW3_NEVER = re.compile(r"\b1500\b|f-?150|silverado|sierra|\bram\b|tundra|titan|ranger|"
+                        r"colorado|canyon|frontier|maverick|ridgeline", re.I)
+ROW3_DESC = re.compile(r"3rd[\s-]?row|third[\s-]?row|seats?\s*[78]\b|[78][\s-]?passenger|[78][\s-]?seater", re.I)
+
+def classify_row3(l):
+    m = ((l.get("model") or "") + " " + (l.get("title") or "")).lower()
+    if l.get("category") == "truck":
+        return "never"
+    # guaranteed-model check BEFORE the pickup pattern: "Suburban 1500" is a
+    # real 3-row SUV name and must not be caught by the bare-1500 pickup match
+    if any(g in m for g in ROW3_GUARANTEED):
+        return "guaranteed"
+    if ROW3_NEVER.search(m):
+        return "never"
+    desc = (l.get("description") or "") + " " + (l.get("notes") or "") + " " + m
+    if ROW3_DESC.search(desc):
+        return "guaranteed"  # seller explicitly confirms a 3rd row / 7-8 seats
+    return "sometimes"
+
+# VIN capture: prefer the swept vin field; fall back to a 17-char VIN pattern in
+# the stored description/notes (I excludes, O excludes, Q excludes per VIN spec).
+VIN_RE = re.compile(r"\b([A-HJ-NPR-Z0-9]{17})\b")
+def find_vin(l):
+    v = (l.get("vin") or "").strip().upper()
+    if len(v) == 17 and not v.isdigit():
+        return v
+    for src in (l.get("description"), l.get("notes")):
+        if not src:
+            continue
+        m = VIN_RE.search(src.upper())
+        if m and not m.group(1).isdigit():
+            return m.group(1)
+    return None
+
 def enrich(listings, threshold):
     out = []
     for l in listings:
@@ -138,6 +182,14 @@ def enrich(listings, threshold):
             l["flag"] = "suspect"
         else:
             l["flag"] = "valid"
+        l["row3"] = classify_row3(l)
+        # Auction-history link: VIN-keyed saleshistory.org page, generated ONLY
+        # for non-clean rows (rebuilt/salvage/scam/lemon) where a VIN was
+        # captured — that's where pre-rebuild damage photos change decisions.
+        if l["flag"] in ("salvage", "suspect"):
+            vin = find_vin(l)
+            if vin:
+                l["auction_url"] = "https://" + vin.lower() + ".saleshistory.org/"
         # rebuilt/salvage/branded titles are worth ~25% less than clean-title book -
         # applied at render time (idempotent per build) so listings.json stays clean-book.
         # BOTH values are kept: clean_value = what the same vehicle would be worth with a
@@ -429,6 +481,14 @@ TEMPLATE = r"""<!DOCTYPE html>
       <label><input type="checkbox" value="suspect" checked> Scam / lemon risk</label>
     </div>
   </div>
+  <div class="dd" id="row3DD" title="3rd-row seating status. GUARANTEED = the model always ships with a 3rd row (or the seller's description confirms one) — check only this box and 100% of results have 3rd rows. SOMETIMES = trim/config dependent, verify with the seller. NEVER = physically impossible (pickups).">
+    <button id="row3Btn" type="button" aria-haspopup="true">3rd row: all</button>
+    <div class="menu" id="row3Menu">
+      <label><input type="checkbox" value="guaranteed" checked> GUARANTEED — always has a 3rd row</label>
+      <label><input type="checkbox" value="sometimes" checked> SOMETIMES — trim-dependent, ask seller</label>
+      <label><input type="checkbox" value="never" checked> NEVER — no 3rd row possible</label>
+    </div>
+  </div>
   <div class="rangewrap" title="FlipScore range filter">
     <span class="lbl">Score</span>
     <input type="number" id="scoreMin" min="0" max="10" step="0.1" value="0.0" aria-label="Minimum FlipScore">
@@ -490,7 +550,8 @@ const MODELS = __MODELS__;
 const MARKETS = __MARKETS__;
 const STATUS = { valid: "NO FLAGS", salvage: "REBUILT/SALVAGE", suspect: "SCAM RISK" };
 const TRIMS = __TRIMS__;
-const state = { q: "", market: "all", flags: new Set(["valid","salvage","suspect"]), rating: "all", maxP: null,
+const state = { q: "", market: "all", flags: new Set(["valid","salvage","suspect"]),
+  row3: new Set(["guaranteed","sometimes","never"]), rating: "all", maxP: null,
   sort: { k: "flip_score", d: -1 },
   makeMode: "include", makeSel: new Set(MAKES),
   modelMode: "include", modelSel: new Set(MODELS),
@@ -521,7 +582,7 @@ function row(l) {
   return `<tr>
     <td class="truck">
       <div class="name"><a href="${l.url}" target="_blank" rel="noopener">${l.sold ? `<span class="soldtag">SOLD</span> ` : ""}${l.title}</a></div>
-      <div class="sub">${l.location || "—"}${l.market ? " · " + l.market : ""}${l.title_status_desc ? " · desc: " + l.title_status_desc + " title" : ""}</div>
+      <div class="sub">${l.location || "—"}${l.market ? " · " + l.market : ""}${l.title_status_desc ? " · desc: " + l.title_status_desc + " title" : ""}${l.auction_url ? ` · <a href="${l.auction_url}" target="_blank" rel="noopener" title="VIN-keyed auction sale history — pre-rebuild damage photos and sale records for this exact vehicle">Auction history ↗</a>` : ""}</div>
       ${l.notes ? `<div class="note${alert ? " alert" : ""}">${l.notes}</div>` : ""}
     </td>
     <td class="trimcell" data-l="TRIM">${l.trim ? l.trim + rec("trim") : `<span style="color:var(--muted)">—</span>`}</td>
@@ -547,6 +608,7 @@ function render() {
   let rows = DATA.filter(l =>
     (state.market === "all" || l.market === state.market)
     && state.flags.has(l.flag)
+    && state.row3.has(l.row3 || "sometimes")
     && makeOK(l) && modelOK(l) && trimOK(l)
     && (!state.hideSold || !l.sold)
     && (state.showPassed ? passed.has(l.id) : !passed.has(l.id))
@@ -706,7 +768,7 @@ nMin.oninput = () => setRange(+nMin.value, state.sMax, "numMin");
 nMax.oninput = () => setRange(state.sMin, +nMax.value, "numMax");
 setRange(0, 10);
 
-const allDDs = ["makeDD", "modelDD", "trimDD", "flagDD"].map(id => document.getElementById(id));
+const allDDs = ["makeDD", "modelDD", "trimDD", "flagDD", "row3DD"].map(id => document.getElementById(id));
 allDDs.forEach(dd => {
   dd.querySelector("button").onclick = e => {
     e.stopPropagation();
@@ -721,6 +783,15 @@ document.getElementById("flagMenu").addEventListener("change", () => {
   state.flags = new Set(on);
   const names = { valid: "no flags", salvage: "rebuilt", suspect: "scam risk" };
   document.getElementById("flagBtn").textContent = "Title status: " +
+    (on.length === 3 ? "all" : on.length === 0 ? "none" : on.map(v => names[v]).join(", "));
+  render();
+});
+// ── 3rd-row status filter: NEVER / SOMETIMES / GUARANTEED ──
+document.getElementById("row3Menu").addEventListener("change", () => {
+  const on = [...document.querySelectorAll("#row3Menu input")].filter(b => b.checked).map(b => b.value);
+  state.row3 = new Set(on);
+  const names = { guaranteed: "GUARANTEED", sometimes: "SOMETIMES", never: "NEVER" };
+  document.getElementById("row3Btn").textContent = "3rd row: " +
     (on.length === 3 ? "all" : on.length === 0 ? "none" : on.map(v => names[v]).join(", "));
   render();
 });
