@@ -140,10 +140,38 @@ ROW3_NEVER = re.compile(r"\b1500\b|f-?150|silverado|sierra|\bram\b|tundra|titan|
                         r"colorado|canyon|frontier|maverick|ridgeline", re.I)
 ROW3_DESC = re.compile(r"3rd[\s-]?row|third[\s-]?row|seats?\s*[78]\b|[78][\s-]?passenger|[78][\s-]?seater", re.I)
 
+# ── One-time model spec table (data/model_specs.json) ───────────────────────
+# Curated once from factory specs — never re-polled. Ordered match patterns
+# (yukon xl before yukon, etc.) -> row3 status, length class, cargo cu-ft
+# behind the 3rd row. The regex heuristics below survive only as a fallback
+# for models not yet in the table.
+_SPECS_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "model_specs.json")
+try:
+    MODEL_SPECS = json.load(open(_SPECS_PATH))["specs"]
+except Exception:
+    MODEL_SPECS = []
+
+def spec_for(l):
+    m = ((l.get("model") or "") + " " + (l.get("title") or "") + " " +
+         (l.get("trim") or "")).lower()
+    for pat, spec in MODEL_SPECS:
+        if pat in m:
+            return spec
+    return None
+
 def classify_row3(l):
-    m = ((l.get("model") or "") + " " + (l.get("title") or "")).lower()
     if l.get("category") == "truck":
         return "never"
+    m = ((l.get("model") or "") + " " + (l.get("title") or "")).lower()
+    spec = spec_for(l)
+    if spec:
+        r = spec["row3"]
+        if r == "sometimes":
+            desc = (l.get("description") or "") + " " + (l.get("notes") or "") + " " + m
+            if ROW3_DESC.search(desc):
+                return "guaranteed"  # trim-dependent model, but seller confirms
+        return r
+    # fallback heuristics for models not in the spec table
     # guaranteed-model check BEFORE the pickup pattern: "Suburban 1500" is a
     # real 3-row SUV name and must not be caught by the bare-1500 pickup match
     if any(g in m for g in ROW3_GUARANTEED):
@@ -154,6 +182,33 @@ def classify_row3(l):
     if ROW3_DESC.search(desc):
         return "guaranteed"  # seller explicitly confirms a 3rd row / 7-8 seats
     return "sometimes"
+
+# ── Body-length / cargo classification ──────────────────────────────────────
+# XL: extended-wheelbase full-size — massive cargo BEHIND the 3rd row
+# (Suburban ~41 cu ft, Yukon XL ~41, Expedition Max/EL ~36, Escalade ESV ~39,
+# Navigator L ~36). STANDARD: full-size with a 3rd row but tight cargo behind
+# it (Tahoe/Yukon ~25, Expedition ~19, Escalade ~15, Armada/QX80 ~17,
+# Sequoia ~19, Navigator ~19 — a car seat + stroller barely fit). OTHER:
+# midsize 3-rows and pickups, where the comparison doesn't apply.
+XL_PAT = re.compile(r"suburban|yukon\s*xl|expedition\s*(?:max|el)\b|escalade\s*esv|"
+                    r"navigator\s*l\b|extended\s*(?:length|wheelbase)", re.I)
+FULLSIZE = ("tahoe", "yukon", "expedition", "escalade", "navigator", "armada",
+            "qx80", "sequoia")
+
+def classify_length(l):
+    m = ((l.get("model") or "") + " " + (l.get("title") or "") + " " +
+         (l.get("trim") or "")).lower()
+    spec = spec_for(l)
+    if spec:
+        # seller text like "extended length" still upgrades a standard row
+        if spec["len"] != "xl" and XL_PAT.search(m):
+            return "xl", spec.get("cargo3")
+        return spec["len"], spec.get("cargo3")
+    if XL_PAT.search(m):
+        return "xl", None
+    if any(f in m for f in FULLSIZE):
+        return "standard", None
+    return "other", None
 
 # VIN capture: prefer the swept vin field; fall back to a 17-char VIN pattern in
 # the stored description/notes (I excludes, O excludes, Q excludes per VIN spec).
@@ -183,6 +238,7 @@ def enrich(listings, threshold):
         else:
             l["flag"] = "valid"
         l["row3"] = classify_row3(l)
+        l["len"], l["cargo3"] = classify_length(l)
         # Auction-history link: VIN-keyed saleshistory.org page, generated ONLY
         # for non-clean rows (rebuilt/salvage/scam/lemon) where a VIN was
         # captured — that's where pre-rebuild damage photos change decisions.
@@ -385,6 +441,8 @@ TEMPLATE = r"""<!DOCTYPE html>
   .status.salvage { background: var(--warn-bg); color: var(--warn-ink); }
   .soldtag { display:inline-block; background:#d1242f; color:#fff; font-weight:800; font-size:11px;
     letter-spacing:.6px; padding:1px 8px; border-radius:4px; vertical-align:middle; }
+  .xltag { display:inline-block; background:var(--brand-ink); color:#fff; font-weight:800; font-size:10px;
+    letter-spacing:.5px; padding:1px 6px; border-radius:4px; vertical-align:middle; cursor:help; }
   .soldhide { display:inline-flex; align-items:center; gap:5px; font-size:13px; color:var(--muted);
     white-space:nowrap; cursor:pointer; }
   .trimcell { font-size:13px; white-space:nowrap; }
@@ -489,6 +547,14 @@ TEMPLATE = r"""<!DOCTYPE html>
       <label><input type="checkbox" value="never" checked> NEVER — no 3rd row possible</label>
     </div>
   </div>
+  <div class="dd" id="lenDD" title="Cargo space BEHIND the 3rd row — the car-seat-and-stroller (and team-gear) test. XL = extended wheelbase: Suburban / Yukon XL ~41 cu ft, Expedition Max ~36, Escalade ESV ~39 — massive trunk even with all seats up. STANDARD = full-size but tight behind row 3: Tahoe/Yukon ~25, Expedition ~19, Armada/QX80 ~17. MIDSIZE/OTHER = smaller 3-rows and pickups, where the comparison doesn't apply. From a one-time factory-spec table (data/model_specs.json), never re-polled.">
+    <button id="lenBtn" type="button" aria-haspopup="true">Cargo: all</button>
+    <div class="menu" id="lenMenu">
+      <label><input type="checkbox" value="xl" checked> XL — extended length, massive trunk (~36–42 cu ft behind row 3)</label>
+      <label><input type="checkbox" value="standard" checked> STANDARD full-size — 3rd row but tight trunk (~15–25 cu ft)</label>
+      <label><input type="checkbox" value="other" checked> MIDSIZE / OTHER — smaller 3-rows &amp; pickups</label>
+    </div>
+  </div>
   <div class="rangewrap" title="FlipScore range filter">
     <span class="lbl">Score</span>
     <input type="number" id="scoreMin" min="0" max="10" step="0.1" value="0.0" aria-label="Minimum FlipScore">
@@ -551,7 +617,8 @@ const MARKETS = __MARKETS__;
 const STATUS = { valid: "NO FLAGS", salvage: "REBUILT/SALVAGE", suspect: "SCAM RISK" };
 const TRIMS = __TRIMS__;
 const state = { q: "", market: "all", flags: new Set(["valid","salvage","suspect"]),
-  row3: new Set(["guaranteed","sometimes","never"]), rating: "all", maxP: null,
+  row3: new Set(["guaranteed","sometimes","never"]),
+  len: new Set(["xl","standard","other"]), rating: "all", maxP: null,
   sort: { k: "flip_score", d: -1 },
   makeMode: "include", makeSel: new Set(MAKES),
   modelMode: "include", modelSel: new Set(MODELS),
@@ -585,7 +652,7 @@ function row(l) {
       <div class="sub">${l.location || "—"}${l.market ? " · " + l.market : ""}${l.title_status_desc ? " · desc: " + l.title_status_desc + " title" : ""}${l.auction_url ? ` · <a href="${l.auction_url}" target="_blank" rel="noopener" title="VIN-keyed auction sale history — pre-rebuild damage photos and sale records for this exact vehicle">Auction history ↗</a>` : ""}</div>
       ${l.notes ? `<div class="note${alert ? " alert" : ""}">${l.notes}</div>` : ""}
     </td>
-    <td class="trimcell" data-l="TRIM">${l.trim ? l.trim + rec("trim") : `<span style="color:var(--muted)">—</span>`}</td>
+    <td class="trimcell" data-l="TRIM">${l.trim ? l.trim + rec("trim") : `<span style="color:var(--muted)">—</span>`}${l.len === "xl" ? ` <span class="xltag" title="Extended wheelbase — ~${l.cargo3 || 36} cu ft behind the 3rd row (vs ~15–25 in standard full-size). Massive trunk with all seats up.">XL</span>` : ""}</td>
     <td class="right" data-l="SCORE"><span class="mrow"><span class="score ${l.flip_score >= 7 ? "hi" : l.flip_score >= 4 ? "mid" : "lo"}" title="${l.score_parts || ""}">${l.flip_score.toFixed(1)}</span></span></td>
     <td class="right" data-l="MILES"><span class="mrow"><span class="num">${fmtMi(l.mileage)}${rec("mileage")}</span></span></td>
     <td class="right" data-l="ASKING"><span class="mrow"><span class="num" style="font-weight:650">${fmt(l.price)}</span></span></td>
@@ -609,6 +676,7 @@ function render() {
     (state.market === "all" || l.market === state.market)
     && state.flags.has(l.flag)
     && state.row3.has(l.row3 || "sometimes")
+    && state.len.has(l.len || "other")
     && makeOK(l) && modelOK(l) && trimOK(l)
     && (!state.hideSold || !l.sold)
     && (state.showPassed ? passed.has(l.id) : !passed.has(l.id))
@@ -768,7 +836,7 @@ nMin.oninput = () => setRange(+nMin.value, state.sMax, "numMin");
 nMax.oninput = () => setRange(state.sMin, +nMax.value, "numMax");
 setRange(0, 10);
 
-const allDDs = ["makeDD", "modelDD", "trimDD", "flagDD", "row3DD"].map(id => document.getElementById(id));
+const allDDs = ["makeDD", "modelDD", "trimDD", "flagDD", "row3DD", "lenDD"].map(id => document.getElementById(id));
 allDDs.forEach(dd => {
   dd.querySelector("button").onclick = e => {
     e.stopPropagation();
@@ -792,6 +860,15 @@ document.getElementById("row3Menu").addEventListener("change", () => {
   state.row3 = new Set(on);
   const names = { guaranteed: "GUARANTEED", sometimes: "SOMETIMES", never: "NEVER" };
   document.getElementById("row3Btn").textContent = "3rd row: " +
+    (on.length === 3 ? "all" : on.length === 0 ? "none" : on.map(v => names[v]).join(", "));
+  render();
+});
+// ── Cargo/length filter: XL extended wheelbase vs standard full-size ──
+document.getElementById("lenMenu").addEventListener("change", () => {
+  const on = [...document.querySelectorAll("#lenMenu input")].filter(b => b.checked).map(b => b.value);
+  state.len = new Set(on);
+  const names = { xl: "XL", standard: "STANDARD", other: "MIDSIZE/OTHER" };
+  document.getElementById("lenBtn").textContent = "Cargo: " +
     (on.length === 3 ? "all" : on.length === 0 ? "none" : on.map(v => names[v]).join(", "));
   render();
 });
