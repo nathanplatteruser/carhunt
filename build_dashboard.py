@@ -190,6 +190,12 @@ def build(data_dir, out_path):
     threshold = config.get("deal_threshold_pct", 15)
     listings = enrich(listings, threshold)
 
+    # SOLD listings stay on the board (raw data transparency) but are tagged in
+    # bright red and excluded from deal ratings/counts - they can't be pursued.
+    for l in listings:
+        if l.get("sold"):
+            l["rating_key"], l["rating_label"] = "sold", "SOLD"
+
     n = len(listings)
     great = sum(1 for l in listings if l["rating_key"] == "great")
     valued = [l for l in listings if l["deal_pct"] is not None]
@@ -202,10 +208,12 @@ def build(data_dir, out_path):
 
     makes = sorted({l.get("make") for l in listings if l.get("make")})
     models = sorted({l.get("model") for l in listings if l.get("model")})
+    trims = sorted({l.get("trim") or "(none)" for l in listings})
     markets = sorted({l.get("market") for l in listings if l.get("market")})
     page = TEMPLATE
     page = page.replace("__MAKES__", json.dumps(makes))
     page = page.replace("__MODELS__", json.dumps(models))
+    page = page.replace("__TRIMS__", json.dumps(trims))
     page = page.replace("__MARKETS__", json.dumps(markets))
     page = page.replace("__DATA__", json.dumps(listings))
     page = page.replace("__THRESHOLD__", str(threshold))
@@ -322,6 +330,11 @@ TEMPLATE = r"""<!DOCTYPE html>
   .status { font-size: 11px; font-weight: 700; letter-spacing: .04em; padding: 2px 7px; border-radius: 2px; white-space: nowrap; }
   .status.valid { color: var(--ok-ink); border: 1px solid var(--line-strong); }
   .status.salvage { background: var(--warn-bg); color: var(--warn-ink); }
+  .soldtag { display:inline-block; background:#d1242f; color:#fff; font-weight:800; font-size:11px;
+    letter-spacing:.6px; padding:1px 8px; border-radius:4px; vertical-align:middle; }
+  .soldhide { display:inline-flex; align-items:center; gap:5px; font-size:13px; color:var(--muted);
+    white-space:nowrap; cursor:pointer; }
+  .trimcell { font-size:13px; white-space:nowrap; }
   .status.suspect { background: var(--danger-bg); color: var(--danger-ink); }
   .conf { display: block; margin-top: 4px; color: var(--faint); font-size: 11px; }
   .rec { color: var(--brand-ink); font-weight: 700; cursor: help; }
@@ -393,6 +406,11 @@ TEMPLATE = r"""<!DOCTYPE html>
     <button id="modelBtn" type="button" aria-haspopup="true">Model: all</button>
     <div class="menu" id="modelMenu"></div>
   </div>
+  <div class="dd" id="trimDD">
+    <button id="trimBtn" type="button" aria-haspopup="true">Trim: all</button>
+    <div class="menu" id="trimMenu"></div>
+  </div>
+  <label class="soldhide" title="Sold listings stay in the data for transparency; check to hide them while hunting active deals"><input type="checkbox" id="hideSold"> Hide sold</label>
   <div class="dd" id="flagDD">
     <button id="flagBtn" type="button" aria-haspopup="true">Title status: all</button>
     <div class="menu" id="flagMenu">
@@ -424,6 +442,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   <table id="tbl">
     <thead><tr>
       <th data-k="title">Truck <span class="dir"></span></th>
+      <th data-k="trim" title="Trim package as parsed from the listing (filter with the Trim dropdown above - e.g. keep only Max / Platinum / XL for maximum space)">Trim <span class="dir"></span></th>
       <th data-k="flip_score" class="right" title="FlipScore 0-10: margin vs market + cost per remaining mile + model quality + proximity to its metro hub + listing validity + title status">Score <span class="dir"></span></th>
       <th data-k="mileage" class="right">Miles <span class="dir"></span></th>
       <th data-k="price" class="right">Asking <span class="dir"></span></th>
@@ -460,10 +479,13 @@ const MAKES = __MAKES__;
 const MODELS = __MODELS__;
 const MARKETS = __MARKETS__;
 const STATUS = { valid: "NO FLAGS", salvage: "REBUILT/SALVAGE", suspect: "SCAM RISK" };
+const TRIMS = __TRIMS__;
 const state = { q: "", market: "all", flags: new Set(["valid","salvage","suspect"]), rating: "all", maxP: null,
   sort: { k: "flip_score", d: -1 },
   makeMode: "include", makeSel: new Set(MAKES),
   modelMode: "include", modelSel: new Set(MODELS),
+  trimMode: "include", trimSel: new Set(TRIMS),
+  hideSold: false,
   sMin: 0, sMax: 10 };
 const fmt = n => n == null ? "—" : "$" + n.toLocaleString();
 const fmtMi = n => n == null ? "—" : (n/1000).toFixed(0) + "k";
@@ -481,10 +503,11 @@ function row(l) {
   const sav = l.savings != null && l.savings > 0 ? ` <span class="num" style="color:var(--pos)">(${fmt(l.savings)})</span>` : "";
   return `<tr>
     <td class="truck">
-      <div class="name"><a href="${l.url}" target="_blank" rel="noopener">${l.title}</a></div>
-      <div class="sub">${l.location || "—"}${l.market ? " · " + l.market : ""}${l.trim ? " · " + l.trim + rec("trim") : ""}${l.title_status_desc ? " · desc: " + l.title_status_desc + " title" : ""}</div>
+      <div class="name">${l.sold ? `<span class="soldtag">SOLD</span> ` : ""}<a href="${l.url}" target="_blank" rel="noopener">${l.title}</a></div>
+      <div class="sub">${l.location || "—"}${l.market ? " · " + l.market : ""}${l.title_status_desc ? " · desc: " + l.title_status_desc + " title" : ""}</div>
       ${l.notes ? `<div class="note${alert ? " alert" : ""}">${l.notes}</div>` : ""}
     </td>
+    <td class="trimcell" data-l="TRIM">${l.trim ? l.trim + rec("trim") : `<span style="color:var(--muted)">—</span>`}</td>
     <td class="right" data-l="SCORE"><span class="mrow"><span class="score ${l.flip_score >= 7 ? "hi" : l.flip_score >= 4 ? "mid" : "lo"}" title="${l.score_parts || ""}">${l.flip_score.toFixed(1)}</span></span></td>
     <td class="right" data-l="MILES"><span class="mrow"><span class="num">${fmtMi(l.mileage)}${rec("mileage")}</span></span></td>
     <td class="right" data-l="ASKING"><span class="mrow"><span class="num" style="font-weight:650">${fmt(l.price)}</span></span></td>
@@ -502,10 +525,12 @@ function render() {
   const q = state.q.toLowerCase();
   const makeOK = l => state.makeMode === "include" ? state.makeSel.has(l.make) : !state.makeSel.has(l.make);
   const modelOK = l => state.modelMode === "include" ? state.modelSel.has(l.model) : !state.modelSel.has(l.model);
+  const trimOK = l => { const t = l.trim || "(none)"; return state.trimMode === "include" ? state.trimSel.has(t) : !state.trimSel.has(t); };
   let rows = DATA.filter(l =>
     (state.market === "all" || l.market === state.market)
     && state.flags.has(l.flag)
-    && makeOK(l) && modelOK(l)
+    && makeOK(l) && modelOK(l) && trimOK(l)
+    && (!state.hideSold || !l.sold)
     && l.flip_score >= state.sMin - 1e-9 && l.flip_score <= state.sMax + 1e-9
     && (state.rating === "all" || (state.rating === "great" ? l.rating_key === "great" : ["great","good"].includes(l.rating_key)))
     && (state.maxP == null || (l.price ?? 0) <= state.maxP)
@@ -514,13 +539,14 @@ function render() {
   rows.sort((a, b) => {
     let x = a[k], y = b[k];
     if (k === "title") { x = a.year ?? 0; y = b.year ?? 0; }
-    if (k === "flag") { x = a.flag; y = b.flag; return x < y ? -d : x > y ? d : 0; }
+    if (k === "flag" || k === "trim") { x = a[k] || "~"; y = b[k] || "~"; return x < y ? -d : x > y ? d : 0; }
     if (x == null) return 1; if (y == null) return -1;
     return (x - y) * d || (b.flip_score - a.flip_score);
   });
   document.getElementById("rows").innerHTML = rows.map(row).join("");
   document.getElementById("empty").style.display = rows.length ? "none" : "block";
   document.getElementById("count").textContent = rows.length + " of " + DATA.length;
+  refreshFacets();
   document.querySelectorAll("thead th").forEach(th => {
     th.querySelector(".dir") && (th.querySelector(".dir").textContent = th.dataset.k === k ? (d === -1 ? "↓" : "↑") : "");
   });
@@ -556,7 +582,7 @@ function buildPicker(kind, items, btnId, menuId) {
     ${items.map(v => `<label><input type="checkbox" value="${v}" checked> ${v}</label>`).join("")}`;
   const label = () => {
     const sel = state[kind + "Sel"], mode = state[kind + "Mode"];
-    const name = kind === "make" ? "Make" : "Model";
+    const name = kind === "make" ? "Make" : kind === "model" ? "Model" : "Trim";
     if (mode === "include" && sel.size === items.length) { btn.textContent = name + ": all"; return; }
     if (sel.size === 0) { btn.textContent = name + ": " + (mode === "include" ? "none" : "all"); return; }
     const list = [...sel].slice(0, 2).join(", ") + (sel.size > 2 ? ` +${sel.size - 2}` : "");
@@ -582,6 +608,33 @@ function buildPicker(kind, items, btnId, menuId) {
 }
 buildPicker("make", MAKES, "makeBtn", "makeMenu");
 buildPicker("model", MODELS, "modelBtn", "modelMenu");
+buildPicker("trim", TRIMS, "trimBtn", "trimMenu");
+
+document.getElementById("hideSold").addEventListener("change", e => { state.hideSold = e.target.checked; render(); });
+
+// ── Cascading facets: each dropdown only shows values that coexist with the
+// OTHER two active filters (pick Ford -> models/trims shrink to Ford's;
+// pick Platinum -> makes/models shrink to those that offer a Platinum row).
+function facetVal(l, kind) { return kind === "trim" ? (l.trim || "(none)") : l[kind]; }
+function facetOK(l, kind) {
+  const sel = state[kind + "Sel"], mode = state[kind + "Mode"], v = facetVal(l, kind);
+  return mode === "include" ? sel.has(v) : !sel.has(v);
+}
+function refreshFacets() {
+  const kinds = ["make", "model", "trim"];
+  kinds.forEach(kind => {
+    const others = kinds.filter(k => k !== kind);
+    const avail = new Set();
+    DATA.forEach(l => {
+      if ((state.market === "all" || l.market === state.market) && others.every(k => facetOK(l, k)))
+        avail.add(facetVal(l, kind));
+    });
+    document.querySelectorAll(`#${kind}Menu label`).forEach(lb => {
+      const cb = lb.querySelector("input[type=checkbox]");
+      if (cb) lb.style.display = avail.has(cb.value) ? "" : "none";
+    });
+  });
+}
 
 // ── FlipScore range: dual slider + number boxes, kept in sync ──
 const rMin = document.getElementById("rangeMin"), rMax = document.getElementById("rangeMax");

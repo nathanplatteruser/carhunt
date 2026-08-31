@@ -11,11 +11,11 @@
 // description (first 900 chars) so the ETL can be re-run later on stored data
 // without re-opening a single listing. Read-only; never messages anyone.
 //
-// SOLD FILTER (bronze-layer exclusion): if "Sold" appears in the listing
-// title (FB prefixes sold listings like "Sold · 2019 Ford Expedition Max"),
-// the record is flagged sold:true and must be SKIPPED before grabbing
-// description/metadata — a sold vehicle can never be pursued, so it is
-// excluded from the silver/gold data layers and every dashboard build.
+// SOLD DETECTION: if "Sold" appears in the listing title (FB prefixes sold
+// listings like "Sold · 2019 Ford Expedition Max"), the record is flagged
+// sold:true. Sold listings are KEPT on the board for raw-data transparency
+// but rendered with a bright red SOLD tag and excluded from deal ratings —
+// a "Hide sold" toggle lets deal-hunters filter them out.
 //
 // Usage: substitute LISTING_ID; run after navigation + a See-more click.
 

@@ -22,9 +22,12 @@ The interesting part isn't finding cheap vehicles — it's explaining why they'r
 
 The dashboard tags every listing (`NO FLAGS` / `REBUILT-SALVAGE` / `SCAM RISK`) with the research note explaining the verdict, so a viewer can filter to clean-title deals only — or browse the graveyard of trucks that looked great until someone read the odometer.
 
+
+**Trim column + cascading filters.** Every row shows its parsed trim package, and Make / Model / Trim are include-or-exclude dropdown filters that narrow each other: pick Ford and the Model and Trim menus shrink to Ford's; pick Platinum and only makes/models actually offering a Platinum row remain. Useful for space-hunting — e.g. keep only Expedition **Max** rows.
+
 **Dual valuation for branded titles.** Every rebuilt/salvage/branded listing carries two numbers: the **clean-title comparable** (what the same vehicle would be worth with a clean title — the functional value of the machine itself) and the **as-titled value** (clean comp minus the 25% branded-title haircut — what it will actually resell for). The dashboard's "Clean-title comp" column shows both and the title gap, so a buyer can judge the vehicle on function while pricing the exit honestly.
 
-**Sold filter (bronze-layer exclusion).** Any listing whose title contains "Sold" (Facebook prefixes sold inventory like `Sold · 2019 Ford Expedition Max`) is treated as dead at the raw-scrape (bronze) layer: it is skipped before descriptions or metadata are fetched, and never enters the processed (silver) data files or the scored (gold) dashboards — a sold vehicle can't be pursued, so it isn't worth a single extra request.
+**Sold tagging.** Any listing whose title contains "Sold" (Facebook prefixes sold inventory like `Sold · 2019 Ford Expedition Max`) is kept in the data for transparency but flagged `sold: true`: the dashboard renders a bright red **SOLD** tag on the row, excludes it from deal ratings and counts, and offers a "Hide sold" toggle so active-deal hunters can filter it away with one click. No extra requests are spent enriching sold rows.
 
 ## Description recovery
 

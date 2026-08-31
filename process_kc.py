@@ -69,7 +69,8 @@ def main():
             title = txt[0] if txt else ""
             loc = txt[1] if len(txt) > 1 else ""
             tl = title.lower()
-            if re.search(r"\bsold\b", tl): skipped["sold"] += 1; continue  # sold = dead inventory, bronze-layer exclusion
+            is_sold = bool(re.search(r"^\s*sold\b|\bsold\b", tl))
+            if is_sold: skipped["sold"] += 1  # kept on board, tagged SOLD in red (raw-data transparency)
             if EXCLUDE.search(tl): skipped["excl"] += 1; continue
             ym = re.search(r"\b(20[0-2]\d)\b", title)
             year = int(ym.group(0)) if ym else None
@@ -104,7 +105,8 @@ def main():
                 mi = int(v) * (1000 if len(v) <= 3 else 1)
             notes = []
             if old and old < 200000: notes.append(f"price drop from ${old:,}")
-            l = {"id": i, "title": title, "price": price, "year": year, "make": mk, "model": model,
+            title = __import__("re").sub(r"^\s*sold\s*[\u00b7\-:]*\s*", "", title, flags=2)  # strip Sold prefix for clean display
+            l = {"id": i, "title": title, "sold": is_sold, "price": price, "year": year, "make": mk, "model": model,
                  "trim": trim_lbl, "mileage": mi, "category": cat, "location": loc,
                  "url": f"https://www.facebook.com/marketplace/item/{i}/",
                  "image": None, "first_seen": "2026-08-12", "region": "kc",

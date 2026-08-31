@@ -7460,9 +7460,9 @@
  "952348597909740": {
   "title": "2023 Chevrolet tahoe RST Sport Utility 4D",
   "mileage": 87987,
-  "notes": "",
+  "notes": "same odometer (87,987) as 28702061322724694 - same Tahoe RST posted twice",
   "market_value": 37600,
-  "last_seen": "2026-08-30",
+  "last_seen": "2026-08-31",
   "region": "lincoln",
   "description": "2023 Chevy Tahoe RST - 1 OWNER - Clean title - 5.3L - Only 87k Miles - Luxury package - Financing available, call or text Josh (dealer-style listing)"
  },
@@ -7490,6 +7490,60 @@
   "notes": "BRANDED/REBUILT TITLE (listing field); ; rebuilt title (listing field)",
   "market_value": 24400,
   "last_seen": "2026-08-30",
+  "region": "lincoln",
+  "description": null
+ },
+ "1836379407361148": {
+  "title": "2020 Infiniti qx80",
+  "mileage": 78330,
+  "notes": "",
+  "market_value": 29500,
+  "last_seen": "2026-08-31",
+  "region": "lincoln",
+  "description": "Message Jared Foote - Clean Title - Free CARFAX - financing options - extended warranties - trades (dealer listing)"
+ },
+ "1968255460538704": {
+  "title": "2022 Lincoln navigator reserve 4dr suv",
+  "mileage": 39812,
+  "notes": "BRANDED/REBUILT TITLE (listing field); ; rebuilt title (listing field)",
+  "market_value": 55500,
+  "last_seen": "2026-08-31",
+  "region": "lincoln",
+  "description": null
+ },
+ "1828769811621024": {
+  "title": "2023 Lincoln navigator reserve 4wd",
+  "mileage": 70564,
+  "notes": "BRANDED/REBUILT TITLE (listing field); ; branded title (listing field)",
+  "market_value": 54500,
+  "last_seen": "2026-08-31",
+  "region": "lincoln",
+  "description": null
+ },
+ "28136960672630083": {
+  "title": "2019 GMC yukon slt 4dr suv",
+  "mileage": 104897,
+  "notes": "",
+  "market_value": 25400,
+  "last_seen": "2026-08-31",
+  "region": "lincoln",
+  "description": "2019 GMC Yukon SLT - Stock E158337A - Clean title - 104,897 mi - 5.3L V8 - VIN 1GKS2BKCXKR158337 - Effect Auto, 6625 L Street Omaha (dealer listing)"
+ },
+ "832819946518362": {
+  "title": "2021 GMC yukon SLT",
+  "mileage": 79699,
+  "notes": "seller joined Facebook 2026; seller joined Facebook 2026 (dealer page)",
+  "market_value": 33300,
+  "last_seen": "2026-08-31",
+  "region": "lincoln",
+  "description": "Janssen Ford York dealer link - 2021 GMC Yukon SLT VIN 1GKS2BKDXMR410468"
+ },
+ "28702061322724694": {
+  "title": "2023 Chevrolet tahoe rst 4x4 1 owner loaded leather",
+  "mileage": 87987,
+  "notes": "same odometer (87,987) as 952348597909740 - same Gretna Tahoe RST posted twice",
+  "market_value": 37600,
+  "last_seen": "2026-08-31",
   "region": "lincoln",
   "description": null
  }
