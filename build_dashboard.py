@@ -98,30 +98,70 @@ def flip_score(l):
     l["score_parts"] = " · ".join(f"{k} {v:g}" for k, v in parts.items())
     return l
 
+# Explicit damage causes a seller's own text might name. Checked against the
+# stored description + notes so the branded-title DM can reference what THEY
+# said instead of asking cold. (Deliberately no bare "front"/"rear" patterns -
+# those words appear innocently: "front seats", "rear AC".)
+DM_CAUSES = [("hail", "hail damage"), ("theft", "theft recovery"), ("flood", "flood damage"),
+             ("fire", "fire damage"), ("vandal", "vandalism"),
+             ("collision", "a collision"), ("accident", "an accident")]
+
 def compose_dm(l):
     """Per-listing seller DM draft: interest + clarifying questions chosen from
     THIS listing's actual gaps and flags. Generated at build time; the dashboard
-    only reveals it on click, and nothing is ever sent automatically."""
+    only reveals it on click, and nothing is ever sent automatically.
+
+    Branded-title rows (rebuilt/salvage) get a different shape: the OPENER
+    acknowledges the title up front - no gotcha, no judgment - and the first
+    question asks what generated the brand. Why that question matters: an
+    insurer totals a vehicle whenever repair cost exceeds roughly 75% of its
+    value, so a salvage title can come from purely cosmetic causes (hail on
+    every panel, theft recovery) with zero safety impact - or from structural
+    collision/flood damage. The buyer is fine with the first kind and walks
+    from the second, so the DM asks kindly which one this is, seeded with
+    whatever cause the seller's own description already names."""
     name = " ".join(str(x) for x in [l.get("year"), l.get("make"), l.get("model")] if x)
     trim = f" {l['trim']}" if l.get("trim") else ""
     notes = (l.get("notes") or "").lower()
+    desc = (l.get("description") or "").lower()
+    branded = l.get("flag") == "salvage" or any(w in notes for w in ("rebuilt", "branded", "salvage"))
+    cause = next((label for pat, label in DM_CAUSES if pat in desc or pat in notes), None) if branded else None
+
+    if branded:
+        opener = (f"Hi! I saw your listing for the {name}{trim} and I'm interested - is it still available? "
+                  "I did see it's a rebuilt/salvage title, and that's not a dealbreaker for me at all - "
+                  "I'm just hoping to understand the story behind it.")
+    else:
+        opener = f"Hi! I saw your listing for the {name}{trim} and I'm interested - is it still available?"
+
     qs = []
+    if branded:
+        if cause:
+            qs.append(f"Your listing mentions {cause} - was that what led to the branded title? "
+                      "Cosmetic causes like hail or theft recovery are totally fine with me; "
+                      "I'd just want to steer clear of anything structural or safety-related (frame, airbags).")
+        else:
+            qs.append("Do you happen to know what led to the salvage/rebuilt title? No judgment either way - "
+                      "cosmetic causes like hail or theft recovery are totally fine with me; "
+                      "I'd just want to steer clear of anything structural or safety-related (frame, airbags).")
+        qs.append("Do you have photos of the original damage or repair documentation from the rebuild?")
     if l.get("mileage") is None:
         qs.append("How many miles are on it?")
     elif l["mileage"] >= 100000:
         qs.append(f"At {l['mileage']:,} miles, has the regular maintenance been kept up (fluids, brakes, transmission service)?")
-    if l.get("flag") == "salvage" or "rebuilt" in notes or "branded" in notes or "salvage" in notes:
-        qs.append("I noticed the title is rebuilt/branded - what was the original damage, and do you have photos or repair documentation from the rebuild?")
-    else:
+    if not branded:
         qs.append("Is the title clean and in your name, with no liens?")
     qs.append("Could you send me the VIN so I can run a Carfax/AutoCheck history report before we meet?")
-    qs.append("Any accidents, warning lights, or mechanical issues I should know about?")
-    if (l.get("deal_pct") or 0) >= 15:
+    if branded:
+        qs.append("Any warning lights or mechanical issues since the repairs?")
+    else:
+        qs.append("Any accidents, warning lights, or mechanical issues I should know about?")
+    if (l.get("deal_pct") or 0) >= 15 and not branded:
         qs.append("The price looks very fair - is there anything about the condition that's reflected in it?")
     if "duplicate listing" in notes:
         qs.append("I've seen this vehicle posted more than once - are you the owner or selling on consignment?")
     body = "\n".join("- " + q for q in qs[:5])
-    return (f"Hi! I saw your listing for the {name}{trim} and I'm interested - is it still available?\n\n"
+    return (f"{opener}\n\n"
             f"A few quick questions:\n{body}\n\n"
             "If everything checks out, I'd love to take a look and test drive it this week. "
             "Happy to meet somewhere public whenever works for you. Thanks!")
@@ -546,7 +586,7 @@ TEMPLATE = r"""<!DOCTYPE html>
     <button id="flagBtn" type="button" aria-haspopup="true">Title status: all</button>
     <div class="menu" id="flagMenu">
       <label><input type="checkbox" value="valid" checked> No red flags</label>
-      <label><input type="checkbox" value="salvage" checked> Rebuilt / salvage title</label>
+      <label title="How these titles are generated: an insurer 'totals' a vehicle whenever the repair estimate exceeds roughly 75% of its value, and the state issues a SALVAGE title. That can happen for purely cosmetic reasons (hail on every panel, theft recovery) with zero safety impact - or for structural collision/flood damage. Once repaired and state-inspected it's re-titled REBUILT. The Draft DM for these rows opens by acknowledging the title and kindly asks which kind it was; the Auction history link shows the original damage photos."><input type="checkbox" value="salvage" checked> Rebuilt / salvage title</label>
       <label><input type="checkbox" value="suspect" checked> Scam / lemon risk</label>
     </div>
   </div>
