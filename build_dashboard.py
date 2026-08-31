@@ -219,6 +219,7 @@ def build(data_dir, out_path):
     page = page.replace("__THRESHOLD__", str(threshold))
     for k, v in {
         "__N__": str(n), "__GREAT__": str(great), "__BEST__": f"{best:.0f}",
+        "__SOLDN__": str(sum(1 for l in listings if l.get("sold"))),
         "__CLEANGREAT__": str(clean_flagged), "__UPDATED__": html.escape(updated),
         "__LOC__": html.escape(loc), "__SCOPE__": html.escape(scope), "__RADIUS__": str(radius),
     }.items():
@@ -400,6 +401,7 @@ TEMPLATE = r"""<!DOCTYPE html>
   <span><b>__GREAT__</b> at ≥__THRESHOLD__% under market</span>
   <span><b>__CLEANGREAT__</b> of those with no red flags</span>
   <span>best discount <b>−__BEST__%</b></span>
+  <span><b>__SOLDN__</b> tagged SOLD</span>
 </div></div>
 
 <div class="toolbar"><div class="wrap">
@@ -518,7 +520,7 @@ function row(l) {
   const sav = l.savings != null && l.savings > 0 ? ` <span class="num" style="color:var(--pos)">(${fmt(l.savings)})</span>` : "";
   return `<tr>
     <td class="truck">
-      <div class="name">${l.sold ? `<span class="soldtag">SOLD</span> ` : ""}<a href="${l.url}" target="_blank" rel="noopener">${l.title}</a></div>
+      <div class="name"><a href="${l.url}" target="_blank" rel="noopener">${l.sold ? `<span class="soldtag">SOLD</span> ` : ""}${l.title}</a></div>
       <div class="sub">${l.location || "—"}${l.market ? " · " + l.market : ""}${l.title_status_desc ? " · desc: " + l.title_status_desc + " title" : ""}</div>
       ${l.notes ? `<div class="note${alert ? " alert" : ""}">${l.notes}</div>` : ""}
     </td>
@@ -645,21 +647,34 @@ function updatePassedBtn() {
 passedBtn.addEventListener("click", () => { state.showPassed = !state.showPassed; updatePassedBtn(); render(); });
 updatePassedBtn();
 
-// ── Cascading facets: each dropdown only shows values that coexist with the
-// OTHER two active filters (pick Ford -> models/trims shrink to Ford's;
-// pick Platinum -> makes/models shrink to those that offer a Platinum row).
+// ── Cascading facets: a dropdown's options only narrow when ANOTHER facet has
+// been ACTIVELY filtered (pick Ford -> models/trims shrink to Ford's; pick
+// Platinum -> makes/models shrink to those offering a Platinum row). A facet
+// left in its default state (everything included / nothing excluded) imposes
+// no constraint, so nothing is gate-kept - you can start filtering at make,
+// model, OR trim, in any order.
+const FACET_ALL = { make: MAKES, model: MODELS, trim: TRIMS };
 function facetVal(l, kind) { return kind === "trim" ? (l.trim || "(none)") : l[kind]; }
 function facetOK(l, kind) {
   const sel = state[kind + "Sel"], mode = state[kind + "Mode"], v = facetVal(l, kind);
   return mode === "include" ? sel.has(v) : !sel.has(v);
 }
+function facetActive(kind) {
+  const sel = state[kind + "Sel"], mode = state[kind + "Mode"];
+  return mode === "include" ? sel.size < FACET_ALL[kind].length : sel.size > 0;
+}
 function refreshFacets() {
   const kinds = ["make", "model", "trim"];
   kinds.forEach(kind => {
-    const others = kinds.filter(k => k !== kind);
+    const others = kinds.filter(k => k !== kind && facetActive(k));
+    const marketOn = state.market !== "all";
+    if (!others.length && !marketOn) {  // nothing actively filtered: show every option
+      document.querySelectorAll(`#${kind}Menu label`).forEach(lb => lb.style.display = "");
+      return;
+    }
     const avail = new Set();
     DATA.forEach(l => {
-      if ((state.market === "all" || l.market === state.market) && others.every(k => facetOK(l, k)))
+      if ((!marketOn || l.market === state.market) && others.every(k => facetOK(l, k)))
         avail.add(facetVal(l, kind));
     });
     document.querySelectorAll(`#${kind}Menu label`).forEach(lb => {
@@ -691,7 +706,7 @@ nMin.oninput = () => setRange(+nMin.value, state.sMax, "numMin");
 nMax.oninput = () => setRange(state.sMin, +nMax.value, "numMax");
 setRange(0, 10);
 
-const allDDs = ["makeDD", "modelDD", "flagDD"].map(id => document.getElementById(id));
+const allDDs = ["makeDD", "modelDD", "trimDD", "flagDD"].map(id => document.getElementById(id));
 allDDs.forEach(dd => {
   dd.querySelector("button").onclick = e => {
     e.stopPropagation();
