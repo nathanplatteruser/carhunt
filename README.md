@@ -23,6 +23,8 @@ The interesting part isn't finding cheap vehicles — it's explaining why they'r
 The dashboard tags every listing (`NO FLAGS` / `REBUILT-SALVAGE` / `SCAM RISK`) with the research note explaining the verdict, so a viewer can filter to clean-title deals only — or browse the graveyard of trucks that looked great until someone read the odometer.
 
 
+**Personal pass list.** Every row has a small ✕ — click it when a listing turns out to be a dud (cosmetic damage in the photos, something a seller shared in DMs) and it disappears from the board permanently, surviving weekly re-scrapes. The list lives in the viewer's own browser (localStorage), so the shared data files stay untouched. The "Passed: N" button reviews the graveyard and restores anything with ↩.
+
 **Trim column + cascading filters.** Every row shows its parsed trim package, and Make / Model / Trim are include-or-exclude dropdown filters that narrow each other: pick Ford and the Model and Trim menus shrink to Ford's; pick Platinum and only makes/models actually offering a Platinum row remain. Useful for space-hunting — e.g. keep only Expedition **Max** rows.
 
 **Dual valuation for branded titles.** Every rebuilt/salvage/branded listing carries two numbers: the **clean-title comparable** (what the same vehicle would be worth with a clean title — the functional value of the machine itself) and the **as-titled value** (clean comp minus the 25% branded-title haircut — what it will actually resell for). The dashboard's "Clean-title comp" column shows both and the title gap, so a buyer can judge the vehicle on function while pricing the exit honestly.

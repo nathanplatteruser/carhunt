@@ -106,6 +106,13 @@
   .soldhide { display:inline-flex; align-items:center; gap:5px; font-size:13px; color:var(--muted);
     white-space:nowrap; cursor:pointer; }
   .trimcell { font-size:13px; white-space:nowrap; }
+  .passbtn { background:none; border:1px solid var(--line, #ccc); color:var(--muted); border-radius:5px;
+    cursor:pointer; font-size:12px; line-height:1; padding:3px 7px; margin-left:6px; vertical-align:middle; }
+  .passbtn:hover { border-color:#d1242f; color:#d1242f; }
+  .passbtn.restoring:hover { border-color:var(--pos, #1a7f37); color:var(--pos, #1a7f37); }
+  .passedtoggle { background:none; border:1px solid var(--line, #ccc); color:var(--muted); border-radius:6px;
+    cursor:pointer; font-size:13px; padding:5px 10px; white-space:nowrap; }
+  .passedtoggle.on { border-color:#d1242f; color:#d1242f; font-weight:650; }
   .status.suspect { background: var(--danger-bg); color: var(--danger-ink); }
   .conf { display: block; margin-top: 4px; color: var(--faint); font-size: 11px; }
   .rec { color: var(--brand-ink); font-weight: 700; cursor: help; }
@@ -156,7 +163,7 @@
 <header class="masthead"><div class="wrap">
   <span class="wordmark">CARHUNT<span class="tick">▮</span> <span style="font-weight:500;color:var(--muted)">Cornhusker</span></span>
   <span class="scope">Kansas City Metro — 3-row SUVs + Ram 1500 + Sierra 1500 · thru 2024 · $20k–$50k · Kansas City, MO · 100 mi</span>
-  <span class="updated">updated Aug 31, 2026 · 5:00 PM</span>
+  <span class="updated">updated Aug 31, 2026 · 5:02 PM</span>
 </div></header>
 
 <div class="digest"><div class="wrap">
@@ -182,6 +189,7 @@
     <div class="menu" id="trimMenu"></div>
   </div>
   <label class="soldhide" title="Sold listings stay in the data for transparency; check to hide them while hunting active deals"><input type="checkbox" id="hideSold"> Hide sold</label>
+  <button type="button" id="passedBtn" class="passedtoggle" title="Listings you've passed on (via the ✕ button on a row). Stored in this browser only - they stay hidden across weekly re-scrapes. Click to review or restore.">Passed: 0</button>
   <div class="dd" id="flagDD">
     <button id="flagBtn" type="button" aria-haspopup="true">Title status: all</button>
     <div class="menu" id="flagMenu">
@@ -256,8 +264,15 @@ const state = { q: "", market: "all", flags: new Set(["valid","salvage","suspect
   makeMode: "include", makeSel: new Set(MAKES),
   modelMode: "include", modelSel: new Set(MODELS),
   trimMode: "include", trimSel: new Set(TRIMS),
-  hideSold: false,
+  hideSold: false, showPassed: false,
   sMin: 0, sMax: 10 };
+
+// ── Personal pass list: listing ids the user has dismissed (✕ on a row).
+// Stored in localStorage so it survives weekly re-scrapes and republishes;
+// per-browser (desktop and phone each keep their own list).
+let passed = new Set();
+try { passed = new Set(JSON.parse(localStorage.getItem("carhunt_passed") || "[]")); } catch (e) {}
+function savePassed() { try { localStorage.setItem("carhunt_passed", JSON.stringify([...passed])); } catch (e) {} }
 const fmt = n => n == null ? "—" : "$" + n.toLocaleString();
 const fmtMi = n => n == null ? "—" : (n/1000).toFixed(0) + "k";
 
@@ -288,7 +303,8 @@ function row(l) {
     <td class="right" data-l="DEALER EXIT"><span class="mrow"><span class="delta ${l.dealer_roi == null ? "zero" : l.dealer_roi >= 3 ? "pos" : l.dealer_roi <= -3 ? "neg" : "zero"}" title="dealer trade-in est. ${fmt(l.trade_value)}">${l.dealer_roi == null ? "—" : (l.dealer_roi > 0 ? "+" : "") + l.dealer_roi.toFixed(0) + "%"}</span></span></td>
     <td class="statuscell"><span class="status ${l.flag}">${STATUS[l.flag]}</span></td>
     <td class="dmcell"><button type="button" class="dmbtn" data-id="${l.id}">✉ Draft DM</button></td>
-    <td class="right opencell"><a class="open" href="${l.url}" target="_blank" rel="noopener">Open ↗</a></td>
+    <td class="right opencell"><a class="open" href="${l.url}" target="_blank" rel="noopener">Open ↗</a>
+      <button type="button" class="passbtn${passed.has(l.id) ? " restoring" : ""}" data-id="${l.id}" title="${passed.has(l.id) ? "Restore this listing to your hunt" : "Pass on this listing - hides it permanently in this browser, even after weekly re-scrapes"}">${passed.has(l.id) ? "↩" : "✕"}</button></td>
   </tr>`;
 }
 
@@ -302,6 +318,7 @@ function render() {
     && state.flags.has(l.flag)
     && makeOK(l) && modelOK(l) && trimOK(l)
     && (!state.hideSold || !l.sold)
+    && (state.showPassed ? passed.has(l.id) : !passed.has(l.id))
     && l.flip_score >= state.sMin - 1e-9 && l.flip_score <= state.sMax + 1e-9
     && (state.rating === "all" || (state.rating === "great" ? l.rating_key === "great" : ["great","good"].includes(l.rating_key)))
     && (state.maxP == null || (l.price ?? 0) <= state.maxP)
@@ -382,6 +399,22 @@ buildPicker("model", MODELS, "modelBtn", "modelMenu");
 buildPicker("trim", TRIMS, "trimBtn", "trimMenu");
 
 document.getElementById("hideSold").addEventListener("change", e => { state.hideSold = e.target.checked; render(); });
+
+// pass / restore buttons (event delegation on the table body)
+document.getElementById("rows").addEventListener("click", e => {
+  const b = e.target.closest(".passbtn");
+  if (!b) return;
+  const id = b.dataset.id;
+  if (passed.has(id)) passed.delete(id); else passed.add(id);
+  savePassed(); updatePassedBtn(); render();
+});
+const passedBtn = document.getElementById("passedBtn");
+function updatePassedBtn() {
+  passedBtn.textContent = (state.showPassed ? "← Back to hunt (" : "Passed: ") + passed.size + (state.showPassed ? ")" : "");
+  passedBtn.classList.toggle("on", state.showPassed);
+}
+passedBtn.addEventListener("click", () => { state.showPassed = !state.showPassed; updatePassedBtn(); render(); });
+updatePassedBtn();
 
 // ── Cascading facets: each dropdown only shows values that coexist with the
 // OTHER two active filters (pick Ford -> models/trims shrink to Ford's;
