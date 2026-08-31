@@ -155,7 +155,8 @@ def spec_for(l):
     m = ((l.get("model") or "") + " " + (l.get("title") or "") + " " +
          (l.get("trim") or "")).lower()
     for pat, spec in MODEL_SPECS:
-        if pat in m:
+        # word-boundary guard: "navigator l" must NOT match "navigator limited"
+        if re.search(re.escape(pat) + r"(?![a-z0-9])", m):
             return spec
     return None
 
