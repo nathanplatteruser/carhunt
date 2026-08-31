@@ -472,10 +472,14 @@ TEMPLATE = r"""<!DOCTYPE html>
   .dmbox header .x { margin-left: auto; cursor: pointer; border: none; background: none; font-size: 18px; color: var(--muted); }
   .dmbox .hint { padding: 8px 16px 0; font-size: 12px; color: var(--faint); }
   .dmbox textarea { margin: 10px 16px; min-height: 260px; resize: vertical; border: 1px solid var(--line-strong); border-radius: 4px; padding: 10px; font: 13px/1.5 inherit; color: var(--ink); background: var(--bg); }
-  .dmbox .row { display: flex; gap: 8px; padding: 0 16px 14px; }
+  .dmbox .row { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 16px 14px; }
   .dmbox .row button, .dmbox .row a { border: 1px solid var(--line-strong); border-radius: 4px; padding: 8px 14px; font-size: 13px; font-weight: 600; cursor: pointer; text-decoration: none; }
   .dmbox .row .primary { background: var(--brand-ink); border-color: var(--brand-ink); color: #fff; }
   .dmbox .row a { color: var(--brand-ink); background: var(--bg); }
+  .dmbox .row .dmyes { background: var(--bg); color: var(--ok-ink); }
+  .dmbox .row .dmyes:hover { border-color: var(--pos); color: var(--pos); }
+  .dmbox .row .dmno { background: var(--bg); color: var(--muted); }
+  .dmbox .row .dmno:hover { border-color: #d1242f; color: #d1242f; }
   .empty { padding: 56px 10px; color: var(--muted); }
   .empty b { display: block; color: var(--ink); font-size: 15px; margin-bottom: 4px; }
   footer { border-top: 1px solid var(--line); color: var(--faint); font-size: 12px; padding: 14px 24px 28px; }
@@ -610,6 +614,9 @@ TEMPLATE = r"""<!DOCTYPE html>
     <div class="row">
       <button type="button" class="primary" id="dmCopy">Copy message</button>
       <a id="dmOpen" href="#" target="_blank" rel="noopener">Open listing ↗</a>
+      <span style="flex:1"></span>
+      <button type="button" id="dmMessaged" class="dmyes" title="Marks this listing Messaged and closes - it leaves the main hunt and waits under the Messaged button while you wait on the seller's reply.">✓ Yes, messaged seller</button>
+      <button type="button" id="dmPass" class="dmno" title="Marks this listing Passed and closes - it leaves the main hunt for good (restore anytime under the Passed button).">✕ No, move to trash</button>
     </div>
   </div>
 </div>
@@ -916,11 +923,13 @@ const dmText = document.getElementById("dmText");
 const dmOpen = document.getElementById("dmOpen");
 const dmTitle = document.getElementById("dmTitle");
 const dmCopy = document.getElementById("dmCopy");
+let dmCurrentId = null;  // listing the open modal belongs to
 document.getElementById("rows").addEventListener("click", e => {
   const btn = e.target.closest(".dmbtn");
   if (!btn) return;
   const l = DATA.find(x => String(x.id) === btn.dataset.id);
   if (!l) return;
+  dmCurrentId = String(l.id);
   dmTitle.textContent = "Message draft — " + (l.title || "").slice(0, 48);
   dmText.value = l.dm || "";
   dmOpen.href = l.url;
@@ -928,6 +937,20 @@ document.getElementById("rows").addEventListener("click", e => {
   dmOverlay.classList.add("on");
   dmText.focus();
 });
+// ── Close the loop from inside the popup: after copy → paste → send on FB,
+// come back and answer "did you message them?" without hunting for the row.
+document.getElementById("dmMessaged").onclick = () => {
+  if (!dmCurrentId) return;
+  messaged.add(dmCurrentId); passed.delete(dmCurrentId);
+  saveMessaged(); savePassed(); updateMessagedBtn(); updatePassedBtn();
+  dmOverlay.classList.remove("on"); render();
+};
+document.getElementById("dmPass").onclick = () => {
+  if (!dmCurrentId) return;
+  passed.add(dmCurrentId); messaged.delete(dmCurrentId);
+  savePassed(); saveMessaged(); updatePassedBtn(); updateMessagedBtn();
+  dmOverlay.classList.remove("on"); render();
+};
 document.getElementById("dmClose").onclick = () => dmOverlay.classList.remove("on");
 dmOverlay.addEventListener("click", e => { if (e.target === dmOverlay) dmOverlay.classList.remove("on"); });
 document.addEventListener("keydown", e => { if (e.key === "Escape") dmOverlay.classList.remove("on"); });
