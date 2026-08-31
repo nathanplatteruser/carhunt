@@ -29,6 +29,8 @@ The dashboard tags every listing (`NO FLAGS` / `REBUILT-SALVAGE` / `SCAM RISK`) 
 
 **Dual valuation for branded titles.** Every rebuilt/salvage/branded listing carries two numbers: the **clean-title comparable** (what the same vehicle would be worth with a clean title — the functional value of the machine itself) and the **as-titled value** (clean comp minus the 25% branded-title haircut — what it will actually resell for). The dashboard's "Clean-title comp" column shows both and the title gap, so a buyer can judge the vehicle on function while pricing the exit honestly.
 
+**Sold re-audit for existing rows.** Sold status is 100% JS-rendered (the raw HTML title tag and embedded JSON carry no sold marker - verified empirically), so stale board rows are re-audited with full page loads via `scripts/sold_audit.py`: it queues rows great-deals-first, they get visited with the hardened detector (H1 "Sold" prefix, separator variants, tab title), and the apply step tags matches. A pilot audit of the top 18 deals found 7 already sold - deal lists rot fast.
+
 **Sold tagging.** Any listing whose title contains "Sold" (Facebook prefixes sold inventory like `Sold · 2019 Ford Expedition Max`) is kept in the data for transparency but flagged `sold: true`: the dashboard renders a bright red **SOLD** tag on the row, excludes it from deal ratings and counts, and offers a "Hide sold" toggle so active-deal hunters can filter it away with one click. No extra requests are spent enriching sold rows.
 
 ## Description recovery

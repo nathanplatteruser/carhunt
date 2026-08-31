@@ -52,6 +52,11 @@ def main():
             seen.add(i)
             if i in have: skipped["known"] += 1; continue
             parts = [x for x in it["t"].split("|") if x and x != "Just listed"]
+            # FB renders sold listings with "Sold" as its OWN tile block ("Sold|$8,500|2015 Dodge...")
+            # - strip it BEFORE title parsing or "Sold" becomes the title and the row is lost as nomatch
+            is_sold = False
+            while parts and re.fullmatch(r"(?i)\s*sold\s*[\u00b7\u2022\-]?\s*", parts[0]):
+                is_sold = True; parts = parts[1:]
             prices = [int(x.replace("$","").replace(",","")) for x in parts if re.fullmatch(r"\$[\d,]+", x)]
             price = prices[0] if prices else None
             old = prices[1] if len(prices) > 1 and prices[1] > (prices[0] or 0) else None
@@ -59,7 +64,7 @@ def main():
             title = txt[0] if txt else ""
             loc = txt[1] if len(txt) > 1 else ""
             tl = title.lower()
-            is_sold = bool(re.search(r"^\s*sold\b|\bsold\b", tl))
+            is_sold = is_sold or bool(re.search(r"^\s*sold\b", tl))  # prefix-style only; avoids "sold as-is" false hits
             if is_sold: skipped["sold"] += 1  # kept on board, tagged SOLD in red (raw-data transparency)
             if EXCLUDE.search(tl): skipped["excl"] += 1; continue
             ym = re.search(r"\b(20[0-2]\d)\b", title)

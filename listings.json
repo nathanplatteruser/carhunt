@@ -16,7 +16,8 @@
   "market_value": 21800,
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "low",
-  "notes": "SCAM RISK: seller account created 2026, loaded Platinum ~34% under book. Verify VIN and title in person before anything"
+  "notes": "SCAM RISK: seller account created 2026, loaded Platinum ~34% under book. Verify VIN and title in person before anything",
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1320428870247481",
@@ -89,7 +90,9 @@
    "mileage:fb-field"
   ],
   "description": "PRICED TO SELL. 2019 Nissan Armada SL. Full-size 4WD SUV. Tires replaced last fall. No major issues, normal wear and tear with minor scratches. Clean leather interior with sunroof. Heated seats, remote start, power lift gate, power folding 3rd row seats. Clean title. Check engine light recently came on showing code P0456 (EVAP small leak, often gas cap; emissions only).",
-  "title_status_desc": "clean"
+  "title_status_desc": "clean",
+  "sold": true,
+  "last_seen": "2026-08-31"
  },
  {
   "id": "704973585604483",
@@ -113,7 +116,8 @@
    "mileage:fb-field"
   ],
   "description": "2017 Nissan Armada Platinum - Fully Loaded - Located in Elkhorn. 5.6L V8, Platinum trim. This Armada has a salvage title - it was rebuilt by a dealer before I bought it. Later, it was involved in a minor fender bender, and $13,000 in professional repairs were completed at Crash Champions in Elkhorn, including a new axle, side mirror, and more. In past winters, it had trouble getting up hills in the snow; rear-wheel drive without snow tires; seller has not driven much since the repairs.",
-  "title_status_desc": "rebuilt"
+  "title_status_desc": "rebuilt",
+  "last_seen": "2026-08-31"
  },
  {
   "id": "2481833195665287",
@@ -323,7 +327,8 @@
   "notes": "",
   "recovered": [
    "mileage:fb-field"
-  ]
+  ],
+  "last_seen": "2026-08-31"
  },
  {
   "id": "37532608716330220",
@@ -468,7 +473,9 @@
    "mileage:fb-field",
    "trim"
   ],
-  "description": "2015 Dodge Durango SXT. Free 3 months/3000 miles warranty. Title: CLEAN. 3.6L V6, 8-speed auto, AWD. Mileage: 133k. Third row seats. Asking $8,500. Denver Auto Sales, 4925 Cornhusker Hwy, Lincoln NE."
+  "description": "2015 Dodge Durango SXT. Free 3 months/3000 miles warranty. Title: CLEAN. 3.6L V6, 8-speed auto, AWD. Mileage: 133k. Third row seats. Asking $8,500. Denver Auto Sales, 4925 Cornhusker Hwy, Lincoln NE.",
+  "sold": true,
+  "last_seen": "2026-08-31"
  },
  {
   "id": "2388635038284698",
@@ -537,7 +544,9 @@
   "notes": "",
   "recovered": [
    "mileage:fb-field"
-  ]
+  ],
+  "sold": true,
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1484696256487625",
@@ -582,7 +591,8 @@
   "notes": "SALVAGE TITLE (FB listing field)",
   "recovered": [
    "mileage:fb-field"
-  ]
+  ],
+  "last_seen": "2026-08-31"
  },
  {
   "id": "2126427191552284",
@@ -718,7 +728,8 @@
    "mileage:fb-field",
    "trim"
   ],
-  "description": "2017 Ford Explorer Limited. Mileage: 70k. Price $13,500. No mechanical issues. Vehicle has LIGHT HAIL DAMAGE. 3.5L V6, AWD. Massage seats, self parking, dual-panel moonroof. Gratify Auto Sales."
+  "description": "2017 Ford Explorer Limited. Mileage: 70k. Price $13,500. No mechanical issues. Vehicle has LIGHT HAIL DAMAGE. 3.5L V6, AWD. Massage seats, self parking, dual-panel moonroof. Gratify Auto Sales.",
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1446591437151610",
@@ -740,7 +751,8 @@
   "notes": "SALVAGE TITLE (FB listing field); price drop from $15,800",
   "recovered": [
    "mileage:fb-field"
-  ]
+  ],
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1746599896359599",
@@ -834,7 +846,9 @@
    "trim"
   ],
   "description": "I want to sell my Ford Explorer XLT. The car is in good condition, everything works perfectly, tires and battery good. Very smooth to drive, ready for any 4x4 test drive. It is previously salvaged.",
-  "title_status_desc": "salvage"
+  "title_status_desc": "salvage",
+  "sold": true,
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1512293526947709",
@@ -1164,7 +1178,9 @@
   "value_source": "trim/year value table (KBB/Edmunds-anchored) + detail checks",
   "value_confidence": "medium",
   "notes": "Local candidate: clean title claim, VIN posted, 'all imperfections pictured'. Right at your 150k cap; seller account is new (2024) - verify in person; price drop from $14,000",
-  "title_status_desc": "clean"
+  "title_status_desc": "clean",
+  "sold": true,
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1003375015873330",
@@ -1284,7 +1300,8 @@
   "recovered": [
    "trim",
    "mileage:fb-field"
-  ]
+  ],
+  "last_seen": "2026-08-31"
  },
  {
   "id": "2018908668663111",
@@ -1407,7 +1424,8 @@
    "trim"
   ],
   "description": "Tailgate Motor Co, Wahoo NE. Financing available + trade-ins accepted. Salvage Title.",
-  "title_status_desc": "salvage"
+  "title_status_desc": "salvage",
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1430190165592502",
@@ -1429,7 +1447,9 @@
   "notes": "REBUILT TITLE (FB listing field); seller account joined 2025 - verify carefully",
   "recovered": [
    "mileage:fb-field"
-  ]
+  ],
+  "sold": true,
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1496870021970846",
@@ -1475,7 +1495,9 @@
   "notes": "clean title per listing field",
   "recovered": [
    "mileage:fb-field"
-  ]
+  ],
+  "sold": true,
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1479969837495635",
@@ -1617,7 +1639,8 @@
    "mileage:fb-field"
   ],
   "description": "2017 GMC Yukon Denali, 6.2L V8 420hp, 8 passenger. 3 months warranty, trade-ins acceptable. NEBRASKA Previously salvaged title, due to an accident.",
-  "title_status_desc": "salvage"
+  "title_status_desc": "salvage",
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1535008067528345",
@@ -1639,7 +1662,8 @@
   "notes": "SALVAGE TITLE (FB listing field); price drop from $179,000",
   "recovered": [
    "mileage:fb-field"
-  ]
+  ],
+  "last_seen": "2026-08-31"
  },
  {
   "id": "4298853720402695",
@@ -1864,7 +1888,8 @@
   "notes": "REBUILT/BRANDED TITLE (FB listing); ",
   "recovered": [
    "mileage:fb-field"
-  ]
+  ],
+  "last_seen": "2026-08-31"
  },
  {
   "id": "1579997663305507",

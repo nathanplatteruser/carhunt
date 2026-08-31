@@ -24,9 +24,15 @@ const s = ms => new Promise(r => setTimeout(r, ms));
 await s(720);
 const t = document.body.innerText;
 
-// SOLD check first — a sold listing is dead inventory; skip all further capture
-const sold = /(^|\s)Sold\s*·/.test(document.title) || /^Sold\s*·/m.test(t)
-          || /\bSold\b\s*·/.test(t.slice(0, 400));
+// SOLD check first. Sold status is 100% JS-rendered (verified: the raw HTML
+// title tag and embedded JSON carry NO sold marker), so this must run on the
+// rendered page. FB puts the red "Sold" at the start of the listing H1
+// ("Sold · 2015 Dodge durango...") but the separator varies (· • - or a line
+// break), so check the H1 prefix first and fall back to separator patterns.
+const h1 = [...document.querySelectorAll('h1')].map(e => e.innerText).join(' ');
+const sold = /^\s*Sold\b/i.test(h1)
+          || /(^|\n)\s*Sold\s*[·•∙⋅\-–—]/m.test(t.slice(0, 600))
+          || /(^|\s)Sold\s*[·•\-]/.test(document.title);
 if (sold) JSON.stringify({ id: 'LISTING_ID', sold: true });
 const g = re => { const m = t.match(re); return m ? m[1].replace(/,/g, '') : null; };
 
