@@ -45,12 +45,15 @@ DSM_MI = {"Des Moines, IA":0,"West Des Moines, IA":8,"Clive, IA":8,"Urbandale, I
  "Grinnell, IA":55,"Chariton, IA":55,"Oskaloosa, IA":60,"Albia, IA":70,"Creston, IA":75,
  "Carroll, IA":85,"Audubon, IA":75,"Ottumwa, IA":85,"Fort Dodge, IA":90}
 
+import process_msp as _msp  # Minneapolis distance table lives with its processor
+
 MARKETS = [
     ("listings.json",           "Lincoln–Omaha Metro",  dict(list(bd.CITY_MI.items()) + list(LINCOLN_EXTRA.items())),
      {"NE":70,"IA":120,"KS":200,"MO":220,"SD":175}),
     ("denver_listings.json",    "Denver Metro",         DENVER_MI, {"CO":60,"WY":110}),
     ("kc_listings.json",        "Kansas City Metro",    KC_MI,     {"MO":60,"KS":60}),
     ("desmoines_listings.json", "Des Moines Metro",     DSM_MI,    {"IA":60}),
+    ("msp_listings.json",       "Minneapolis–St. Paul Metro", _msp.MSP_MI, {"MN":40,"WI":40}),
 ]
 
 def main():
