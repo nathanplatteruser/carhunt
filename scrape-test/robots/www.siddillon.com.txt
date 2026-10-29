@@ -1,0 +1,10 @@
+User-agent: *
+Crawl-delay: 1
+Disallow: /wp-admin/
+Disallow: /wp-includes/
+Disallow: /wp-content/uploads/inventory/
+Disallow: /wp-content/uploads/pb_backupbuddy/
+Disallow: /wp-content/uploads/chromeData/
+Disallow: /wp-content/uploads/configuratorTron/
+Disallow: /wp-content/uploads/gravity_forms/
+

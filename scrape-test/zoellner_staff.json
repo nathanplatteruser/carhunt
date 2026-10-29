@@ -1,0 +1,262 @@
+[
+  {
+    "name": "Jason Zoellner",
+    "title": "Owner",
+    "department": "Management",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "(402) 223-3547 ext 3110",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Ford (Store Mascot)",
+    "title": "Chief Pawject Manager",
+    "department": "Management",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "1-800-Snuggles",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Abigayle Zoellner Rivera",
+    "title": "Human Resources & Marketing Director",
+    "department": "Office/Admin",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext 3129",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Tyler Zoellner",
+    "title": "Executive Sales Manager",
+    "department": "Sales",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext 3103",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Ray Hernandez",
+    "title": "Sales & Leasing Manager",
+    "department": "Sales",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "(402) 223-3547 Ext 3102",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "David Ahlschwede",
+    "title": "New Car Manager",
+    "department": "Management",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "(402) 223-3547 Ext 3118",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Chris Chace",
+    "title": "Used Car & Internet Sales Manager",
+    "department": "Sales",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext 3111",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Kruz Schoenrock",
+    "title": "Finance Manager",
+    "department": "F&I",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547. ext. 3115",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Jeff Green",
+    "title": "Sales Consultant",
+    "department": "Sales",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext 3113",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Skyler Sorensen",
+    "title": "Sales Consultant",
+    "department": "Sales",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext 3137",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Dennis Lyons",
+    "title": "Sales Consultant",
+    "department": "Sales",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext. 3109",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Brayden Cook",
+    "title": "Sales Consultant",
+    "department": "Sales",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext. 3138",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Kyle Knipplemier",
+    "title": "Sales Consultant",
+    "department": "Sales",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext. 3134",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Josh Barnard",
+    "title": "Sales Consultant",
+    "department": "Sales",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "(402) 223-3547 ext. 3114",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Denise Blaker",
+    "title": "Office Manager",
+    "department": "Office/Admin",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext 3123",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Linda Sattler",
+    "title": "Office Assistant",
+    "department": "Office/Admin",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext 3133",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Lindsey Barker",
+    "title": "Office Assistant",
+    "department": "Office/Admin",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext. 3119",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Chad Hernandez",
+    "title": "Service Manager",
+    "department": "Service",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext 3112",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Josh Dorothy",
+    "title": "Assistant Service Manager",
+    "department": "Service",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "(402) 223-3547 ext. 3108",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Steve Kurtzuba",
+    "title": "Service Advisor",
+    "department": "Service",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext. 3112",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Kodi Higgins",
+    "title": "Quicklane Manager",
+    "department": "Service",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "(402) 223-3547 ext. 3140",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Anthonee Briggs",
+    "title": "Quicklane Advisor",
+    "department": "Service",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "(402) 223-3547 ext. 3120",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Michael McMurphy",
+    "title": "Parts Manager",
+    "department": "Parts",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402-223-3547 ext. 3107",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Dillon Buss",
+    "title": "Parts Advisor + Master Technician",
+    "department": "Parts",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": null,
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Codie Willey",
+    "title": "Parts Advisor",
+    "department": "Parts",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext. 3106",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  },
+  {
+    "name": "Tiffany Baird",
+    "title": "Service & Reception",
+    "department": "Service",
+    "department_source": "inferred from title",
+    "email": null,
+    "phone": "402.223.3547 ext. 3104",
+    "bio": null,
+    "source_url": "https://www.zoellnerfordofbeatrice.com/dealership/staff.htm"
+  }
+]
