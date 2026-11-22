@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "whale-skill": {
+      "source": { "source": "github", "repo": "Jakeschincariol/whale-skill" }
+    }
+  },
+  "enabledPlugins": {
+    "whale-skill@whale-skill": true
+  }
+}
